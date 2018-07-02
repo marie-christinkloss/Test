@@ -1,0 +1,208 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+ssh://marie-christin.kloss@git.robotron.de:29418/splunk-sandbox.git
+  <groupId>de.robotron</groupId>
+  <artifactId>template</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+<!--   <packaging>jar</packaging>
+ -->
+  <name>template</name>
+  
+  <organization>
+    <name>Robotron Datenbank-Software GmbH</name>
+    <url>http://www.robotron.de</url>
+  </organization>
+
+<!-- setzen der globalen Variablen -->
+  <properties>
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
+        <selenium.version>2.45.0</selenium.version>
+		<overwrite.binaries>false</overwrite.binaries>
+    </properties>
+
+	<!-- Setzen alle Abhängigkeiten und laden der Bibliotheken -->
+    <dependencies>
+    <!-- Für Vergleiche bei Tests (z.B. assert_equal(x, y);) -->
+        <dependency>
+            <groupId>org.hamcrest</groupId>
+            <artifactId>hamcrest-all</artifactId>
+            <version>1.3</version>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-java</artifactId>
+            <version>${selenium.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.seleniumhq.selenium</groupId>
+            <artifactId>selenium-remote-driver</artifactId>
+            <version>${selenium.version}</version>
+        </dependency>
+        <!-- https://mvnrepository.com/artifact/junit/junit -->
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+        <dependency>
+            <groupId>com.codeborne</groupId>
+            <artifactId>phantomjsdriver</artifactId>
+            <version>1.2.1</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Testframework (Umfangreicher als JUnit) -->
+        <dependency>
+            <groupId>org.testng</groupId>
+            <artifactId>testng</artifactId>
+            <version>6.8.8</version>
+            <scope>test</scope>
+        </dependency>
+        <!-- Für die Ausführung von Shell-Befehlen innerhalb der pom.xml 
+        	nur für Linux, erfordert extra Installation
+        -->
+     <!--   <dependency>
+			<groupId>com.atlassian.maven.plugins</groupId>
+			<artifactId>bash-maven-plugin</artifactId>
+			<version>1.0-SNAPSHOT</version>
+			<scope>provided</scope>
+	</dependency>  -->
+    </dependencies>
+
+    <profiles>
+    <!-- Profile für die Ausführung der Shell-Scripte-->
+    <!-- Bauen der App -->
+      <!--  <profile>
+            <id>build</id>
+            <properties>
+                <buildBool>true</buildBool>
+            </properties>
+        </profile>
+        
+        <profile>
+            <id>deploy</id>
+            <properties>
+                <deployBool>true</deployBool>
+            </properties>
+        </profile>
+		<
+        <profile>
+            <id>appInsp</id>
+            <properties>
+                <testBool>true</testBool>
+            </properties>
+        </profile> -->
+        <!-- Ausführung und Einstellungen der automatisierten Tests -->
+        <profile>
+            <id>selenium-tests</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <plugins>
+                <!-- Kompiliert den Quellcode. Manche Plugins benötigen eine spezielle Version -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-compiler-plugin</artifactId>
+                        <configuration>
+                            <source>1.7</source>
+                            <target>1.7</target>
+                        </configuration>
+                        <version>2.3.2</version>
+                    </plugin>
+                 <!--Für das herunterladen und ggf. entpacken von benötigen Browsern
+                 beim 1. Ausführen oder wenn neue Browser/-versionen geladen werden bitte auskommentieren und ggf die RepositoryMap anpassen-->    
+                 <!-- <plugin>
+                        <groupId>com.lazerycode.selenium</groupId>
+                        <artifactId>driver-binary-downloader-maven-plugin</artifactId>
+                        <version>1.0.7</version>
+                        <configuration>   -->
+                    	<!-- Festlegung der Pfade: Binaries und Zips der Browser, RepositoryMap (legt detailierten Download der Browser fest) -->
+                 <!--            <rootStandaloneServerDirectory>${project.basedir}/src/test/resources/selenium_standalone_binaries</rootStandaloneServerDirectory>
+                            <downloadedZipFileDirectory>${project.basedir}/src/test/resources/selenium_standalone_zips</downloadedZipFileDirectory>
+                            <customRepositoryMap>${project.basedir}/src/test/resources/RepositoryMap.xml</customRepositoryMap>
+                            <overwriteFilesThatExist>${overwrite.binaries}</overwriteFilesThatExist>
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <goals>
+                                    <goal>selenium</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin> -->
+                    <!-- Plugin für das Ausführen von Test, Erstellen von Testberichten(/target/failsafe-reports/*.html|xml|txt) 
+                    und Screenshots(siehe angegebener Pfad: 'screenshotDirectory') -->
+                    <plugin>
+                        <groupId>org.apache.maven.plugins</groupId>
+                        <artifactId>maven-failsafe-plugin</artifactId>
+                        <version>2.7.2</version>
+                        <configuration>
+                        	<systemProperties>
+                            	<browser>${browser}</browser>
+                                <screenshotDirectory>${project.build.directory}/screenshots</screenshotDirectory>
+                                <!--Set properties passed in by the driver binary downloader-->
+                                <phantomjs.binary.path>${pathToBrowser}</phantomjs.binary.path>
+                           <!--     <webdriver.chrome.driver>${pathToBrowser}</webdriver.chrome.driver>-->
+                          	</systemProperties>
+                           	<includes>
+								<!--Testfälle, die ausgeführt werden sollen (im Ordner "Test") -->
+								<include>**/testSuite.java</include>	                            	
+							</includes> 
+							<!--<excludes>
+								Testfälle, die NICHT ausgeführt werden sollen (im Ordner "Test") 
+                            	<exclude>**/checkVersion.java</exclude>
+                            </excludes> -->
+                        </configuration>
+                        <executions>
+                            <execution>
+                                <goals>
+                                <!-- Erstellt Integrationstestumgebung + Ausführung der Integrationstest -->
+                                    <goal>integration-test</goal>
+                                <!-- s.o. + schließen Testumgebung und  test der Ergebnisse (erzeugen der Datein (s.o.)) -->    
+                                    <goal>verify</goal>
+                                </goals>
+                            </execution>
+                        </executions>
+                    </plugin>
+                </plugins>
+            </build>
+        </profile>
+    </profiles>
+  <!--  <build>
+		<plugins> -->
+    		<!-- Plugin für das Ausführen von Shell-Befehlen 
+     			Ausfürhen mit mvn bash:run oder mvn install-->
+		<!--	<plugin>
+				<groupId>com.atlassian.maven.plugins</groupId>
+                <artifactId>bash-maven-plugin</artifactId>
+                <version>1.0-SNAPSHOT</version>
+                <executions>
+                    <execution>
+                        <id>test</id>
+                        <phase>integration-test</phase>
+                        <goals>
+                            <goal>run</goal>
+                        </goals>
+                    </execution>
+                </executions>
+                <configuration>
+                    <script>
+			if [ ${buildBool} ]
+			then  bash ./src/build/shell/build.sh
+			fi
+			if [ ${deployBool} ]
+			then bash ./src/build/shell/deploy.sh
+			fi
+			if [ ${testBool} ]
+			then bash ./src/build/shell/test.sh
+			fi
+					</script>
+                </configuration>
+            </plugin> 
+        </plugins>   
+    </build> -->
+</project>

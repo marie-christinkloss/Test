@@ -1,7 +1,0 @@
-#errorClassTable div.results-table thead > tr > th[data-sort-key="example_text"] {
-    display: none !important;
-}
-
-#errorClassTable div.results-table tbody > tr > td.invisible-cell {
-    display: none !important;
-}

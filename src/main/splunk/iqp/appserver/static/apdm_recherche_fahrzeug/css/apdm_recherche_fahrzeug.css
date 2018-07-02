@@ -1,7 +1,0 @@
-#tbl_pruefungen div.results-table thead > tr > th[data-sort-key="source"] {
-    display: none !important;
-}
-
-#tbl_pruefungen div.results-table tbody > tr > td.invisible-cell {
-    display: none !important;
-}
