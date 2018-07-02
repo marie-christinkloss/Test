@@ -1,0 +1,26 @@
+#highlight tr.markTestStep td{
+	background-color: #ffc57a;
+}
+
+#testSteps tr.markTestStep td{
+        background-color: #ffc57a;
+}
+
+#table_dtcs tr.markTestStep td{
+        background-color: #ffc57a;
+}
+
+#highlight div.results-table thead > tr > th[data-sort-key="mark"],
+#highlight div.results-table thead > tr > th[data-sort-key="source"],
+#highlight div.results-table thead > tr > th[data-sort-key="pruefUmfangToken"],
+#table_dtcs div.results-table thead > tr > th[data-sort-key="mark"],
+#table_dtcs div.results-table thead > tr > th[data-sort-key="testStepTime"],
+#testSteps div.results-table thead > tr > th[data-sort-key="mark"] {
+    display: none !important;
+}
+
+#testSteps div.results-table tbody > tr > td.invisible-cell,
+#highlight div.results-table tbody > tr > td.invisible-cell,
+#table_dtcs div.results-table tbody > tr > td.invisible-cell {
+    display: none !important;
+}

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>FT FWS: K0-Lagen</title>
+    <link rel="shortcut icon" href="/en-US/static/@E5DE6AA89387C3F24866F0F0D5B919CF936DD6E5B5FD97CCEDF67A79CEC7E655.899/img/favicon.ico" />
+    <link rel="stylesheet" type="text/css" href="{{SPLUNKWEB_URL_PREFIX}}/static/build/css/bootstrap-enterprise.css" />
+    <link rel="stylesheet" type="text/css" href="{{SPLUNKWEB_URL_PREFIX}}/static/css/build/pages/dashboard-simple-bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/iqp/dashboard.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/iqp/fws_k0_lagen/css/custom_style.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/RDS_TA_html2pdf/html2pdf.css" />
+</head>
+<body class="simplexml preload locale-en" data-splunk-version="6.5.1" data-splunk-product="enterprise">
+<!-- 
+BEGIN LAYOUT
+This section contains the layout for the dashboard. Splunk uses proprietary
+styles in <div> tags, similar to Bootstrap's grid system. 
+-->
+<header>
+    <a class="navSkip" href="#navSkip" tabindex="1">Screen reader users, click here to skip the navigation bar</a>
+    <div class="header splunk-header">
+            <div id="placeholder-splunk-bar">
+                <a href="{{SPLUNKWEB_URL_PREFIX}}/app/launcher/home" class="brand" title="splunk &gt; listen to your data">splunk<strong>&gt;</strong></a>
+            </div>
+                <div id="placeholder-app-bar"></div>
+    </div>
+    <a id="navSkip"></a>
+</header>
+<div class="dashboard-body container-fluid main-section-body" data-role="main">
+    <div class="dashboard-header clearfix">
+        <h2>FT FWS: K0-Lagen</h2>
+    </div>
+    <div class="fieldset">
+        <div class="input input-timerangepicker" id="filt_time">
+            <label>Datum</label>
+        </div>
+        <div class="input input-multiselect" id="filt_werk">
+            <label>Werkfilter</label>
+        </div>
+        <div class="input input-multiselect" id="filt_spurcode">
+            <label>Spurcode</label>
+        </div>
+        <div class="input input-multiselect" id="filt_chassis_property">
+            <label>Fahrwerk-Eigenschaft</label>
+        </div>
+        <div id="element4" class="dashboard-element html">
+            <div class="panel-body html">
+                <label>FGNR</label>
+                <textarea class="input input-text" id="input_shortVIN" style="width:206px">*</textarea>
+            </div>
+        </div>
+        <div class="input input-dropdown" id="filt_master">
+            <label>Master</label>
+        </div>
+        <br />
+        <h3>RAMA</h3>
+        <div class="input input-multiselect" id="filt_pruefstand_rama">
+            <label>Prüfstand</label>
+        </div>
+        <div class="input input-multiselect" id="filt_pruefumfang_rama">
+            <label>Prüfumfang</label>
+        </div>
+        <div class="input input-multiselect" id="filt_ref_car">
+            <label>Referenz Auto (IN_AUSWERTUNG)</label>
+        </div>
+        <br />
+        <h3>Linie</h3>
+        <div class="input input-multiselect" id="filt_pruefstand_linie">
+            <label>Prüfstand</label>
+        </div>
+        <div class="input input-multiselect" id="filt_pruefumfang_linie">
+            <label>Prüfumfang</label>
+        </div>
+        <div class="input input-multiselect" id="filt_messungsart_linie">
+            <label>Messungsart</label>
+        </div>
+        <div class="form-submit" id="search_btn">
+            <button class="btn btn-primary submit">Senden</button>
+        </div>
+    </div>
+    <div id="row0" class="dashboard-row dashboard-row0">
+        <div id="panel_summary" class="dashboard-cell" style="width: 100%;">
+            <div class="dashboard-panel clearfix">
+                <h2 class="panel-title" id="summary">Zusammenfassung:- Fahrzeug/e gefunden</h2>
+                <div class="panel-element-row">
+                    <div id="summary_table" class="dashboard-element table" style="width: 100%">
+                        <div class="panel-body"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="row1" class="dashboard-row dashboard-row1">
+        <div id="panel_histogramm" class="dashboard-cell" style="width: 100%;">
+            <div class="dashboard-panel clearfix">
+                <h2 id="histoHeader" class="panel-title">Histogramm</h2>
+                <div id="container_histogram_chart" class="panel-element-row"></div>
+                <div id="container_histogram_table"></div>
+            </div>
+        </div>
+    </div>
+    <div id="row2" class="dashboard-row dashboard-row2">
+        <div id="panel_soll_ist" class="dashboard-cell" style="width: 100%;">
+            <div class="dashboard-panel clearfix">
+                <h2 id="siHeader" class="panel-title">Soll-Ist-Vergleich</h2>
+                <div id="container_soll_ist_chart" class="panel-element-row"></div>
+                <div id="container_soll_ist_table"></div>
+            </div>
+        </div>
+    </div>
+    <div id="row3" class="dashboard-row dashboard-row3">
+        <div id="panel_cp_cpk" class="dashboard-cell" style="width: 100%;">
+            <div class="dashboard-panel clearfix">
+                <h2 id="ccHeader" class="panel-title">CP-CPK-Faktor</h2>
+                <div class="fieldset">
+                    <div class="input input-text" id="filt_warn_fkt_idx">
+                        <label id="wFac_idxVal">Warnfaktor (Indexwert)</label>
+                    </div>
+                    <div class="input input-text" id="filt_eing_fkt_idx">
+                        <label id="eFac_idxVal">Eingriffsfaktor (Indexwert)</label>
+                    </div>
+                    <div class="form-submit" id="submit_idx_btn">
+                        <button class="btn btn-primary submit">Senden</button>
+                    </div>
+                </div>
+                <div id="container_cp_cpk"></div>
+            </div>
+        </div>
+    </div>
+    <div id="row4" class="dashboard-row dashboard-row4">
+        <div id="panel_filt" class="dashboard-cell" style="width: 100%;">
+            <div class="dashboard-panel clearfix">
+                <h2 id="vdHeader" class="panel-title">Fahrzeugdaten</h2>
+                <div class="fieldset">
+                    <div class="input input-text" id="filt_warn_fkt_ist">
+                        <label id="wFac_isVal">Warnfaktor (Istwert)</label>
+                    </div>
+                    <div class="input input-text" id="filt_eing_fkt_ist">
+                        <label id="eFac_isVal">Eingriffsfaktor (Istwert)</label>
+                    </div>
+                    <div class="form-submit" id="submit_ist_btn">
+                        <button class="btn btn-primary submit">Senden</button>
+                    </div>
+                    <br />
+                    <div id="reset_button" class="form-submit">
+                        <button id="resetFgnr" class="btn">Filter FGNR zurücksetzen</button>
+                    </div>
+                </div>
+                <div class="panel-element-row">
+                    <div id="data_comp_table" class="dashboard-element table" style="width: 100%">
+                        <div class="panel-body"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- 
+END LAYOUT
+-->
+
+<script src="{{SPLUNKWEB_URL_PREFIX}}/config?autoload=1"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/js/i18n.js"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/i18ncatalog?autoload=1"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/build/simplexml/index.js"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/iqp/fws_k0_lagen/js/dashboard.js" type="text/javascript"></script>
+</body>
+</html>

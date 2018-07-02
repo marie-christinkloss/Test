@@ -1,0 +1,208 @@
+<form script="qlearning/js/ql_fehlerklassen.js" stylesheet="qlearning/css/ql_fehlerklassen.css">
+  <init>
+    <set token="i18n_known" i18ntag="">bekannt</set>
+    <set token="i18n_unknown" i18ntag="">unbekannt</set>
+    <set token="i18n_id" i18ntag="">ID</set>
+    <set token="i18n_count" i18ntag="">Anzahl</set>
+    <set token="i18n_trend" i18ntag="">Trend</set>
+    <set token="i18n_exampleText" i18ntag="">Beispieltext</set>
+    <set token="i18n_sensitivity" i18ntag="">Sensibilitaet</set>
+  </init>
+  <label>QL - Fehlerklassen</label>
+  <description>Die APDM TestStepResults in denen das Ergebnis NOK lautete sollen hier Fehlerklassen zugeordnet werden, um gleichartige Fehler zu gruppieren und Statistiken darüber bilden zu können.</description>
+  <search base="cluster_base_search">
+    <query>| search cluster_label=$cluster_label$
+| table pruefumfangName testStepName resultName description param1 param2 resultValueStr ErrorCodeDec errorText adviseText 
+| stats values(*) as *
+| mvmatcher</query>
+    <done>
+      <set token="form.ft_pruefumfangName">$result.pruefumfangName$</set>
+      <set token="form.ft_testStepName">$result.testStepName$</set>
+      <set token="form.ft_resultName">$result.resultName$</set>
+      <set token="form.ft_description">$result.description$</set>
+      <set token="form.ft_param1">$result.param1$</set>
+      <set token="form.ft_param2">$result.param2$</set>
+      <set token="form.ft_resultValueStr">$result.resultValueStr$</set>
+      <set token="form.ft_ErrorCodeDec">$result.ErrorCodeDec$</set>
+      <set token="form.ft_errorText">$result.errorText$</set>
+      <set token="form.ft_adviseText">$result.adviseText$</set>
+    </done>
+    <progress>
+      <unset token="form.ft_pruefumfangName"></unset>
+      <unset token="form.ft_testStepName"></unset>
+      <unset token="form.ft_resultName"></unset>
+      <unset token="form.ft_description"></unset>
+      <unset token="form.ft_param1"></unset>
+      <unset token="form.ft_param2"></unset>
+      <unset token="form.ft_resultValueStr"></unset>
+      <unset token="form.ft_ErrorCodeDec"></unset>
+      <unset token="form.ft_errorText"></unset>
+      <unset token="form.ft_adviseText"></unset>
+    </progress>
+  </search>
+  <search id="cluster_base_search">
+    <query>| tstats count from datamodel=APDM_Fehler
+where TestStepResult.werk="$werk$" TestStepResult.systemName="$system$" TestStepResult.errorTextComplete="*$textfilter$*"
+groupby _time TestStepResult.pruefumfangName TestStepResult.testStepName TestStepResult.resultName TestStepResult.description TestStepResult.param1 TestStepResult.param2 TestStepResult.resultValueStr TestStepResult.ErrorCodeDec TestStepResult.errorText TestStepResult.adviseText 
+| rename TestStepResult.* as *
+| lookup lkup_fehlerklasse pruefumfangName testStepName resultName description param1 param2 resultValueStr ErrorCodeDec errorText adviseText OUTPUTNEW pruefumfangName AS bekannter_fehler
+| search NOT bekannter_fehler=*
+
+| eval error_message=coalesce(resultValueStr,"-").";".coalesce(ErrorCodeDec,"-").";".coalesce(errorText,"-").";".coalesce(adviseText,"-")
+| eval test_step=coalesce(pruefumfangName,"-").";".coalesce(testStepName,"-").";".coalesce(resultName,"-").";".coalesce(description,"-").";".coalesce(param1,"-").";".coalesce(param2,"-")
+| eval complete_text=test_step." - ".error_message 
+
+| cluster field=complete_text t=$sensitivity$ labelonly=true</query>
+    <earliest>$time.earliest$</earliest>
+    <latest>$time.latest$</latest>
+  </search>
+  <fieldset submitButton="true" autoRun="false">
+    <input type="time" token="time" searchWhenChanged="false">
+      <label></label>
+      <default>
+        <earliest>-7d@h</earliest>
+        <latest>now</latest>
+      </default>
+    </input>
+    <input id="input_werk" type="dropdown" token="werk" searchWhenChanged="false">
+      <label>Werk</label>
+      <choice value="*">Alle Werke</choice>
+      <default>*</default>
+      <fieldForLabel>werk</fieldForLabel>
+      <fieldForValue>value</fieldForValue>
+      <search>
+        <query>| inputlookup lkup_werk_input | table werk value</query>
+      </search>
+    </input>
+    <input type="dropdown" token="system" searchWhenChanged="false">
+      <label>System</label>
+      <choice value="*">Alle</choice>
+      <default>*</default>
+      <fieldForLabel>systemName</fieldForLabel>
+      <fieldForValue>systemName</fieldForValue>
+      <search>
+        <query>| tstats values(TestResult.systemName) as systemName from datamodel=APDM_TestResults | mvexpand systemName</query>
+        <earliest>$time.earliest$</earliest>
+        <latest>$time.latest$</latest>
+      </search>
+    </input>
+    <input type="text" token="textfilter" searchWhenChanged="false">
+      <label>Stichwort</label>
+      <default></default>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <title>Anzahlen bekannter und unbekannter Fehler</title>
+      <chart>
+        <search>
+          <query>| tstats count from datamodel=APDM_Fehler
+where TestStepResult.werk="$werk$" TestStepResult.systemName="$system$" TestStepResult.errorTextComplete="*$textfilter$*"
+groupby _time TestStepResult.pruefumfangName TestStepResult.testStepName TestStepResult.resultName TestStepResult.description TestStepResult.param1 TestStepResult.param2 TestStepResult.resultValueStr TestStepResult.ErrorCodeDec TestStepResult.errorText TestStepResult.adviseText 
+| rename TestStepResult.* as *
+
+| lookup lkup_fehlerklasse pruefumfangName testStepName resultName description param1 param2 resultValueStr ErrorCodeDec errorText adviseText OUTPUTNEW pruefumfangName AS bekannter_fehler
+| eval bekannt_bool=if(isnotnull(bekannter_fehler),"$i18n_known$","$i18n_unknown$")
+| timechart sum(count) as count by bekannt_bool</query>
+          <earliest>$time.earliest$</earliest>
+          <latest>$time.latest$</latest>
+        </search>
+        <option name="charting.axisTitleX.visibility">collapsed</option>
+        <option name="charting.axisY2.enabled">1</option>
+        <option name="charting.chart">column</option>
+        <option name="charting.chart.overlayFields">$i18n_unknown$</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Vorschlag für neue Fehlerklassen</title>
+      <html id="sensitivity_slider">
+        <div class="input input-text" id="input_sensitivity" style="width: 220px;">
+          <label>$i18n_sensitivity$ [0..1]</label>
+          <div id="input_sensitivity_slider"></div>
+          <div id="input_sensitivity_text" class="splunk-textinput splunk-view">
+            <input id="input_sensitivity_text-input" value="0.9" type="text" />
+          </div>
+        </div>
+        <div class="form-submit" id="submit_button_cluster">
+          <button id="input_submit_btn_cluster" class="btn btn-primary submit">Submit</button>
+        </div>
+      </html>
+      <table id="errorClassTable">
+        <search base="cluster_base_search">
+          <query>
+            <![CDATA[
+| stats sum(count) as count sparkline(sum(count)) as sparkline values(complete_text) as example_text by cluster_label | eval example_text=mvindex(example_text,0,4) | sort - count
+| rename 
+  cluster_label as "$i18n_id$", 
+  count as "$i18n_count$", 
+  sparkline as "$i18n_trend$", 
+  example_text as "$i18n_exampleText$"
+| eval example_text=mvjoin('$i18n_exampleText$',"<NEWLINE>")
+| rex field=example_text mode=sed "s/<NEWLINE>/\n/g"
+            ]]>
+          </query>
+        </search>
+        <option name="drilldown">row</option>
+        <drilldown>
+          <set token="cluster_label">$row.ID$</set>
+          <set token="example_text">$row.example_text$</set>
+        </drilldown>
+      </table>
+    </panel>
+  </row>
+  <row depends="$cluster_label$">
+    <panel>
+      <title>Hinzufügen des neuen Fehlerklassen</title>
+      <input type="text" token="ft_pruefumfangName">
+        <label>pruefumfangName</label>
+      </input>
+      <input type="text" token="ft_testStepName">
+        <label>testStepName</label>
+      </input>
+      <input type="text" token="ft_resultName">
+        <label>resultName</label>
+      </input>
+      <input type="text" token="ft_description">
+        <label>description</label>
+      </input>
+      <input type="text" token="ft_param1">
+        <label>param1</label>
+      </input>
+      <input type="text" token="ft_param2">
+        <label>param2</label>
+      </input>
+      <input type="text" token="ft_resultValueStr">
+        <label>resultValueStr</label>
+      </input>
+      <input type="text" token="ft_ErrorCodeDec">
+        <label>ErrorCodeDec</label>
+      </input>
+      <input type="text" token="ft_errorText">
+        <label>errorText</label>
+      </input>
+      <input type="text" token="ft_adviseText">
+        <label>adviseText</label>
+      </input>
+      <html>
+        <label>Beispieltexte</label>
+        <textarea rows="5" id="input_example_text" style="width: 90%;resize: both;">$example_text$</textarea>
+      </html>
+      <html>
+        <div style="display:inline">
+          <button id="btn_add_fehlerklasse" class="btn btn-primary i18n" style="padding-left:12px" i18ntag="">Fehlerklasse hinzufügen</button>
+        </div>
+      </html>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <html>
+        <div style="display:inline">
+          <button id="btn_list_fehlerklassen" class="btn i18n" style="padding-left:12px" i18ntag="">Liste aller Fehlerklassen</button>
+        </div>
+      </html>
+    </panel>
+  </row>
+</form>

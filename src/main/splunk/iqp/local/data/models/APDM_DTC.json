@@ -1,0 +1,329 @@
+{
+    "modelName": "APDM_DTC",
+    "displayName": "APDM_DTC",
+    "description": "",
+    "objectSummary": {
+        "Event-Based": 1,
+        "Transaction-Based": 0,
+        "Search-Based": 0
+    },
+    "objects": [
+        {
+            "objectName": "DTCEntry",
+            "displayName": "DTCEntry",
+            "parentName": "BaseEvent",
+            "fields": [
+                {
+                    "fieldName": "Event",
+                    "owner": "DTCEntry",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "Event",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "complete",
+                    "owner": "DTCEntry",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "complete",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "dtcAddress",
+                    "owner": "DTCEntry",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "dtcAddress",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "dtcCode",
+                    "owner": "DTCEntry",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "dtcCode",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "dtcEntry",
+                    "owner": "DTCEntry",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "dtcEntry",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "dtcSGBD",
+                    "owner": "DTCEntry",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "dtcSGBD",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "dtcText",
+                    "owner": "DTCEntry",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "dtcText",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "dtcTime",
+                    "owner": "DTCEntry",
+                    "type": "number",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "dtcTime",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "errorCount",
+                    "owner": "DTCEntry",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "errorCount",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "integrationLevel",
+                    "owner": "DTCEntry",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "integrationLevel",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "pruefumfangName",
+                    "owner": "DTCEntry",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "pruefumfangName",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "series",
+                    "owner": "DTCEntry",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "series",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "shortVIN",
+                    "owner": "DTCEntry",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "shortVIN",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "testDuration",
+                    "owner": "DTCEntry",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "testDuration",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "testStand",
+                    "owner": "DTCEntry",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "testStand",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "testTime",
+                    "owner": "DTCEntry",
+                    "type": "number",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "testTime",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "time",
+                    "owner": "DTCEntry",
+                    "type": "number",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "time",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "werk",
+                    "owner": "DTCEntry",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "werk",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "saCode",
+                    "owner": "DTCEntry",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "saCode",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "_time",
+                    "owner": "BaseEvent",
+                    "type": "timestamp",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "_time",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "host",
+                    "owner": "BaseEvent",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "host",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "source",
+                    "owner": "BaseEvent",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "source",
+                    "comment": ""
+                },
+                {
+                    "fieldName": "sourcetype",
+                    "owner": "BaseEvent",
+                    "type": "string",
+                    "fieldSearch": "",
+                    "required": false,
+                    "multivalue": false,
+                    "hidden": false,
+                    "editable": true,
+                    "displayName": "sourcetype",
+                    "comment": ""
+                }
+            ],
+            "calculations": [
+                {
+                    "outputFields": [
+                        {
+                            "fieldName": "countryVariant",
+                            "owner": "DTCEntry",
+                            "type": "string",
+                            "fieldSearch": "",
+                            "required": false,
+                            "multivalue": false,
+                            "hidden": false,
+                            "editable": true,
+                            "displayName": "countryVariant",
+                            "comment": ""
+                        }
+                    ],
+                    "calculationID": "kr3pkc3sf6",
+                    "owner": "DTCEntry",
+                    "editable": true,
+                    "comment": "",
+                    "calculationType": "Eval",
+                    "expression": "coalesce(countryVariant, \"-\")"
+                }
+            ],
+            "constraints": [
+                {
+                    "search": "index=\"dtc_summary\"",
+                    "owner": "DTCEntry"
+                }
+            ],
+            "lineage": "DTCEntry"
+        }
+    ],
+    "objectNameList": [
+        "DTCEntry"
+    ]
+}

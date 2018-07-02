@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>IPSQ Recherche - Nacharbeit</title>
+    <link rel="shortcut icon" href="{{SPLUNKWEB_URL_PREFIX}}/static/img/favicon.ico" />
+        <link rel="stylesheet" type="text/css" href="/en-US/static/@264376.407/css/build/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="/en-US/static/@264376.407/css/build/pages/dashboard-simple-bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/iqp/dashboard.css" />
+    <link rel="stylesheet" type="text/css" media="all" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/iqp/ipsq_recherche_nacharbeit/css/db_ipsq_recherche_nacharbeit.css" />
+    <style type="text/css"> 
+.panel-title > #hide_button {
+    display: inline;
+    position: absolute;
+    right: 20px;
+    padding: 3px;
+}
+#panel_stat .refresh-time-indicator.pull-right.splunk-view.splunk-timeindicator,
+#panel_filt .refresh-time-indicator.pull-right.splunk-view.splunk-timeindicator {
+    right: 70px;
+}
+
+div.histogram_container {
+    display: inline-block;
+    width: 225px;
+    height: 350px;
+}
+
+div.histogram_container_long {
+    display: inline-block;
+    width: 675px;
+    height: 350px;
+}
+
+    </style>
+    <!--[if IE 7]><link rel="stylesheet" href="{{SPLUNKWEB_URL_PREFIX}}/static/css/sprites-ie7.css" /><![endif]-->
+</head>
+<body class="simplexml preload locale-en">
+<!-- 
+BEGIN LAYOUT
+This section contains the layout for the dashboard. Splunk uses proprietary
+styles in <div> tags, similar to Bootstrap's grid system. 
+-->
+<a class="navSkip" href="#navSkip" tabindex="1">Screen reader users, click here to skip the navigation bar</a>
+<div class="header splunk-header">
+        <div id="placeholder-splunk-bar">
+            <a href="{{SPLUNKWEB_URL_PREFIX}}/app/launcher/home" class="brand" title="splunk &gt; listen to your data">splunk<strong>&gt;</strong></a>
+        </div>
+            <div id="placeholder-app-bar"></div>
+</div>
+<a id="navSkip"></a>
+<div class="dashboard-body container-fluid main-section-body" data-role="main">
+    <div class="dashboard-header clearfix">
+        <h2>IPSQ Recherche - Nacharbeit</h2>
+        <p class="description"></p>
+    </div>
+    <div class="fieldset">
+        <div class="input input-timerangepicker" id="input1">
+            <label>Nacharbeitsdatum</label>
+        </div>
+        <div class="input input-dropdown" id="werkinput">
+            <label>Werk</label>
+        </div>
+    </div>
+    <div id="row0" class="dashboard-row dashboard-row0">
+        <div id="panel_filt" class="dashboard-cell" style="width: 100%;">
+            <div class="dashboard-panel clearfix">
+                <h2 class="panel-title i18n">Weitere Filter</h2>
+                <div class="fieldset">
+                    <div class="input input-text" id="input_freitext">
+                        <label>Freitextsuche</label>
+                    </div>
+                    <div class="input input-dropdown" id="input2">
+                        <label>saCode</label>
+                    </div>
+                    <div class="input input-dropdown" id="input3">
+                        <label>sxCode</label>
+                    </div>
+                    <div class="input input-text" id="input4">
+                        <label>Baureihe</label>
+                    </div>
+                    <div class="input input-text" id="input5">
+                        <label>I-Stufe</label>
+                    </div>
+                    <div class="input input-multiselect" id="input6">
+                        <label>shortVIN</label>
+                    </div>
+                    <div class="input input-text" id="input7">
+                        <label>Typschlüssel Nr</label>
+                    </div>
+                    <div class="input input-text" id="input8">
+                        <label>Merkmal Bezeichnung</label>
+                    </div>
+                    <div class="input input-text" id="input9">
+                        <label>NA Fehlerort Bezeichnung</label>
+                    </div>
+                    <div class="input input-text" id="input10">
+                        <label>NA Fehlerort Nr</label>
+                    </div>
+                    <div class="input input-text" id="input11">
+                        <label>NA Fehlerart Bezeichnung</label>
+                    </div>
+                    <div class="input input-text" id="input12">
+                        <label>NA Fehlerart Nr</label>
+                    </div>
+                    <div class="input input-text" id="input13">
+                        <label>NA Fehlerlage Bezeichnung</label>
+                    </div>
+                    <div class="input input-text" id="input14">
+                        <label>NA Taetigkeit Bezeichnung</label>
+                    </div>
+                    <div class="input input-text" id="input15">
+                        <label>PR Bemerkung und NA Bemerkung</label>
+                    </div>
+                    <div class="input input-text" id="input16">
+                        <label>NA Nacharbeiter ID</label>
+                    </div>
+                    <div class="input input-text" id="input17">
+                        <label>NA Schicht Bezeichnung</label>
+                    </div>
+                    <div class="input input-text" id="input18">
+                        <label>NA Leist Kostenstelle Nr</label>
+                    </div>
+                    <div class="input input-text" id="input19">
+                        <label>NA Leist Meisterbereich Nr</label>
+                    </div>
+                    <div class="input input-text" id="input_bel_kst">
+                        <label>NA Bel Kostenstelle Nr</label>
+                    </div>
+                    <div class="input input-text" id="input20">
+                        <label>NA Bel Meisterbereich Nr</label>
+                    </div>
+                    <div class="input input-text" id="input21">
+                        <label>NA Bel Produktionsbereich Nr</label>
+                    </div>
+                    <div class="input input-text" id="input22">
+                        <label>NA Nacharbeitsdauer</label>
+                    </div>
+                    <div class="input input-text" id="input23">
+                        <label>PR_NA Fehlertyp Bezeichnung</label>
+                    </div>
+                    <div class="input input-text" id="input24">
+                        <label>PR Fehlerprotokoll Teil 1</label>
+                    </div>
+                    <div class="input input-text" id="input25">
+                        <label>PR Fehlerprotokoll Teil 2</label>
+                    </div>
+                    <div class="input input-text" id="input26">
+                        <label>PR Fehlerprotokoll Teil 3</label>
+                    </div>
+                    <div class="input input-text" id="input27">
+                        <label>PR Fehlerprotokoll Teil 4</label>
+                    </div>
+                    <div class="input input-text" id="input28">
+                        <label>PR Station Nr</label>
+                    </div>
+                    <div class="input input-text" id="input29">
+                        <label>NA Station Bezeichnung</label>
+                    </div>
+                    <div class="input input-text" id="input30">
+                        <label>PR Prüf Nacharbeit BI</label>
+                    </div>
+                    <div class="input input-text" id="input31">
+                        <label>PR Prüfer ID</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="row1" class="dashboard-row dashboard-row1">
+        <div id="panel_stat" class="dashboard-cell" style="width: 100%;">
+            <div class="dashboard-panel clearfix">
+                <h2 class="panel-title i18n" >Statistische Auswertungen</h2>
+                <div class="fieldset">
+                    <div class="histogram_container">
+                            <div id="element1" class="dashboard-element single" >
+                                <div class="panel-head">
+                                    <h3 class="i18n">Anzahl durchgefuehrte Nacharbeiten</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                            <div id="element2" class="dashboard-element single">
+                                <div class="panel-head">
+                                    <h3 class="i18n">Anzahl der betroffenen Fahrzeuge</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element3" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">Haeufigste Fahrzeuge</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element4" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">Haeufigste Baureihen</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element5" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">Typschluessel</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element6" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">I-Stufe</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element7" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">Merkmal Bezeichnung</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element8" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">NA Bel Produktionsbereich Nr</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element9" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">NA Fehlerlage Bezeichnung</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element10" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">NA Taetigkeit Bezeichnung</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element11" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">NA Schicht Bezeichnung</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element12" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">NA Leist Kostenstelle Nr</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element13" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">NA Leist Meisterbereich Nr</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element_bel_kst" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">NA Bel Kostenstelle Nr</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element14" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">NA Bel Meisterbereich Nr</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element15" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">NA Fehlerort Bezeichnung</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element16" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">PR_NA Fehlertyp Bezeichnung</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element17" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">PR Station Nr</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element18" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">NA Station Bezeichnung</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element19" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">PR Pruef Nacharbeit BI</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element_nadauer" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">NA Nacharbeitsdauer in Minuten (wenn > 0)</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element_f1datum" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">F1 Datum</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element_prdatum" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">Pruefdatum</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element_nadatum" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">Nacharbeitsdatum</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element_prdiff" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">Dauer zwischen Pruefung und Nacharbeit in Stunden</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    <div class="histogram_container_long">
+                            <div id="element_f1diff" class="dashboard-element chart">
+                                <div class="panel-head">
+                                    <h3 class="i18n">Dauer zwischen F1-Datum und Nacharbeit in Stunden</h3>
+                                </div>
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                    
+                    <div class="histogram_container_long" style="width: 100%;float:left;">
+                            <div class="panel-head">
+                                <h3 class="i18n">Bemerkungen</h3>
+                            </div>
+                            <div id="tagcloud" class="dashboard-element">
+                                <div class="panel-body"></div>
+                            </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="row6" class="dashboard-row dashboard-row6">
+        <div id="panel18" class="dashboard-cell" style="width: 100%;">
+            <div class="dashboard-panel clearfix">
+                <div class="panel-element-row">
+                    <div id="ipsq_table" class="dashboard-element table" style="width: 100%">
+                        <div class="panel-head">
+                            <h3 class="i18n">Ausschleuser und Nacharbeiten</h3>
+                        </div>
+                    
+                        <div class="panel-body"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="footer"></div>
+
+<!-- 
+END LAYOUT
+-->
+
+<script src="{{SPLUNKWEB_URL_PREFIX}}/config?autoload=1"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/js/i18n.js"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/i18ncatalog?autoload=1"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/js/build/simplexml.min/config.js"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/iqp/dashboard.js" type="text/javascript"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/iqp/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js" type="text/javascript"></script>
+<script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/iqp/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit_ready.js" type="text/javascript"></script>
+</body>
+</html>

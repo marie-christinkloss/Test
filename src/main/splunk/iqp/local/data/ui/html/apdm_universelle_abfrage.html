@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>APDM Universelle Abfrage</title>
+    <link rel="shortcut icon" href="/en-US/static/@E5DE6AA89387C3F24866F0F0D5B919CF936DD6E5B5FD97CCEDF67A79CEC7E655.703/img/favicon.ico"
+    />
+    <link rel="stylesheet" type="text/css" href="{{SPLUNKWEB_URL_PREFIX}}/static/build/css/bootstrap-enterprise.css" />
+    <link rel="stylesheet" type="text/css" href="{{SPLUNKWEB_URL_PREFIX}}/static/css/build/pages/dashboard-simple-bootstrap.min.css"
+    />
+    <link rel="stylesheet" type="text/css" media="all" href="{{SPLUNKWEB_URL_PREFIX}}/static/app/iqp/dashboard.css" />
+	<style type="text/css">
+#UniApdmSubTable .table-chrome.table-striped>tbody>tr.odd>td {
+	background-color: #fff!important;
+}
+    </style>
+</head>
+
+<body class="simplexml preload locale-en" data-splunk-version="6.5.1" data-splunk-product="enterprise">
+    <!--
+BEGIN LAYOUT
+This section contains the layout for the dashboard. Splunk uses proprietary
+styles in <div> tags, similar to Bootstrap's grid system.
+-->
+    <header>
+        <a class="navSkip" href="#navSkip" tabindex="1">Screen reader users, click here to skip the navigation bar</a>
+        <div class="header splunk-header">
+            <div id="placeholder-splunk-bar">
+                <a href="{{SPLUNKWEB_URL_PREFIX}}/app/launcher/home" class="brand" title="splunk &gt; listen to your data">splunk<strong>&gt;</strong></a>
+            </div>
+            <div id="placeholder-app-bar"></div>
+        </div>
+        <a id="navSkip"></a>
+    </header>
+    <div class="dashboard-body container-fluid main-section-body" data-role="main">
+        <div class="dashboard-header clearfix">
+            <h2>APDM Universelle Abfrage</h2>
+        </div>
+        <div class="fieldset">
+            <div class="input input-timerangepicker" id="filt_time">
+                <label>Datum des Testschrittes</label>
+            </div>
+            <div class="input input-multiselect" id="filt_baureihe">
+                <label>Baureihe</label>
+            </div>
+            <div class="input input-multiselect" id="filt_integrationLevel">
+                <label>I-Stufe</label>
+            </div>
+
+            <!--
+            <div class="input input-text" id="filt_shortVIN">
+                <label>shortVIN</label>
+            </div>-->
+            <div class="input input-multiselect" id="filt_system">
+                <label>System</label>
+            </div>
+            <div class="input input-multiselect" id="filt_pruefumfang">
+                <label>Prüfumfang</label>
+            </div>
+            <div class="input input-multiselect" id="filt_pruefling">
+                <label>Prüfling</label>
+            </div>
+            <div class="input input-text" id="filt_pruefprozedur">
+                <label>Prüfprozedur</label>
+            </div>
+            <div class="input input-multiselect" id="filt_sgbd">
+                <label>SGBD</label>
+            </div>
+            <div class="input input-text" id="filt_errorCode">
+                <label>Error Code (Dec)</label>
+            </div>
+            <div class="input input-text" id="filt_errorText">
+                <label>Error Text</label>
+            </div>
+            <div class="input input-text" id="filt_hinweisText">
+                <label>Hinweistext</label>
+            </div>
+            <div class="input input-text" id="filt_resultData">
+                <label>Result Data</label>
+            </div>
+            <div class="input input-multiselect" id="filt_saCode_or">
+                <label>Fahrzeug enthält saCode</label>
+            </div>
+            <div class="input input-multiselect" id="filt_saCode_not">
+                <label>Fahrzeug enthält saCode nicht</label>
+            </div>
+            <div class="input input-multiselect" id="filt_werk">
+                <label>Werkfilter</label>
+            </div>
+            <div id="element4" class="dashboard-element html">
+                <div class="panel-body html">
+                    <label>Short VIN</label>
+                    <textarea class="input input-text" id="input_shortVIN" style="width:206px">*</textarea>
+                </div>
+            </div>
+            <div id="div_buttons" class="html">
+                <div class="panel-body html">
+                    <div class="form-submit" id="submit_button" style="display:inline;"><button id="i_submit_btn" class="btn btn-primary submit">Submit</button></div><span></span>
+                    <div id="reset_button" style="display:inline;"><button class="btn i18n">Filter zuruecksetzen</button></div>
+                </div>
+            </div>
+        </div>
+        <div id="row1" class="dashboard-row dashboard-row1">
+            <div id="panel1" class="dashboard-cell" style="width: 100%;">
+                <div class="dashboard-panel clearfix">
+                    <h2 class="panel-title i18n">Einstellungen fuer Tabelle</h2>
+                    <div class="fieldset">	
+                        <div class="input input-dropdown" id="dropdown_group_by">
+                            <label>Gruppierung</label>
+                        </div>
+                        <div class="input input-multiselect" id="selectColumns">
+                            <label>Spalten ausblenden</label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id = "row_table" class ="dashboard-row dashboard-row_table" data-depends="$base_search_filters_set$">
+            <div id="panel_table" class="dashboard-cell" style="width=100%;">
+                <div class="dashboard-panel clearfix">
+                    <div class="panel-element-row">
+                        <div id="table_no_groups" class="dashboard-element table" style="width: 100%">
+                            <div class="panel-body"></div>
+                        </div>
+                        <div id="table_groups" class="dashboard-element table" style="width: 100%">
+                            <div class="panel-body"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--
+END LAYOUT
+-->
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/config?autoload=1"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/js/i18n.js"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/i18ncatalog?autoload=1"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/build/simplexml/index.js"></script>
+	<script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/iqp/dashboard.js" type="text/javascript"></script>
+    <script src="{{SPLUNKWEB_URL_PREFIX}}/static/app/iqp/apdm_universelle_abfrage/js/db_apdm_universelle_abfrage.js" type="text/javascript"></script>
+</body>
+
+</html>

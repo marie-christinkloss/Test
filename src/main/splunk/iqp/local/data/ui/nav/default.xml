@@ -1,0 +1,39 @@
+<nav search_view="search" color="#5379af">
+  <view name="startseite" default='true' />
+  <view name="search" />
+  <view name="data_models" />
+  <view name="reports" />
+  <view name="alerts" />
+  <view name="dashboards" />
+  <collection label="Auswertungen">
+    <collection label="APDM">
+        <a href="apdm_themenspeicher">APDM Themenspeicher</a>
+        <a href="apdm_recherche_thema">APDM Recherche - Thema</a>
+        <view name="apdm_recherche_fahrzeug" />
+        <view name="apdm_recherche_istufe" />
+        <a href="ipsq_recherche_nacharbeit">IPSQ Recherche - Nacharbeit</a>
+        <view name="apdm_historie_7_tage" />
+        <view name="apdm_historie_4_wochen" />
+        <a href="apdm_universelle_abfrage">APDM Universelle Abfrage</a>
+        <view name="d2_apdm_dtc_analyse_ceasar_in_splunk" />
+    </collection>
+    <collection label="FT FWS">
+      <a href="ft_fws_kolagen_uebersicht">FT FWS: K0-Lagen</a>
+      <a href="ft_fws_auswertung_fahrwerksdaten">FT FWS: Auswertung Fahrwerksdaten</a>
+      <a href="ft_fws_auswertung_hinterachsdaten">FT FWS: Auswertung Hinterachsanlagendaten</a>
+      <view name="ft_fws_offsetmanager" />
+      <view name="ft_fws_spursturzkurven" />
+      <view name="ft_fws_timelogging" />
+      <view name="ft_fws_appender" />
+    </collection>
+    <collection label="QLearning">
+      <view name="ql_fehlerklassen" />
+      <view name="ql_fehlerbilder" />
+      <view name="ql_nacharbeitsempfehlung" />
+    </collection>
+  </collection>
+  <!--<collection label="Visualisierungen">
+    <view name="io_rate_pruefumfaenge_fdp" />
+    <view name="ionio" />
+  </collection>-->
+</nav>

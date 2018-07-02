@@ -1,0 +1,16 @@
+#tbl_hist_7d .sorts {
+    min-width: 16px;
+}
+
+#tbl_hist_7d .sorts > a {
+    writing-mode: tb-rl;
+	white-space: nowrap;
+}
+
+#tbl_hist_7d .sorts > a > i.icon-sorts {
+    /*transform: rotate(90 deg);*/
+    margin-top: 5px;
+    min-height: 16px;
+    min-width: 11px;
+    writing-mode: lr-tb;
+}

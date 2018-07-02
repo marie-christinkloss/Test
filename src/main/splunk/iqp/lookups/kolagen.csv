@@ -1,0 +1,40 @@
+topic,resultName,alias_de,alias_en,position,sortNr,id
+rama,Gesamtspur vorne vor Einstellung,G-Spur VA VE,total toe FA BA,V,1,1
+rama,Gesamtspur hinten vor Einstellung,G-Spur HA VE,total toe RA BA,H,2,2
+rama,Fahrachswinkel vor Einstellung,FA-Winkel VE,grap angle BA,H,3,3
+rama,Sturz vorne links vor Einstellung,Sturz VL VE,chamber FL BA,V,4,4
+rama,Sturz vorne rechts vor Einstellung,Sturz VR VE,chamber FR BA,V,5,5
+rama,Sturzdifferenz vorne vor Einstellung,Sturzdifferenz VA VE,chamber-different FA BA,V,6,6
+rama,Sturz hinten links vor Einstellung,Sturz HL VE,chamber RL BA,H,7,7
+rama,Sturz hinten rechts vor Einstellung,Sturz HR VE,chamber RR BA,H,8,8
+rama,Sturzdifferenz hinten vor Einstellung,Sturzdifferenz HA VE,chamber-different RA BA,H,9,9
+rama,Spur vorne links vor Einstellung,Spur VL VE,toe FL BA,V,10,10
+rama,Spur vorne rechts vor Einstellung,Spur VR VE,toe FR BA,V,11,11
+rama,Spur hinten links vor Einstellung,Spur HL VE,toe RL BA,H,12,12
+rama,Spur hinten rechts vor Einstellung,Spur HR VE,toe RR BA,H,13,13
+linie,Gesamtspur vorne,G-Spur VA,total toe FA,V,1,100
+linie,Gesamtspur hinten,G-Spur HA,total toe RA,H,2,101
+linie,Fahrachswinkel,FA-Winkel,grap angle,H,3,102
+linie,Sturz vorne links,Sturz VL,chamber FL,V,4,103
+linie,Sturz vorne rechts,Sturz VR,chamber FR,V,5,104
+linie,Sturzdifferenz vorne,Sturzdifferenz VA,chamber-different FA,V,6,105
+linie,Sturz hinten links,Sturz HL,chamber RL,H,7,106
+linie,Sturz hinten rechts,Sturz HR,chamber RR,H,8,107
+linie,Sturzdifferenz hinten,Sturzdifferenz HA,chamber-different RA,H,9,108
+linie,Spur vorne links,Spur VL,toe FL,V,10,109
+linie,Spur vorne rechts,Spur VR,toe FR,V,11,110
+linie,Spur hinten links,Spur HL,toe RL,H,12,111
+linie,Spur hinten rechts,Spur HR,toe RR,H,13,112
+hrs,Gesamtspur vorne HSR,G-Spur VA HSR,total toe FA HSR,V,1,200
+hrs,Gesamtspur hinten HSR,G-Spur HA HSR,total toe RA HSR,H,2,201
+hrs,Fahrachswinkel HSR,FA-Winkel HSR,grap angle HSR,H,3,202
+hrs,Sturz vorne links HSR,Sturz VL HSR,chamber FL HSR,V,4,203
+hrs,Sturz vorne rechts HSR,Sturz VR HSR,chamber FR HSR,V,5,204
+hrs,Sturzdifferenz_V HSR,Sturzdifferenz VA HSR,chamber-different FA HSR,V,6,205
+hrs,Sturz hinten links HSR,Sturz HL HSR,chamber RL HSR,H,7,206
+hrs,Sturz hinten rechts HSR,Sturz HR HSR,chamber RR HSR,H,8,207
+hrs,Sturzdifferenz_H HSR,Sturzdifferenz HA HSR,chamber-different RA HSR,H,9,208
+hrs,Spur vorne links HSR,Spur VL HSR,toe FL HSR,V,10,209
+hrs,Spur vorne rechts HSR,Spur VR HSR,toe FR HSR,V,11,210
+hrs,Spur hinten links HSR,Spur HL HSR,toe RL HSR,H,12,211
+hrs,Spur hinten rechts HSR,Spur HR HSR,toe RR HSR,H,13,212

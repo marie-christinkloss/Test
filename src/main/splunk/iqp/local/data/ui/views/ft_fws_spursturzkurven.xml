@@ -1,0 +1,469 @@
+<form script="fws_spur_sturz_kurven/js/spurSturzKurven.js" stylesheet="RDS_TA_html2pdf:html2pdf.css">
+  <init>
+    <set token="i18n_Spur" i18ntag="">Spur</set>
+    <set token="i18n_Sturz" i18ntag="">Sturz</set>
+    <set token="i18n_Hoehe" i18ntag="">Hoehe</set>
+    <unset token="tok_shortVINs"></unset>
+    <unset token="tok_wheelAlignmentCodes"></unset>
+    <unset token="tok_series2"></unset>
+    <unset token="tok_testStands"></unset>
+  </init>
+  <label>FT FWS: Spur/Sturz-Kurven</label>
+  <search id="filterBase">
+    <query>index="iqp_spur_sturz_kurven_summary" $tok_werk$
+| stats count by shortVIN wheelAlignmentCode series testStand | fields - count
+    </query>
+    <earliest>$tok_dateTime.earliest$</earliest>
+    <latest>$tok_dateTime.latest$</latest>
+    <sampleRatio>1</sampleRatio>
+  </search>
+  <search id="spurSturzBase">
+    <query>index="iqp_spur_sturz_kurven_summary" $tok_shortVINs$ $tok_testStands$ $tok_series2$ $tok_wheelAlignmentCodes$
+| append [ 
+| inputlookup lkup_spurSturz_sollwerte | search $tok_series2$ $tok_wheelAlignmentCodes$
+| fields series wheelAlignmentCode axle setting TTS_* TLD_* TP_*
+| rename 
+  TLD_description AS Umkehrpunkt 
+  TP_pointNumber AS PruefTime
+| eval SpurHL=if(setting="Spur" AND axle="HA", TP_xValue, null()), SpurHR=SpurHL
+| eval SpurVL=if(setting="Spur" AND axle="VA", TP_xValue * -1, null()), SpurVR=SpurVL
+| eval SturzHL=if(setting="Sturz" AND axle="HA", TP_xValue, null()), SturzHR=SturzHL
+| eval SturzVL=if(setting="Sturz" AND axle="VA", TP_xValue, null()), SturzVR=SturzVL
+| eval SpHoeheHL=if(setting="Spur" AND axle="HA", TP_yValue * -1, null()), SpHoeheHR=SpHoeheHL
+| eval SpHoeheVL=if(setting="Spur" AND axle="VA", TP_yValue * -1, null()), SpHoeheVR=SpHoeheVL
+| eval StHoeheHL=if(setting="Sturz" AND axle="HA", TP_yValue * -1, null()), StHoeheHR=StHoeheHL
+| eval StHoeheVL=if(setting="Sturz" AND axle="VA", TP_yValue * -1, null()), StHoeheVR=StHoeheVL
+| stats
+    max(Spur*) AS Spur*
+    max(SpHoehe*) AS SpHoehe*
+    max(Sturz*) AS Sturz*
+    max(StHoehe*) AS StHoehe*
+  by PruefTime series wheelAlignmentCode Umkehrpunkt
+| sort Umkehrpunkt PruefTime
+]
+| fields PruefTime Umkehrpunkt wheelalignmentCode SpurVL SpurVR SpurHL SpurHR SturzVL SturzVR SturzHL SturzHR SpHoeheVL SpHoeheVR SpHoeheHL SpHoeheHR StHoeheVL StHoeheVR StHoeheHL StHoeheHR</query>
+    <earliest>$tok_dateTime.earliest$</earliest>
+    <latest>$tok_dateTime.latest$</latest>
+    <sampleRatio>1</sampleRatio>
+  </search>
+  <search id="metaInfo" base="filterBase">
+    <query> | search $tok_shortVIN$ testStand="$tok_testStand$" $tok_series$ $tok_wheelAlignmentCode$
+| eval shortVINs="shortVIN=\"" + shortVIN + "\""
+| eval wheelAlignmentCodes="wheelAlignmentCode=\"*" + wheelAlignmentCode + "*\""
+| eval series2="series=\"" + series + "\""
+| eval testStands="testStand=\"" + testStand + "\""
+| fields shortVINs wheelAlignmentCodes series2 testStands
+| stats
+  values(*) As *
+| eval shortVINs="(" + mvjoin(shortVINs, " OR ") + ")"
+| eval wheelAlignmentCodes="(" + mvjoin(wheelAlignmentCodes, " OR ") + ")"
+| eval series2="(" + mvjoin(series2, " OR ") + ")"
+| eval testStands="(" + mvjoin(testStands, " OR ") + ")"
+</query>
+    <finalized>
+      <condition match=" 'job.resultCount' != 0 ">
+        <set token="tok_shortVINs">$result.shortVINs$</set>
+        <set token="tok_wheelAlignmentCodes">$result.wheelAlignmentCodes$</set>
+        <set token="tok_series2">$result.series2$</set>
+        <set token="tok_testStands">$result.testStands$</set>
+      </condition>
+    </finalized>
+  </search>
+  <fieldset submitButton="false">
+    <input type="time" token="tok_dateTime">
+      <label>Zeit</label>
+      <default>
+        <earliest>-30d@d</earliest>
+        <latest>now</latest>
+      </default>
+    </input>
+    <input id="input_werk" type="dropdown" token="tok_werk">
+      <label>Werk</label>
+      <prefix>werk="</prefix>
+      <suffix>"</suffix>
+    </input>
+    <input id="input_testStand" type="dropdown" token="tok_testStand">
+      <label>Pruefstand</label>
+      <search base="filterBase">
+        <query>fields testStand | dedup testStand | sort testStand</query>
+      </search>
+      <fieldForLabel>testStand</fieldForLabel>
+      <fieldForValue>testStand</fieldForValue>
+    </input>
+    <input id="input_series" type="multiselect" token="tok_series">
+      <label>Baureihe</label>
+      <choice value="*">Alle</choice>
+      <search base="filterBase">
+        <query>search testStand="$tok_testStand$" $tok_wheelAlignmentCode$ | fields series  | dedup series | sort series</query>
+      </search>
+      <default>*</default>
+      <prefix>(</prefix>
+      <suffix>)</suffix>
+      <valuePrefix>series="</valuePrefix>
+      <valueSuffix>"</valueSuffix>
+      <delimiter> OR </delimiter>
+      <fieldForLabel>series</fieldForLabel>
+      <fieldForValue>series</fieldForValue>
+    </input>
+    <input id="input_wheelAlignmentCode" type="multiselect" token="tok_wheelAlignmentCode">
+      <label>Spurcode</label>
+      <choice value="*">Alle</choice>
+      <search base="filterBase">
+        <query>search testStand="$tok_testStand$" $tok_series$ | fields wheelAlignmentCode  | dedup wheelAlignmentCode | sort wheelAlignmentCode</query>
+      </search>
+      <default>*</default>
+      <prefix>(</prefix>
+      <suffix>)</suffix>
+      <valuePrefix>wheelAlignmentCode="</valuePrefix>
+      <valueSuffix>"</valueSuffix>
+      <delimiter> OR </delimiter>
+      <fieldForLabel>wheelAlignmentCode</fieldForLabel>
+      <fieldForValue>wheelAlignmentCode</fieldForValue>
+    </input>
+    <input id="input_shortVIN" type="multiselect" token="tok_shortVIN">
+      <label>FGNR</label>
+      <search base="filterBase">
+        <query>search testStand="$tok_testStand$" $tok_series$ $tok_wheelAlignmentCode$ | fields shortVIN  | dedup shortVIN | sort -shortVIN</query>
+      </search>
+      <fieldForLabel>shortVIN</fieldForLabel>
+      <fieldForValue>shortVIN</fieldForValue>
+      <choice value="*">Alle</choice>
+      <prefix>(</prefix>
+      <suffix>)</suffix>
+      <valuePrefix>shortVIN="</valuePrefix>
+      <valueSuffix>"</valueSuffix>
+      <delimiter> OR  </delimiter>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <title>Spur (Vorne/Links)</title>
+      <viz type="viz_plotly_curvedline_app.toeChamberCurve">
+        <search base="spurSturzBase">
+          <query>
+| table Umkehrpunkt SpurVL SpHoeheVL PruefTime
+| rename 
+  SpurVL AS Spur
+  SpHoeheVL AS SpHoehe
+| sort Umkehrpunkt PruefTime Spur SpHoehe 
+| eventstats
+    median(eval(if(Umkehrpunkt="KO-Lage", SpHoehe, null()))) AS tmp_K0Hoehe
+    median(eval(if(Umkehrpunkt="KO-Lage", Spur, null()))) AS tmp_K0Spur
+| eval tmp_diffHoehe=SpHoehe-tmp_K0Hoehe, tmp_diffSpur=Spur-tmp_K0Spur 
+| eval tmp_gt_0=if(tmp_diffHoehe&gt;=0,1,0), tmp_lt_0=if(tmp_diffHoehe&lt;=0,1,0)
+| eventstats 
+    max(tmp_gt_0) AS tmp_gt_0
+    max(tmp_lt_0) AS tmp_lt_0
+  by Umkehrpunkt
+| eval tmp_diffHoehe=abs(tmp_diffHoehe)
+| eventstats
+    min(eval(if(tmp_gt_0>0 AND tmp_lt_0>0, tmp_diffHoehe, null()))) AS tmp_minDiffHoehe
+  by Umkehrpunkt
+| eval 
+  tmp_shortVINMatch=if(match(Umkehrpunkt, "^[\w\d]{7}"), 1, 0),
+  Umkehrpunkt=if(tmp_shortVINMatch=1,substr(Umkehrpunkt,0,7),Umkehrpunkt)
+| eventstats 
+    avg(eval(if(tmp_shortVINMatch=1 AND tmp_diffHoehe=tmp_minDiffHoehe, tmp_diffSpur, null()))) AS tmp_avgdiffSpur
+  by Umkehrpunkt
+| eval Spur=if(tmp_shortVINMatch=1 AND isNotNull(tmp_avgdiffSpur), Spur-tmp_avgdiffSpur, Spur)
+| fields - tmp_* 
+| rename 
+  Spur AS "$i18n_Spur$"
+  SpHoehe AS "$i18n_Hoehe$"
+          </query>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="height">785</option>
+      </viz>
+    </panel>
+    <panel>
+      <title>Spur (Vorne/Rechts)</title>
+      <viz type="viz_plotly_curvedline_app.toeChamberCurve">
+        <search base="spurSturzBase">
+          <query>
+| table Umkehrpunkt SpurVR SpHoeheVR PruefTime
+| rename 
+  SpurVR AS Spur
+  SpHoeheVR AS SpHoehe
+| sort Umkehrpunkt PruefTime Spur SpHoehe 
+| eventstats
+    median(eval(if(Umkehrpunkt="KO-Lage", SpHoehe, null()))) AS tmp_K0Hoehe
+    median(eval(if(Umkehrpunkt="KO-Lage", Spur, null()))) AS tmp_K0Spur
+| eval tmp_diffHoehe=SpHoehe-tmp_K0Hoehe, tmp_diffSpur=Spur-tmp_K0Spur 
+| eval tmp_gt_0=if(tmp_diffHoehe&gt;=0,1,0), tmp_lt_0=if(tmp_diffHoehe&lt;=0,1,0)
+| eventstats 
+    max(tmp_gt_0) AS tmp_gt_0
+    max(tmp_lt_0) AS tmp_lt_0
+  by Umkehrpunkt
+| eval tmp_diffHoehe=abs(tmp_diffHoehe)
+| eventstats
+    min(eval(if(tmp_gt_0>0 AND tmp_lt_0>0, tmp_diffHoehe, null()))) AS tmp_minDiffHoehe
+  by Umkehrpunkt
+| eval 
+  tmp_shortVINMatch=if(match(Umkehrpunkt, "^[\w\d]{7}"), 1, 0),
+  Umkehrpunkt=if(tmp_shortVINMatch=1,substr(Umkehrpunkt,0,7),Umkehrpunkt)
+| eventstats 
+    avg(eval(if(tmp_shortVINMatch=1 AND tmp_diffHoehe=tmp_minDiffHoehe, tmp_diffSpur, null()))) AS tmp_avgdiffSpur
+  by Umkehrpunkt
+| eval Spur=if(tmp_shortVINMatch=1 AND isNotNull(tmp_avgdiffSpur), Spur-tmp_avgdiffSpur, Spur)
+| fields - tmp_* 
+| rename 
+  Spur AS "$i18n_Spur$"
+  SpHoehe AS "$i18n_Hoehe$"
+          </query>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="height">785</option>
+      </viz>
+      <html>
+        <span class="pageBreak" />
+      </html>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Spur (Hinten/Links)</title>
+      <viz type="viz_plotly_curvedline_app.toeChamberCurve">
+        <search base="spurSturzBase">
+          <query>
+| table Umkehrpunkt SpurHL SpHoeheHL PruefTime
+| rename 
+  SpurHL AS Spur
+  SpHoeheHL AS SpHoehe
+| sort Umkehrpunkt PruefTime Spur SpHoehe 
+| eventstats
+    median(eval(if(Umkehrpunkt="KO-Lage", SpHoehe, null()))) AS tmp_K0Hoehe
+    median(eval(if(Umkehrpunkt="KO-Lage", Spur, null()))) AS tmp_K0Spur
+| eval tmp_diffHoehe=SpHoehe-tmp_K0Hoehe, tmp_diffSpur=Spur-tmp_K0Spur 
+| eval tmp_gt_0=if(tmp_diffHoehe&gt;=0,1,0), tmp_lt_0=if(tmp_diffHoehe&lt;=0,1,0)
+| eventstats 
+    max(tmp_gt_0) AS tmp_gt_0
+    max(tmp_lt_0) AS tmp_lt_0
+  by Umkehrpunkt
+| eval tmp_diffHoehe=abs(tmp_diffHoehe)
+| eventstats
+    min(eval(if(tmp_gt_0>0 AND tmp_lt_0>0, tmp_diffHoehe, null()))) AS tmp_minDiffHoehe
+  by Umkehrpunkt
+| eval 
+  tmp_shortVINMatch=if(match(Umkehrpunkt, "^[\w\d]{7}"), 1, 0),
+  Umkehrpunkt=if(tmp_shortVINMatch=1,substr(Umkehrpunkt,0,7),Umkehrpunkt)
+| eventstats 
+    avg(eval(if(tmp_shortVINMatch=1 AND tmp_diffHoehe=tmp_minDiffHoehe, tmp_diffSpur, null()))) AS tmp_avgdiffSpur
+  by Umkehrpunkt
+| eval Spur=if(tmp_shortVINMatch=1 AND isNotNull(tmp_avgdiffSpur), Spur-tmp_avgdiffSpur, Spur)
+| fields - tmp_* 
+| rename 
+  Spur AS "$i18n_Spur$"
+  SpHoehe AS "$i18n_Hoehe$"
+          </query>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="height">785</option>
+      </viz>
+    </panel>
+    <panel>
+      <title>Spur (Hinten/Rechts)</title>
+      <viz type="viz_plotly_curvedline_app.toeChamberCurve">
+        <search base="spurSturzBase">
+          <query>
+| table Umkehrpunkt SpurHR SpHoeheHR PruefTime
+| rename 
+  SpurHR AS Spur
+  SpHoeheHR AS SpHoehe
+| sort Umkehrpunkt PruefTime Spur SpHoehe 
+| eventstats
+    median(eval(if(Umkehrpunkt="KO-Lage", SpHoehe, null()))) AS tmp_K0Hoehe
+    median(eval(if(Umkehrpunkt="KO-Lage", Spur, null()))) AS tmp_K0Spur
+| eval tmp_diffHoehe=SpHoehe-tmp_K0Hoehe, tmp_diffSpur=Spur-tmp_K0Spur 
+| eval tmp_gt_0=if(tmp_diffHoehe&gt;=0,1,0), tmp_lt_0=if(tmp_diffHoehe&lt;=0,1,0)
+| eventstats 
+    max(tmp_gt_0) AS tmp_gt_0
+    max(tmp_lt_0) AS tmp_lt_0
+  by Umkehrpunkt
+| eval tmp_diffHoehe=abs(tmp_diffHoehe)
+| eventstats
+    min(eval(if(tmp_gt_0>0 AND tmp_lt_0>0, tmp_diffHoehe, null()))) AS tmp_minDiffHoehe
+  by Umkehrpunkt
+| eval 
+  tmp_shortVINMatch=if(match(Umkehrpunkt, "^[\w\d]{7}"), 1, 0),
+  Umkehrpunkt=if(tmp_shortVINMatch=1,substr(Umkehrpunkt,0,7),Umkehrpunkt)
+| eventstats 
+    avg(eval(if(tmp_shortVINMatch=1 AND tmp_diffHoehe=tmp_minDiffHoehe, tmp_diffSpur, null()))) AS tmp_avgdiffSpur
+  by Umkehrpunkt
+| eval Spur=if(tmp_shortVINMatch=1 AND isNotNull(tmp_avgdiffSpur), Spur-tmp_avgdiffSpur, Spur)
+| fields - tmp_* 
+| rename 
+  Spur AS "$i18n_Spur$"
+  SpHoehe AS "$i18n_Hoehe$"
+          </query>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="height">785</option>
+      </viz>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Sturz (Vorne/Links)</title>
+      <viz type="viz_plotly_curvedline_app.toeChamberCurve">
+        <search base="spurSturzBase">
+          <query>
+| table Umkehrpunkt SturzVL StHoeheVL PruefTime
+| rename 
+  SturzVL AS Sturz
+  StHoeheVL AS StHoehe
+| sort Umkehrpunkt PruefTime Sturz StHoehe 
+| eventstats
+    median(eval(if(Umkehrpunkt="KO-Lage", StHoehe, null()))) AS tmp_K0Hoehe
+    median(eval(if(Umkehrpunkt="KO-Lage", Sturz, null()))) AS tmp_K0Sturz
+| eval tmp_diffHoehe=StHoehe-tmp_K0Hoehe, tmp_diffSturz=Sturz-tmp_K0Sturz 
+| eval tmp_gt_0=if(tmp_diffHoehe&gt;=0,1,0), tmp_lt_0=if(tmp_diffHoehe&lt;=0,1,0)
+| eventstats 
+    max(tmp_gt_0) AS tmp_gt_0
+    max(tmp_lt_0) AS tmp_lt_0
+  by Umkehrpunkt
+| eval tmp_diffHoehe=abs(tmp_diffHoehe)
+| eventstats
+    min(eval(if(tmp_gt_0>0 AND tmp_lt_0>0, tmp_diffHoehe, null()))) AS tmp_minDiffHoehe
+  by Umkehrpunkt
+| eval 
+  tmp_shortVINMatch=if(match(Umkehrpunkt, "^[\w\d]{7}"), 1, 0),
+  Umkehrpunkt=if(tmp_shortVINMatch=1,substr(Umkehrpunkt,0,7),Umkehrpunkt)
+| eventstats 
+    avg(eval(if(tmp_shortVINMatch=1 AND tmp_diffHoehe=tmp_minDiffHoehe, tmp_diffSturz, null()))) AS tmp_avgdiffSturz
+  by Umkehrpunkt
+| eval Sturz=if(tmp_shortVINMatch=1 AND isNotNull(tmp_avgdiffSturz), Sturz-tmp_avgdiffSturz, Sturz)
+| fields - tmp_* 
+| rename 
+  Sturz AS "$i18n_Sturz$"
+  StHoehe AS "$i18n_Hoehe$"
+          </query>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="height">785</option>
+      </viz>
+    </panel>
+    <panel>
+      <title>Sturz (Vorne/Rechts)</title>
+      <viz type="viz_plotly_curvedline_app.toeChamberCurve">
+        <search base="spurSturzBase">
+          <query>
+| table Umkehrpunkt SturzVR StHoeheVR PruefTime
+| rename 
+  SturzVR AS Sturz
+  StHoeheVR AS StHoehe
+| sort Umkehrpunkt PruefTime Sturz StHoehe 
+| eventstats
+    median(eval(if(Umkehrpunkt="KO-Lage", StHoehe, null()))) AS tmp_K0Hoehe
+    median(eval(if(Umkehrpunkt="KO-Lage", Sturz, null()))) AS tmp_K0Sturz
+| eval tmp_diffHoehe=StHoehe-tmp_K0Hoehe, tmp_diffSturz=Sturz-tmp_K0Sturz 
+| eval tmp_gt_0=if(tmp_diffHoehe&gt;=0,1,0), tmp_lt_0=if(tmp_diffHoehe&lt;=0,1,0)
+| eventstats 
+    max(tmp_gt_0) AS tmp_gt_0
+    max(tmp_lt_0) AS tmp_lt_0
+  by Umkehrpunkt
+| eval tmp_diffHoehe=abs(tmp_diffHoehe)
+| eventstats
+    min(eval(if(tmp_gt_0>0 AND tmp_lt_0>0, tmp_diffHoehe, null()))) AS tmp_minDiffHoehe
+  by Umkehrpunkt
+| eval 
+  tmp_shortVINMatch=if(match(Umkehrpunkt, "^[\w\d]{7}"), 1, 0),
+  Umkehrpunkt=if(tmp_shortVINMatch=1,substr(Umkehrpunkt,0,7),Umkehrpunkt)
+| eventstats 
+    avg(eval(if(tmp_shortVINMatch=1 AND tmp_diffHoehe=tmp_minDiffHoehe, tmp_diffSturz, null()))) AS tmp_avgdiffSturz
+  by Umkehrpunkt
+| eval Sturz=if(tmp_shortVINMatch=1 AND isNotNull(tmp_avgdiffSturz), Sturz-tmp_avgdiffSturz, Sturz)
+| fields - tmp_* 
+| rename 
+  Sturz AS "$i18n_Sturz$"
+  StHoehe AS "$i18n_Hoehe$"
+          </query>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="height">785</option>
+      </viz>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Sturz (Hinten/Links)</title>
+      <viz type="viz_plotly_curvedline_app.toeChamberCurve">
+        <search base="spurSturzBase">
+          <query>
+| table Umkehrpunkt SturzHL StHoeheHL PruefTime
+| rename 
+  SturzHL AS Sturz
+  StHoeheHL AS StHoehe
+| sort Umkehrpunkt PruefTime Sturz StHoehe 
+| eventstats
+    median(eval(if(Umkehrpunkt="KO-Lage", StHoehe, null()))) AS tmp_K0Hoehe
+    median(eval(if(Umkehrpunkt="KO-Lage", Sturz, null()))) AS tmp_K0Sturz
+| eval tmp_diffHoehe=StHoehe-tmp_K0Hoehe, tmp_diffSturz=Sturz-tmp_K0Sturz 
+| eval tmp_gt_0=if(tmp_diffHoehe&gt;=0,1,0), tmp_lt_0=if(tmp_diffHoehe&lt;=0,1,0)
+| eventstats 
+    max(tmp_gt_0) AS tmp_gt_0
+    max(tmp_lt_0) AS tmp_lt_0
+  by Umkehrpunkt
+| eval tmp_diffHoehe=abs(tmp_diffHoehe)
+| eventstats
+    min(eval(if(tmp_gt_0>0 AND tmp_lt_0>0, tmp_diffHoehe, null()))) AS tmp_minDiffHoehe
+  by Umkehrpunkt
+| eval 
+  tmp_shortVINMatch=if(match(Umkehrpunkt, "^[\w\d]{7}"), 1, 0),
+  Umkehrpunkt=if(tmp_shortVINMatch=1,substr(Umkehrpunkt,0,7),Umkehrpunkt)
+| eventstats 
+    avg(eval(if(tmp_shortVINMatch=1 AND tmp_diffHoehe=tmp_minDiffHoehe, tmp_diffSturz, null()))) AS tmp_avgdiffSturz
+  by Umkehrpunkt
+| eval Sturz=if(tmp_shortVINMatch=1 AND isNotNull(tmp_avgdiffSturz), Sturz-tmp_avgdiffSturz, Sturz)
+| fields - tmp_* 
+| rename 
+  Sturz AS "$i18n_Sturz$"
+  StHoehe AS "$i18n_Hoehe$"
+          </query>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="height">785</option>
+      </viz>
+    </panel>
+    <panel>
+      <title>Sturz (Hinten/Rechts)</title>
+      <viz type="viz_plotly_curvedline_app.toeChamberCurve">
+        <search base="spurSturzBase">
+          <query>
+| table Umkehrpunkt SturzHR StHoeheHR PruefTime
+| rename 
+  SturzHR AS Sturz
+  StHoeheHR AS StHoehe
+| sort Umkehrpunkt PruefTime Sturz StHoehe 
+| eventstats
+    median(eval(if(Umkehrpunkt="KO-Lage", StHoehe, null()))) AS tmp_K0Hoehe
+    median(eval(if(Umkehrpunkt="KO-Lage", Sturz, null()))) AS tmp_K0Sturz
+| eval tmp_diffHoehe=StHoehe-tmp_K0Hoehe, tmp_diffSturz=Sturz-tmp_K0Sturz 
+| eval tmp_gt_0=if(tmp_diffHoehe&gt;=0,1,0), tmp_lt_0=if(tmp_diffHoehe&lt;=0,1,0)
+| eventstats 
+    max(tmp_gt_0) AS tmp_gt_0
+    max(tmp_lt_0) AS tmp_lt_0
+  by Umkehrpunkt
+| eval tmp_diffHoehe=abs(tmp_diffHoehe)
+| eventstats
+    min(eval(if(tmp_gt_0>0 AND tmp_lt_0>0, tmp_diffHoehe, null()))) AS tmp_minDiffHoehe
+  by Umkehrpunkt
+| eval 
+  tmp_shortVINMatch=if(match(Umkehrpunkt, "^[\w\d]{7}"), 1, 0),
+  Umkehrpunkt=if(tmp_shortVINMatch=1,substr(Umkehrpunkt,0,7),Umkehrpunkt)
+| eventstats 
+    avg(eval(if(tmp_shortVINMatch=1 AND tmp_diffHoehe=tmp_minDiffHoehe, tmp_diffSturz, null()))) AS tmp_avgdiffSturz
+  by Umkehrpunkt
+| eval Sturz=if(tmp_shortVINMatch=1 AND isNotNull(tmp_avgdiffSturz), Sturz-tmp_avgdiffSturz, Sturz)
+| fields - tmp_* 
+| rename 
+  Sturz AS "$i18n_Sturz$"
+  StHoehe AS "$i18n_Hoehe$"
+          </query>
+        </search>
+        <option name="drilldown">none</option>
+        <option name="height">785</option>
+      </viz>
+    </panel>
+  </row>
+</form> 

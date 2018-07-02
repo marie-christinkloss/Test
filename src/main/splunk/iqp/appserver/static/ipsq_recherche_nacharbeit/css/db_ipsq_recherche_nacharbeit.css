@@ -1,0 +1,34 @@
+#ipsq_table .sorts {
+    min-width: 16px;
+}
+
+#ipsq_table .sorts > a {
+    writing-mode: tb-rl;
+}
+
+#ipsq_table .sorts > a > i.icon-sorts {
+    transform: rotate(-90deg);
+    writing-mode: tb-lr;
+    margin-top: 5px;
+}
+
+.fixed  {
+  position: fixed;
+  top:0;
+  left:0;
+  width: 100%; 
+}
+
+/*
+* Funktioniert, aber dann sind die Spaltenköpfe (thead) nicht genau über den Spalten (tbody)
+table tbody, table thead
+{
+    display: block;
+}
+
+table tbody 
+{
+   overflow: auto;
+   height: 500px;
+}
+*/

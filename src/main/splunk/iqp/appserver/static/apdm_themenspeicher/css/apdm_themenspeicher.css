@@ -1,0 +1,100 @@
+#element1 .sorts {
+    min-width: 16px;
+}
+
+#element1 .sorts > a {
+    writing-mode: tb-rl;
+}
+
+#element1 .sorts > a > i.icon-sorts {
+    transform: rotate(-90deg);
+    writing-mode: tb-lr;
+    margin-top: 5px;
+}
+
+#add_et_modal {
+    margin-right: 20px;
+}
+
+td[data-cell-index="11"],
+td[data-cell-index="12"],
+td[data-cell-index="13"],
+td[data-cell-index="14"],
+td[data-cell-index="15"],
+td[data-cell-index="16"],
+td[data-cell-index="17"],
+td[data-cell-index="18"] {
+    color: black !important;
+    cursor: text !important;
+}
+
+td[data-cell-index="11"] > .multivalue-subcell,
+td[data-cell-index="12"] > .multivalue-subcell,
+td[data-cell-index="13"] > .multivalue-subcell,
+td[data-cell-index="14"] > .multivalue-subcell,
+td[data-cell-index="15"] > .multivalue-subcell,
+td[data-cell-index="16"] > .multivalue-subcell,
+td[data-cell-index="17"] > .multivalue-subcell,
+td[data-cell-index="18"] > .multivalue-subcell {
+    color: black !important;
+    cursor: text !important;
+}
+
+
+.iqp_comment {
+    display: inline-block;
+}
+
+.iqp_report {
+    display: inline-table;
+}
+.iqp_entry {
+    display: table-row;
+}
+.iqp_label {
+    color: #555;
+    display: table-cell;
+    padding: 4px 8px;
+    text-align: right;
+}
+.iqp_value {
+    display: table-cell;
+    padding: 4px 8px;
+}
+
+.tooltip-inner {
+    
+max-width: 400px;
+position: relative;
+text-align: left;
+font-size: 14px;
+font-weight: normal;
+overflow:visible !important;
+
+}    
+
+#comment_err_all_fields_empty.modal {
+    display: none;
+}
+#comment_ok_message.modal {
+    display: none;
+}
+#comment_delete_ok_message.modal {
+    display: none;
+}
+
+
+#add_et_modal {
+    margin-left: inherit;
+    width: inherit;
+    left: inherit;
+}
+
+#element1 #statistics.lazy-view-container {
+    padding-top: 0;
+}
+
+#element1 .header-table-docked {
+    right: 20px !important;
+    left: 20px !important;
+}

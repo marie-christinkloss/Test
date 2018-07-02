@@ -1,0 +1,87 @@
+<dashboard>
+  <label>FT FWS: Offsetmanager Ausreißer Details</label>
+  <row>
+    <panel>
+      <title>$outlierCnt$ Ausreißer von "$resultName$" am Prüftstand "$testStand$"</title>
+      <table depends="$AW_VA_HA$">
+        <search>
+          <query>| loadjob $jobid$
+| where IS_AW_OUT=1 AND (IS_REF=0 AND IS_VE=0) AND testStand_iL="$testStand$" AND shortResultName="$resultName$"
+| eval outlierRange=outlierUg + " ≤ Δ ≤ " + outlierOg, outlierLimitMax=cnt_AW_Rama-outlierAwLimit, outlierOverall=outlierAwCntUG+outlierAwCntOG
+| table testStand_iL shortVIN wheelAlignmentCode shortResultName outlierAwL cnt_AW_Linie outlierR cnt_AW_Rama outlierAwDiff outlierAwValues outlierAwDiffValues outlierRange outlierAwCntUG outlierAwCntOG outlierOverall outlierLimitMax
+| sort testStand_iL shortVIN
+| rename
+  testStand_iL AS Prüfstand
+  shortVIN AS FGNR
+  wheelAlignmentCode AS Spurcode
+  shortResultName AS Ergebnisname
+  outlierR AS "Rama (R)"
+  outlierAwL AS "Linie (L)"
+  outlierAwDiff AS "Diff_L-R"
+  outlierAwValues AS "Diff_L-R_n"
+  outlierAwDiffValues AS "Abstand"
+  outlierRange AS "Bereich"
+  outlierAwCntUG AS "Anz zu niedrig"
+  outlierAwCntOG AS "Anz zu hoch"
+  outlierOverall AS "gesamt Ausreißer"
+  outlierLimitMax AS "max Ausreißer"
+  cnt_AW_Linie AS "Anz L"
+  cnt_AW_Rama AS "Anz R"</query>
+          <earliest>-30d@d</earliest>
+          <latest>now</latest>
+          <sampleRatio>1</sampleRatio>
+          <finalized>
+            <set token="outlierCnt">$job.resultCount$</set>
+          </finalized>
+        </search>
+        <option name="count">100</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">false</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+      </table>
+      <table depends="$EW_HA$">
+        <search>
+          <query>| loadjob $jobid$
+| where IS_AW_OUT=1 AND (IS_REF=0 AND IS_VE=0) AND testStand_iL="$testStand$" AND shortResultName="$resultName$" AND hinterTestStand="$hinterTestStand$"
+| eval outlierRange=outlierUg + " ≤ Δ ≤ " + outlierOg, outlierLimitMax=cnt_AW_Rama-outlierAwLimit, outlierOverall=outlierAwCntUG+outlierAwCntOG
+| table hinterTestStand testStand_iL shortVIN wheelAlignmentCode shortResultName outlierAwL cnt_AW_Linie outlierR cnt_AW_Rama outlierAwDiff outlierAwValues outlierAwDiffValues outlierRange outlierAwCntUG outlierAwCntOG outlierOverall outlierLimitMax
+| sort hinterTestStand testStand_iL shortVIN
+| rename
+  hinterTestStand AS Hinterachsanlage
+  testStand_iL AS Prüfstand
+  shortVIN AS FGNR
+  wheelAlignmentCode AS Spurcode
+  shortResultName AS Ergebnisname
+  outlierR AS "Rama (R)"
+  outlierAwL AS "Linie (L)"
+  outlierAwDiff AS "Diff_L-R"
+  outlierAwValues AS "Diff_L-R_n"
+  outlierAwDiffValues AS "Abstand"
+  outlierRange AS "Bereich"
+  outlierAwCntUG AS "Anz zu niedrig"
+  outlierAwCntOG AS "Anz zu hoch"
+  outlierOverall AS "gesamt Ausreißer"
+  outlierLimitMax AS "max Ausreißer"
+  cnt_AW_Linie AS "Anz L"
+  cnt_AW_Rama AS "Anz R"</query>
+          <earliest>-30d@d</earliest>
+          <latest>now</latest>
+          <sampleRatio>1</sampleRatio>
+          <finalized>
+            <set token="outlierCnt">$job.resultCount$</set>
+          </finalized>
+        </search>
+        <option name="count">100</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">false</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+      </table>
+    </panel>
+  </row>
+</dashboard>

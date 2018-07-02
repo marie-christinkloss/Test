@@ -1,0 +1,135 @@
+<form stylesheet="Startseite/css/contents.css" script="Startseite/js/start.js">
+  <label>Startseite</label>
+  <fieldset submitButton="false"></fieldset>
+
+
+  <row>
+    <panel>
+      <title>Verfügbare Dashboards</title>
+      <html>
+  <div class="nav-bar-slide">
+      <ul class="nav nav-list affix-top">
+          <li class="active"><a href="#Alle_Werke">Allgemein</a>
+          </li>
+          <li class=""><a href="#Alle_Werke-Details">Alle Werke - Details</a>
+          </li>
+          <li class=""><a href="#Werksspezifisch">Werksspezifisch</a>
+          </li>
+      </ul>
+      <ul class="nav nav-list affix-top">
+          <li class="active"><a>Startseiten Werke</a>
+          </li>
+          <li class=""><a href="hauptseite_tr451">Regensburg</a>
+          </li>
+      </ul>
+      <ul class="nav nav-list affix-top">
+          <li class="active"><a>Startseiten Fachteams E/E - Prüf- und Prozessplanung</a></li>
+          <li class=""><a href="startseite_eeppl__ftantrieb">Antrieb</a></li>
+          <li class=""><a href="startseite_eeppl__fteediagnose_1">E/E-Diagnose 1</a></li>
+          <li class=""><a href="startseite_eeppl__fteediagnose_2">E/E-Diagnose 2</a></li>
+          <li class=""><a href="startseite_eeppl__fteemontagesysteme">E/E-Montagesysteme</a></li>
+          <li class=""><a href="startseite_eeppl__ftfahrwerk_scheinwerfer_fas">Fahrwerk, Scheinwerfer, FAS</a></li>
+          <li class=""><a href="startseite_eeppl__ftfinishnacharbeit">Finish / Nacharbeit</a></li>
+          <li class=""><a href="startseite_eeppl__ftfzgkonfiguration">Fzg-Konfiguration</a></li>
+          <li class=""><a href="startseite_eeppl__ftinteraktionenergie">Interaktion / Energie</a></li>
+          <li class=""><a href="startseite_eeppl__ftprozessintegration">Prozessintegration</a></li>
+      </ul>
+  </div>
+  <div class="example-contents">
+    <section id="Alle_Werke">
+        <h2>Alle Werke</h2>
+        <div class="">
+            <a class="example" href="apdm_themenspeicher">
+              <img src="/static/app/iqp/apdm_themenspeicher/preview/apdm_themenspeicher.png" />
+                <div class="content">
+                    <h3>APDM Themenspeicher</h3>
+                    <p>Analyse der häufigsten APDM Fehler und Absprünge in IPSQ und Fehlerprotokolle</p>
+                </div>
+            </a>
+            <a class="example" href="ipsq_recherche_nacharbeit">
+              <img src="/static/app/iqp/ipsq_recherche_nacharbeit/preview/ausschleusser-offlinena.png" />
+                <div class="content">
+                    <h3>IPSQ Recherche - Nacharbeit</h3>
+                    <p>Analyse von fehlerhaften Prüfungen und Nacharbeiten aus dem IPS-Q</p>
+                </div>
+            </a>
+            <a class="example" href="apdm_universelle_abfrage">
+              <img src="/static/app/iqp/apdm_universelle_abfrage/preview/apdm_universelle_abfrage.png" />
+                <div class="content">
+                    <h3>Universelle APDM Abfrage</h3>
+                    <p>Vollständige Analyse von APDM-Ergebnisdaten</p>
+                </div>
+            </a>
+            <a class="example" href="ft_fws_kolagen_uebersicht">
+              <img src="/static/app/iqp/fws_k0_lagen/preview/kolagen_uebersicht.png" />
+                <div class="content">
+                    <h3>KO-Lagen Übersicht</h3>
+                    <p>Analyse von Prozessdaten der Fahrwerk-Einstellung</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section id="Alle_Werke-Details">
+        <h2>Alle Werke - Details</h2>
+        <div class="">
+            <a class="example" href="apdm_recherche_istufe">
+              <img src="/static/app/iqp/apdm_recherche_istufe/preview/apdm_istufe.png" />
+                <div class="content">
+                    <h3>APDM Recherche - I-Stufe</h3>
+                    <p>Detailrecherche nach I-Stufe über APDM</p>
+                </div>
+            </a>
+            <a class="example" href="apdm_recherche_fahrzeug">
+              <img src="/static/app/iqp/apdm_recherche_fahrzeug/preview/apdm_fahrzeug.png" />
+                <div class="content">
+                    <h3>APDM Recherche - Fahrzeug</h3>
+                    <p>Detailrecherche nach VIN über APDM und IPSQ</p>
+                </div>
+            </a>
+           <a class="example" href="apdm_recherche_thema">
+              <img src="/static/app/iqp/apdm_recherche_thema/preview/apdm_recherche_thema_150px.png" />
+                <div class="content">
+                    <h3>APDM Recherche - Thema</h3>
+                    <p>Analyse eines Fehlers im APDM mit zugehörigen Nacharbeiten</p>
+                </div>
+            </a>
+            <a class="example" href="apdm_historie_7_tage">
+              <img src="/static/app/iqp/apdm_historie/preview/apdm_7tage.png" />
+                <div class="content">
+                    <h3>APDM Themenspeicher - letzte 7 Tage</h3>
+                    <p>Analyse von APDM Daten und Absprünge in IPSQ und Fehlerprotokolle</p>
+                </div>
+            </a>
+            <a class="example" href="apdm_historie_4_wochen">
+              <img src="/static/app/iqp/apdm_historie/preview/apdm_4wochen.png" />
+                <div class="content">
+                    <h3>APDM Themenspeicher - letzte 4 Wochen</h3>
+                    <p>Analyse von APDM Daten und Absprünge in IPSQ und Fehlerprotokolle</p>
+                </div>
+            </a>
+            <a class="example" href="ionio">
+              <img src="/static/app/iqp/ionio.png" />
+                <div class="content">
+                  <h3>Inline/Offline Nacharbeit</h3>
+                    <p>Analyse von Direktläufern zu nachgearbeiteten Fahrzeugen.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+    <section id="Werksspezifisch">
+        <h2>Werksspezifisch</h2>
+        <div class="">
+            <a class="example" href="io_rate_pruefumfaenge_fdp">
+              <img src="/static/app/iqp/dlq.png" />
+                <div class="content">
+                    <h3>I.O. Rate Prüfumfänge</h3>
+                    <p>Anzeige der Direktläuferquote (DLQ) in der Montage und anschließenden Prüfstandslinie.</p>
+                </div>
+            </a>
+        </div>
+    </section>
+  </div>
+			</html>
+    </panel>
+  </row>
+</form>

@@ -1,0 +1,196 @@
+<form script="ionio.js"> 
+  <label>Inline/Offline Nacharbeit</label>
+  <search id="direktlaeufer_search">
+    <query>| tstats prestats=true
+       max(_time)
+       from datamodel=APDM_TestResults
+       where (nodename = TestResult)
+       (TestResult.werk="$werkfilter$")
+       (TestResult.errorCount&gt;0)
+       (TestResult.inline = true)
+       (TestResult.systemName="Cascade")
+       $tok_pruefumfang$
+       groupby "TestResult.shortVIN" "TestResult.pruefumfangName" "TestResult.testStand" "TestResult.werk" 
+| eval fehlerhaft=1  
+| tstats prestats=true append=true
+       max(_time)
+       from datamodel=APDM_TestResults
+       where (nodename = TestResult)
+       (TestResult.werk="$werkfilter$")
+       (TestResult.errorCount=0)
+       (TestResult.inline = true)
+       (TestResult.systemName="Cascade")
+       $tok_pruefumfang$
+       groupby "TestResult.shortVIN" "TestResult.pruefumfangName" "TestResult.testStand" "TestResult.werk" 
+| fillnull value=0 fehlerhaft 
+| rename "TestResult.shortVIN" as shortVIN, "TestResult.pruefumfangName" as pruefumfangName, "TestResult.testStand" as testStand, "TestResult.werk" as werk $order_data_join$  
+| stats max(_time) as max_time by shortVIN werk pruefumfangName testStand fehlerhaft 
+| eval max_nio_time=if(fehlerhaft==1,max_time,null())
+| eval max_io_time=if(fehlerhaft==0,max_time,null()) 
+| stats max(max_nio_time) as max_nio_time,  max(max_io_time) as max_io_time,  max(max_time) as _time by shortVIN pruefumfangName 
+| eval direktlaeufer=if(isnull(max_nio_time),"IO",if(max_io_time&gt;max_nio_time,"inlineNA","offlineNA"))</query>
+    <earliest>$Zeitauswahl.earliest$</earliest>
+    <latest>$Zeitauswahl.latest$</latest>
+  </search>
+  <search base="direktlaeufer_search" id="direktlaeufer_stats">
+    <query></query>
+  </search>
+  <fieldset submitButton="false" autoRun="false">
+    <input type="time" searchWhenChanged="true" token="Zeitauswahl">
+      <label></label>
+      <default>
+        <earliest>-7d@h</earliest>
+        <latest>now</latest>
+      </default>
+    </input>
+    <input type="multiselect" searchWhenChanged="true" token="tok_pruefumfang">
+      <label>Prüfumfang</label>
+      <choice value="*">Alle</choice>
+      <default>*</default>
+      <prefix>(</prefix>
+      <suffix>)</suffix>
+      <valuePrefix>TestResult.pruefumfangName="</valuePrefix>
+      <valueSuffix>"</valueSuffix>
+      <delimiter> OR </delimiter>
+      <search>
+        <query>| tstats values(TestResult.pruefumfangName) AS pruefumfangName from datamodel=APDM_TestResults where (nodename = TestResult) (TestResult.werk=$werkfilter$) (earliest=$Zeitauswahl.earliest$) (latest=$Zeitauswahl.latest$)  | mvexpand pruefumfangName</query>
+      </search>
+      <fieldForLabel>pruefumfangName</fieldForLabel>
+      <fieldForValue>pruefumfangName</fieldForValue>
+    </input>
+    <input type="multiselect" searchWhenChanged="true" token="tok_serie">
+      <label>Baureihe</label>
+      <valuePrefix>OrderData.series="</valuePrefix>
+      <valueSuffix>"</valueSuffix>
+      <delimiter> OR </delimiter>
+      <choice value="*">Alle</choice>
+      <choice value="F20&quot; OR OrderData.series=&quot;F21&quot; OR OrderData.series=&quot;F33&quot; OR OrderData.series=&quot;F30&quot; OR OrderData.series=&quot;F83&quot; OR OrderData.series=&quot;F80">LK</choice>
+      <choice value="F46&quot; OR OrderData.series=&quot;F48">LU</choice>
+      <prefix>(</prefix>
+      <suffix>)</suffix>
+      <search>
+        <query>| tstats values(OrderData.series) AS series from datamodel=APDM_OrderData_Events where (nodename = OrderData) (TestResult.werk=$werkfilter$)  (earliest=$order_data_base_search_earliest$) (latest=$order_data_base_search_latest$) | mvexpand series</query>
+      </search>
+      <fieldForLabel>series</fieldForLabel>
+      <fieldForValue>series</fieldForValue>
+      <default>*</default>
+    </input>
+    <input type="dropdown" token="werkfilter" searchWhenChanged="true" id="werkinput">
+      <label>Werk</label>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <chart>
+        <title>IO/NIO</title>
+        <search base="direktlaeufer_search">
+          <query>stats count as insgesamt, count(eval(direktlaeufer="IO")) as IO, count(eval(direktlaeufer="inlineNA")) as inlineNA,count(eval(direktlaeufer="offlineNA")) as offlineNA by pruefumfangName | eval "Direktläufer Quote"=IO/insgesamt |eval "Quote Direktläufer und inlineNA"=(IO+inlineNA)/insgesamt | fields pruefumfangName,inlineNA,offlineNA, "Direktläufer Quote", "Quote Direktläufer und inlineNA"</query>
+        </search>
+        <option name="charting.chart">area</option>
+        <option name="charting.axisY2.enabled">true</option>
+        <option name="charting.axisLabelsX.majorLabelStyle.overflowMode">ellipsisNone</option>
+        <option name="charting.axisLabelsX.majorLabelStyle.rotation">0</option>
+        <option name="charting.axisTitleX.visibility">visible</option>
+        <option name="charting.axisTitleY.visibility">visible</option>
+        <option name="charting.axisTitleY2.visibility">visible</option>
+        <option name="charting.axisX.scale">linear</option>
+        <option name="charting.axisY.scale">linear</option>
+        <option name="charting.axisY2.scale">inherit</option>
+        <option name="charting.chart.bubbleMaximumSize">50</option>
+        <option name="charting.chart.bubbleMinimumSize">10</option>
+        <option name="charting.chart.bubbleSizeBy">area</option>
+        <option name="charting.chart.nullValueMode">gaps</option>
+        <option name="charting.chart.sliceCollapsingThreshold">0.01</option>
+        <option name="charting.chart.stackMode">default</option>
+        <option name="charting.chart.style">shiny</option>
+        <option name="charting.drilldown">all</option>
+        <drilldown>
+          <set token="tok_pruefumfang_detail">$row.pruefumfangName$</set>
+          <!--<set token="form.tokPruefumfang">$row.pruefumfangName$</set>-->
+          <!--<set token="tok_shortVIN">$row.shortVIN$</set>-->
+          <set token="tok_direktlaeufer">$click.name2$</set>
+          <!--<set token="form.tok_direktlaeufer">$click.name2$</set>-->
+        </drilldown>
+        <option name="charting.layout.splitSeries">0</option>
+        <option name="charting.legend.labelStyle.overflowMode">ellipsisMiddle</option>
+        <option name="charting.legend.placement">right</option>
+        <option name="wrap">true</option>
+        <option name="rowNumbers">false</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="charting.chart.overlayFields">"Direktläufer Quote","Quote Direktläufer und inlineNA"</option>
+        <option name="charting.axisY2.maximumNumber">1</option>
+        <option name="charting.axisLabelsY2.majorUnit">0.1</option>
+        <option name="charting.axisY2.minimumNumber">0.7</option>
+        <option name="charting.axisTitleY.text">Anzahl</option>
+        <option name="charting.axisTitleY2.text">Quote</option>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <chart>
+        <title>Inline Nacharbeit</title>
+        <search base="direktlaeufer_search">
+          <query>stats count as insgesamt, count(eval(direktlaeufer="IO")) as IO, count(eval(direktlaeufer="inlineNA")) as inlineNA,count(eval(direktlaeufer="offlineNA")) as offlineNA by pruefumfangName
+| fields pruefumfangName,inlineNA, offlineNA</query>
+        </search>
+        <option name="charting.chart">column</option>
+        <option name="charting.axisY2.enabled">false</option>
+        <option name="charting.axisLabelsX.majorLabelStyle.overflowMode">ellipsisNone</option>
+        <option name="charting.axisLabelsX.majorLabelStyle.rotation">0</option>
+        <option name="charting.axisTitleX.visibility">visible</option>
+        <option name="charting.axisTitleY.visibility">visible</option>
+        <option name="charting.axisTitleY2.visibility">visible</option>
+        <option name="charting.axisX.scale">linear</option>
+        <option name="charting.axisY.scale">linear</option>
+        <option name="charting.axisY2.scale">inherit</option>
+        <option name="charting.chart.bubbleMaximumSize">50</option>
+        <option name="charting.chart.bubbleMinimumSize">10</option>
+        <option name="charting.chart.bubbleSizeBy">area</option>
+        <option name="charting.chart.nullValueMode">gaps</option>
+        <option name="charting.chart.sliceCollapsingThreshold">0.01</option>
+        <option name="charting.chart.stackMode">stacked</option>
+        <option name="charting.chart.style">shiny</option>
+        <option name="charting.drilldown">all</option>
+        <option name="charting.layout.splitSeries">0</option>
+        <option name="charting.legend.labelStyle.overflowMode">ellipsisMiddle</option>
+        <option name="charting.legend.placement">right</option>
+        <drilldown>
+          <set depends="$row.pruefumfangName$" token="tok_pruefumfang_detail">$row.pruefumfangName$</set>
+          <set token="tok_direktlaeufer">$click.name2$</set>
+        </drilldown>
+      </chart>
+    </panel>
+  </row>
+  <row>
+    <panel depends="$tok_pruefumfang_detail$">
+      <title>Details zu $tok_pruefumfang_detail$</title>
+      <input type="dropdown" token="direktlaeufer" searchWhenChanged="true">
+        <label>Direktläufer</label>
+        <choice value="*">Alle</choice>
+        <choice value="IO">in Ordnung</choice>
+        <choice value="inlineNA">inlineNA</choice>
+        <choice value="offlineNA">offlineNA</choice>
+        <default>*</default>
+      </input>
+      <table>
+        <title>Details/FGNR</title>
+        <search base="direktlaeufer_search">
+          <query>search pruefumfangName=$tok_pruefumfang_detail$ | fields - _time | fields shortVIN,pruefumfangName,direktlaeufer
+| search direktlaeufer=$direktlaeufer$
+| rename pruefumfangName AS Prüfumfang, direktlaeufer AS Direktläufer</query>
+        </search>
+        <option name="wrap">undefined</option>
+        <option name="rowNumbers">undefined</option>
+        <option name="drilldown">row</option>
+        <drilldown target="My new Window">
+          <link>
+            <![CDATA[/app/iqp/ipsq_recherche_nacharbeit?form.shortVIN=$row.shortVIN$&form.pruefdatum.earliest=$Zeitauswahl.earliest$&form.pruefdatum.latest=$Zeitauswahl.latest$&form.werkfilter=*&werkfilter=*]]>
+          </link>
+        </drilldown>
+        <option name="dataOverlayMode">none</option>
+        <option name="count">10</option>
+      </table>
+    </panel>
+  </row>
+</form>

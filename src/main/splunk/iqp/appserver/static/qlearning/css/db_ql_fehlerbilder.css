@@ -1,0 +1,13 @@
+.modal { 
+    display: none;
+}
+.panel-title > #hide_button {
+    display: inline;
+    position: absolute;
+    right: 20px;
+    padding: 3px;
+    top: 6px;
+}
+#saved_error_patterns .fieldset.editable.hide-label.hidden.empty {
+    display: none !important;
+}

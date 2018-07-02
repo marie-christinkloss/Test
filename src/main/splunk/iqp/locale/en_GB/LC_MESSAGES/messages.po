@@ -1,0 +1,3687 @@
+# Translations template for PROJECT.
+# Copyright (C) 2017 ORGANIZATION
+# This file is distributed under the same license as the PROJECT project.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2017.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: PROJECT VERSION\n"
+"Report-Msgid-Bugs-To: EMAIL@ADDRESS\n"
+"POT-Creation-Date: 2017-11-15 15:12+0100\n"
+"PO-Revision-Date: 2017-11-15 15:13+0100\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: en_US\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 0.9.4\n"
+"X-Generator: Poedit 2.0.4\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#. label
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/db_apdm_historie_letzte_4_wochen.js:64
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/db_apdm_historie_letzte_7_tage.js:49
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Appender/js/appender.js:346
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Fahrwerksdaten/js/fahrwerksdaten.js:542
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Hinterachsanlagendaten/js/HAAdaten.js:539
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/inputs.js:325
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/inputs.js:355
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:156
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:164
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:160
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/comment.js:136
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_historie_4_wochen.xml:8
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_historie_7_tage.xml:8
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:3
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/appender.xml:111
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:31
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:5
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:43
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:244
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:292
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:5
+msgid "Pruefumfang"
+msgstr "Test Scope"
+
+#. label
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/db_apdm_historie_letzte_4_wochen.js:65
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/db_apdm_historie_letzte_7_tage.js:50
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:145
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:166
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:162
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/comment.js:138
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_historie_4_wochen.xml:16
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_historie_7_tage.xml:16
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:49
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:8
+msgid "Pruefprozedur"
+msgstr "Test Procedure"
+
+#. label
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/db_apdm_historie_letzte_4_wochen.js:66
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/db_apdm_historie_letzte_7_tage.js:51
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:159
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:165
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:161
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/comment.js:137
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_historie_4_wochen.xml:12
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_historie_7_tage.xml:12
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:7
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:46
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:7
+msgid "Pruefling"
+msgstr "Test Object"
+
+#. label
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/db_apdm_historie_letzte_4_wochen.js:67
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/db_apdm_historie_letzte_7_tage.js:52
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:161
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:167
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:163
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/comment.js:139
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_historie_4_wochen.xml:20
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_historie_7_tage.xml:20
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:16
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:26
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:183
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:44
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:50
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:10
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:52
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getvins.xml:35
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:9
+msgid "SGBD"
+msgstr "SGBD"
+
+#. label
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/db_apdm_historie_letzte_4_wochen.js:68
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/db_apdm_historie_letzte_7_tage.js:53
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:146
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:169
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:165
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/comment.js:140
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_historie_4_wochen.xml:24
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_historie_7_tage.xml:24
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:55
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getvins.xml:38
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:14
+msgid "Error Code (Dec)"
+msgstr "Error Code (Dec)"
+
+#. label
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/db_apdm_historie_letzte_4_wochen.js:69
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/db_apdm_historie_letzte_7_tage.js:54
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:147
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:171
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:168
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/comment.js:141
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_historie_4_wochen.xml:28
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_historie_7_tage.xml:28
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:16
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:58
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getvins.xml:41
+msgid "Result Data"
+msgstr "Result Data"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/db_ql_fehlerbilder.js:55
+msgid "Fehlerbild Speichern"
+msgstr "Save Error Pattern"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/db_ql_fehlerbilder.js:56
+msgid "Kurzbeschreibung des Fehlers"
+msgstr "Short description of error"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/db_ql_fehlerbilder.js:57
+msgid "Das Fehlerbild wurde gespeichert."
+msgstr "The error pattern was saved."
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/db_ql_fehlerbilder.js:58
+msgid "Ein Fehlerbild mit dieser Beschreibung ist bereits gespeichert!"
+msgstr "An error pattern with this description is already stored!"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/db_ql_nacharbeitsempfehlung.js:44
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_fahrzeug/js/apdm_recherche_fahrzeug.js:39
+msgid "source"
+msgstr "source"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Appender/js/appender.js:76
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/DTC/js/step_marker.js:21
+msgid "mark"
+msgstr "mark"
+
+#. input/choice
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Appender/js/appender.js:140
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Appender/js/appender.js:215
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Appender/js/appender.js:284
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:257
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__istufe.xml:49
+msgid "OK"
+msgstr "OK"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Appender/js/appender.js:200
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Appender/js/appender.js:272
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Appender/js/appender.js:332
+msgid "Abbrechen"
+msgstr "Cancel"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Appender/js/appender.js:203
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/appender.xml:3
+msgid "Hinzufuegen"
+msgstr "Add"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Appender/js/appender.js:275
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/comment.js:144
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/appender.xml:4
+msgid "Bearbeiten"
+msgstr "Edit"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Appender/js/appender.js:335
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/appender.xml:5
+msgid "Entfernen"
+msgstr "Remove"
+
+#. set
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Appender/js/appender.js:342
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Fahrwerksdaten/js/fahrwerksdaten.js:1022
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Hinterachsanlagendaten/js/HAAdaten.js:1000
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/dashboard.js:183
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/dashboard.js:496
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/dashboard.js:787
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/dashboard.js:795
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:494
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:679
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:716
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:154
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:153
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:172
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:147
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:5
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:66
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__istufe.xml:8
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/appender.xml:74
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:7
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:110
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:283
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:6
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:8
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:35
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:24
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:110
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:121
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:6
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:143
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:161
+msgid "FGNR"
+msgstr "Short VIN"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Appender/js/appender.js:344
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:171
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:128
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/appender.xml:92
+msgid "Systemname"
+msgstr "Systemname"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Appender/js/appender.js:348
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:164
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/appender.xml:9
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:53
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:12
+msgid "Ergebnisname"
+msgstr "Result Name"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Appender/js/appender.js:367
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Appender/js/appender.js:372
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Appender/js/appender.js:377
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Hinterachsanlagendaten/js/HAAdaten.js:937
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Hinterachsanlagendaten/js/HAAdaten.js:998
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:23
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/appender.xml:10
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:20
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:13
+msgid "Ergebniswert"
+msgstr "Result Value"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Appender/js/appender.js:369
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Appender/js/appender.js:374
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Appender/js/appender.js:379
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/appender.xml:11
+msgid "Einheit"
+msgstr "Unit"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/DTC/js/db_uebersicht.js:33
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/DTC/js/db_uebersicht.js:90
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:4
+msgid "Analyse"
+msgstr "Analysis"
+
+#. label
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Fahrwerksdaten/js/fahrwerksdaten.js:466
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Hinterachsanlagendaten/js/HAAdaten.js:463
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/inputs.js:44
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:175
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:179
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/appender.xml:62
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:193
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:22
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitskategorien_neu.xml:19
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:71
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:62
+msgid "Zeit"
+msgstr "Time"
+
+#. label
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Fahrwerksdaten/js/fahrwerksdaten.js:480
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Fahrwerksdaten/js/fahrwerksdaten.js:661
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Hinterachsanlagendaten/js/HAAdaten.js:477
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Hinterachsanlagendaten/js/HAAdaten.js:642
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/inputs.js:67
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:148
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:175
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:141
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_historie_4_wochen.xml:5
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_historie_7_tage.xml:5
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:80
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__istufe.xml:53
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/appender.xml:69
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:6
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:95
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:7
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ionio.xml:79
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:200
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:68
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:31
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:105
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:78
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:69
+msgid "Werk"
+msgstr "Factory"
+
+#. label
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Fahrwerksdaten/js/fahrwerksdaten.js:500
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Fahrwerksdaten/js/fahrwerksdaten.js:662
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Hinterachsanlagendaten/js/HAAdaten.js:497
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Hinterachsanlagendaten/js/HAAdaten.js:643
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/inputs.js:203
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:680
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:716
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:205
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:106
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:7
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:103
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:191
+msgid "Spurcode"
+msgstr "Wheel Alignment Code"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Fahrwerksdaten/js/fahrwerksdaten.js:521
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Hinterachsanlagendaten/js/HAAdaten.js:518
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/inputs.js:96
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:10
+msgid "Einstellung"
+msgstr "Setting"
+
+#. set
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Fahrwerksdaten/js/fahrwerksdaten.js:566
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Hinterachsanlagendaten/js/HAAdaten.js:564
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Hinterachsanlagendaten/js/HAAdaten.js:644
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/inputs.js:254
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/inputs.js:284
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:8
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/appender.xml:6
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:32
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:229
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:277
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:83
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:8
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:91
+msgid "Pruefstand"
+msgstr "Test Bench"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Fahrwerksdaten/js/fahrwerksdaten.js:590
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Hinterachsanlagendaten/js/HAAdaten.js:589
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/inputs.js:385
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/inputs.js:415
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:682
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:716
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:307
+msgid "Messungsart"
+msgstr "Measure Type"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Fahrwerksdaten/js/fahrwerksdaten.js:614
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Hinterachsanlagendaten/js/HAAdaten.js:614
+msgid "Einstellhaeufigkeit"
+msgstr "Setting Frequency"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Fahrwerksdaten/js/fahrwerksdaten.js:638
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:364
+msgid "Toleranz"
+msgstr "Tolerance"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Fahrwerksdaten/js/fahrwerksdaten.js:658
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Hinterachsanlagendaten/js/HAAdaten.js:639
+msgid "Gruppieren"
+msgstr "Group By"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Fahrwerksdaten/js/fahrwerksdaten.js:660
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Hinterachsanlagendaten/js/HAAdaten.js:641
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:153
+msgid "Keine"
+msgstr "None"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Fahrwerksdaten/js/fahrwerksdaten.js:663
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:148
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:176
+msgid "Teststand"
+msgstr "Test Bench"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Fahrwerksdaten/js/fahrwerksdaten.js:903
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Hinterachsanlagendaten/js/HAAdaten.js:882
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/dashboard.js:401
+msgid "Minuten"
+msgstr "Minutes"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Fahrwerksdaten/js/fahrwerksdaten.js:958
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/Fahrwerksdaten/js/fahrwerksdaten.js:1020
+msgid "Soll-Ist-Differenz"
+msgstr "Target-Is-Difference"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/dashboard.js:97
+msgid "Gefundene Fahrzeuge: "
+msgstr "Founded Vehicles: "
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/dashboard.js:100
+msgid "Histogramm"
+msgstr "Histogram"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/dashboard.js:101
+msgid "Soll-Ist-Vergleich"
+msgstr "Target-Is-Comparison"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/dashboard.js:102
+msgid "CP-CPK-Faktor"
+msgstr "CP-CPK-Factor"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/dashboard.js:103
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:3
+msgid "Fahrzeugdaten"
+msgstr "Vehicle Data"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/dashboard.js:104
+msgid "Filter FGNR zuruecksetzen"
+msgstr "Reset FGNR Filter"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/dashboard.js:106
+msgid "Warnfaktor"
+msgstr "Warning Factor"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/dashboard.js:107
+msgid "Eingriffsfaktor"
+msgstr "Intervention  Factor"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/dashboard.js:108
+msgid "Indexwert"
+msgstr "Index-Value"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/dashboard.js:109
+msgid "Istwert"
+msgstr "Is-Value"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/dashboard.js:203
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/dashboard.js:403
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:369
+msgid "StdNV"
+msgstr "StdND"
+
+#. set
+#. option
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/dashboard.js:402
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:160
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:178
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:20
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ionio.xml:124
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:6
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:38
+msgid "Anzahl"
+msgstr "Count"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/dashboard.js:404
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:443
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:537
+msgid "UEG"
+msgstr "LIL"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/dashboard.js:405
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:444
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:538
+msgid "OEG"
+msgstr "UIL"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/dashboard.js:458
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:362
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:527
+msgid "Name"
+msgstr "Name"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/inputs.js:233
+msgid "Master"
+msgstr "Master"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/inputs.js:445
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:259
+msgid "Referenzmessung (IN_AUSWERTUNG)"
+msgstr "Ref. Measurment (IN_AUSWERTUNG)"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:363
+msgid "Sollwert"
+msgstr "Target-Value"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:365
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:438
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:532
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:21
+msgid "Min"
+msgstr "Min"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:366
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:439
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:533
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:22
+msgid "Max"
+msgstr "Max"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:367
+msgid "Mittelwert"
+msgstr "Avg"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:368
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:435
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:529
+msgid "Stabw"
+msgstr "StDev"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:434
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:528
+msgid "XQuer"
+msgstr "Avg"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:436
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:530
+msgid "S"
+msgstr "S"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:437
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:531
+msgid "Anz"
+msgstr "Count"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:440
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:534
+msgid "Bereich"
+msgstr "Range"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:441
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:535
+msgid "Tol. IO"
+msgstr "Tol. IO"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:442
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:536
+msgid "Tol. NIO"
+msgstr "Tol. NIO"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:445
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:539
+msgid "cp"
+msgstr "cp"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:446
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:540
+msgid "cpk"
+msgstr "cpk"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:447
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:541
+msgid "FAu"
+msgstr "FAu"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:448
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:542
+msgid "FAo"
+msgstr "FAo"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:449
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:543
+msgid "FAg"
+msgstr "FAg"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:491
+msgid "Maximum"
+msgstr "Maximum"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:492
+msgid "Minimum"
+msgstr "Minimum"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:681
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:716
+msgid "Modellbeschreibung"
+msgstr "Model Description"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:683
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:717
+msgid "IN_AUSWERTUNG"
+msgstr "IN_AUSWERTUNG"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:684
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:717
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:12
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:11
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:13
+msgid "LL/RL"
+msgstr "LHD/RHD"
+
+#. set
+#. label
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:685
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:717
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:142
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:156
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:174
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:145
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:24
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__istufe.xml:3
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__istufe.xml:20
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:8
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:472
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:155
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:7
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:9
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ionio.xml:62
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:33
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:91
+msgid "Baureihe"
+msgstr "Series"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:686
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:717
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:148
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:25
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:16
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:14
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:14
+msgid "Typschluessel"
+msgstr "Type Key"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:687
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:718
+msgid "Pruefstand RAMA"
+msgstr "Test Bench RAMA"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:688
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:718
+msgid "Pruefzeitpunkt RAMA"
+msgstr "Testtime Rama"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:689
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:718
+msgid "Pruefstand Linie"
+msgstr "Test Bench Line"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:690
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/KoLagen/js/search.js:718
+msgid "Pruefzeitpunkt Linie"
+msgstr "Testtime Line"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/TimeLogging/js/drilldownAction.js:91
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/TimeLogging/js/drilldownAction.js:102
+msgid "Show Filters"
+msgstr "Show Filters"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/TimeLogging/js/drilldownAction.js:104
+msgid "Hide Filters"
+msgstr "Hide Filter"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:138
+msgid "Einstellungen fuer Tabelle"
+msgstr "Settings for table"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:139
+msgid "Filter zuruecksetzen"
+msgstr "Reset Filter"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:141
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:179
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:28
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getvins.xml:19
+msgid "Datum des Testschrittes"
+msgstr "Date of test step"
+
+#. set
+#. label
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:143
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:158
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:173
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:146
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__istufe.xml:4
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__istufe.xml:34
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:10
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:431
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:139
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:9
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:11
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:32
+msgid "I-Stufe"
+msgstr "I-Level"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:144
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:78
+msgid "System"
+msgstr "System"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:149
+msgid "Fahrzeug enthaelt saCode"
+msgstr "Vehicle contains saCode"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:150
+msgid "Fahrzeug enthaelt saCode nicht"
+msgstr "Vehicle does not contain saCode"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:151
+msgid "Gruppierung"
+msgstr "Group By"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:152
+msgid "Spalten ausblenden"
+msgstr "Hide Columns"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:155
+msgid "Pruefzeit"
+msgstr "Test time"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:157
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:4
+msgid "Fehleranzahl"
+msgstr "Error Count"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:158
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:46
+msgid "Sequenz"
+msgstr "Sequence"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:160
+msgid "Pruefschritt"
+msgstr "Test Step"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:162
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:168
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:164
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:17
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:10
+msgid "Api-Job"
+msgstr "API-Job"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:163
+msgid "Parameter"
+msgstr "Parameter"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:165
+msgid "Min-Wert"
+msgstr "Min-Value"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:166
+msgid "Ist-Wert"
+msgstr "Is-Value"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:167
+msgid "Max-Wert"
+msgstr "Max-Value"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:168
+msgid "OK/NOK"
+msgstr "OK/NOK"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:169
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:49
+msgid "Fehlertyp"
+msgstr "Error Type"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:170
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:47
+msgid "Schrittdauer"
+msgstr "Step Duration"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:171
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:170
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:167
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:20
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:27
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:17
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:15
+msgid "Fehlertext"
+msgstr "Errortext"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:172
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:21
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:18
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:16
+msgid "Hinweistext"
+msgstr "Note text"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/UniAPDM/js/db_universelle_apdm_abfrage.js:173
+msgid "PU-Version"
+msgstr "TS-Version"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:145
+msgid "Zeitlicher Verlauf"
+msgstr "Time course"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:146
+msgid "Betroffene Fahrzeuge"
+msgstr "Affected Vehicles"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:147
+msgid "Fehlerdetails"
+msgstr "Error Details"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:148
+msgid "Nacharbeiten"
+msgstr "Reworks"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:149
+msgid "Korrelierende Fehler - Davor"
+msgstr "Correlating errors - before"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:150
+msgid "Korrelierende Fehler - Danach"
+msgstr "Correlating errors - after"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:154
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:169
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__istufe.xml:7
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:28
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:9
+msgid "Anzahl Fahrzeuge"
+msgstr "Count Vehicle"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:155
+msgid "Anzahl Fehler"
+msgstr "Count Error"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:157
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:9
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:8
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:10
+msgid "Fahrzeugtyp"
+msgstr "Vehicle Type"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:159
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:14
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:23
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:12
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:24
+msgid "Motorbaureihe"
+msgstr "Engine Series"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:161
+msgid "NA-Dauer"
+msgstr "NA-Duration"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:162
+msgid "NA-Bemerkung"
+msgstr "NA-Comment"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:163
+msgid "belastete Kostenstelle"
+msgstr "debited Cost Centre"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:172
+msgid "Korrelation"
+msgstr "Correlation"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:173
+msgid "prozentuale Korrelation"
+msgstr "percentage Correlation"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_recherche_thema/js/apdm_recherche_thema.js:174
+msgid "Anzahl betroffene Fahrzeuge"
+msgstr "Count Affected Vehicles"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:150
+msgid "Kommentar"
+msgstr "Comment"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:151
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/comment.js:126
+msgid "Wiedervorlage"
+msgstr "Resubmission"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:152
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/comment.js:127
+msgid "Wiedervorlage KW"
+msgstr "Resubmission CW"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:153
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/comment.js:128
+msgid "Kommentar Werk"
+msgstr "Comment Factory"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:154
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/comment.js:129
+msgid "Link"
+msgstr "Link"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:155
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/comment.js:130
+msgid "Kommentar Datum"
+msgstr "Comment Date"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:156
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/comment.js:132
+msgid "Notizen"
+msgstr "Notes"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:157
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/comment.js:133
+msgid "PQM/QC"
+msgstr "PQM/QC"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:158
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/comment.js:134
+msgid "Verantwortlich"
+msgstr "Responsible"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:159
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/comment.js:135
+msgid "Status"
+msgstr "Status"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:166
+msgid "Error Code (Hex)"
+msgstr "Error Code (Hex)"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:170
+msgid "Inline/Offline"
+msgstr "Inline/Offline"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:176
+msgid "Montagehalle"
+msgstr "Assemblyhall"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:177
+msgid "beliebig"
+msgstr "random"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:178
+msgid "Kommentar fuer Werk"
+msgstr "Comment for factory"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:180
+msgid "nicht relevante (n.r.) ausschliessen"
+msgstr "exclude non-relevant (n.r.)"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:181
+msgid "Nur Erstfehler anzeigen"
+msgstr "Show first error only"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:182
+msgid "Pruefumfang-Gruppe"
+msgstr "Test Scope Group"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:571
+msgid "Kommentare"
+msgstr "Comments"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:572
+msgid "Kommentar hinzufuegen"
+msgstr "Add Comment"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:573
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:6
+msgid "Fehler"
+msgstr "Error"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:574
+msgid "Erfolgreich"
+msgstr "Successful"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:575
+msgid "Es muss mindestens ein Kommentarfeld gesetzt sein."
+msgstr "At least one comment field must be set."
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:576
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:579
+msgid "Alle Kommentare zum Fehler Loeschen"
+msgstr "Delete all comments about the error"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:577
+msgid "Kommentar(e) wurden erfolgreich hinzugefuegt."
+msgstr "Comment(s) were successfully added."
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:578
+msgid "Kommentar(e) wurden erfolgreich geloescht."
+msgstr "Comment(s) were successfully deleted."
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/apdm_themenspeicher.js:580
+msgid "Vorhandene Kommentare zum Fehler"
+msgstr "Existing comments about the error"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/comment.js:131
+msgid "Kommentar User"
+msgstr "Comment User"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/comment.js:142
+msgid "gueltig fuer Werk"
+msgstr "valid for factory"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/apdm_themenspeicher/js/comment.js:143
+msgid "Loeschen"
+msgstr "Delete"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:126
+msgid "Weitere Filter"
+msgstr "More Filter"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:127
+msgid "Statistische Auswertungen"
+msgstr "Static Evaluation"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:128
+msgid "Anzahl durchgefuehrte Nacharbeiten"
+msgstr "Count Executed Reworks"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:129
+msgid "Anzahl der betroffenen Fahrzeuge"
+msgstr "Count Affected Vehicles"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:130
+msgid "Haeufigste Fahrzeuge"
+msgstr "Most Rework Station"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:131
+msgid "Haeufigste Baureihen"
+msgstr "Most Series"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:132
+msgid "NA Nacharbeitsdauer in Minuten (wenn > 0)"
+msgstr "RW Rework Duration in Minutes (if > 0)"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:133
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:177
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:53
+msgid "F1 Datum"
+msgstr "F1-Date"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:134
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:176
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:52
+msgid "Pruefdatum"
+msgstr "Test Date"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:135
+msgid "Dauer zwischen Pruefung und Nacharbeit in Stunden"
+msgstr "Duration between test and rework in hours"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:136
+msgid "Dauer zwischen F1-Datum und Nacharbeit in Stunden"
+msgstr "Duration between F1-Date and rework in hours"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:137
+msgid "Bemerkungen"
+msgstr "Comments"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:138
+msgid "Ausschleuser und Nacharbeiten"
+msgstr "Sorter and rework"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:140
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:27
+msgid "Nacharbeitsdatum"
+msgstr "Rework Date"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:142
+msgid "Freitextsuche"
+msgstr "Free text search"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:143
+msgid "saCode"
+msgstr "saCode"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:144
+msgid "sxCode"
+msgstr "sxCode"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:149
+msgid "Merkmal Bezeichnung"
+msgstr "Feature Description"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:150
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql__nacharbeitskategorien.xml:22
+msgid "NA Fehlerort Bezeichnung"
+msgstr "RW Error Location"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:151
+msgid "NA Fehlerort Nr"
+msgstr "RW Error Location Num"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:152
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql__nacharbeitskategorien.xml:12
+msgid "NA Fehlerart Bezeichnung"
+msgstr "RW Errortype"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:153
+msgid "NA Fehlerart Nr"
+msgstr "RW Errortype Num"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:154
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql__nacharbeitskategorien.xml:17
+msgid "NA Fehlerlage Bezeichnung"
+msgstr "RW Error Position"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:155
+msgid "NA Taetigkeit Bezeichnung"
+msgstr "RW Activity"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:156
+msgid "PR Bemerkung und NA Bemerkung"
+msgstr "PR Comment and RW Comment"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:157
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:34
+msgid "NA Nacharbeiter ID"
+msgstr "RW Reworker ID"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:158
+msgid "NA Schicht Bezeichnung"
+msgstr "RW Shift"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:159
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:36
+msgid "NA Leist Kostenstelle Nr"
+msgstr "RW  Service Cost Center"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:160
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:37
+msgid "NA Leist Meisterbereich Nr"
+msgstr "RW Service Mastertarget"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:161
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:38
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:35
+msgid "NA Bel Kostenstelle Nr"
+msgstr "RW Debited Cost Centre"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:162
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:39
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:36
+msgid "NA Bel Meisterbereich Nr"
+msgstr "RW Debited Mastertarget"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:163
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:40
+msgid "NA Bel Produktionsbereich Nr"
+msgstr "RW Debited Productiontarget"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:164
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:41
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:37
+msgid "NA Nacharbeitsdauer"
+msgstr "RW Rework Duration"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:165
+msgid "PR_NA Fehlertyp Bezeichnung"
+msgstr "PR_RW Errortype"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:166
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:43
+msgid "PR Fehlerprotokoll Teil 1"
+msgstr "PR Errorlog Part 1"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:167
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:44
+msgid "PR Fehlerprotokoll Teil 2"
+msgstr "PR Errorlog Part 2"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:168
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:45
+msgid "PR Fehlerprotokoll Teil 3"
+msgstr "PR Errorlog Part 2"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:169
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:46
+msgid "PR Fehlerprotokoll Teil 4"
+msgstr "PR Errorlog Part 4"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:170
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:47
+msgid "PR Station Nr"
+msgstr "PR Station"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:171
+msgid "NA Station Bezeichnung"
+msgstr "RW Station"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:172
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:49
+msgid "PR Pruef Nacharbeit BI"
+msgstr "PR test rework BI"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:173
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:51
+msgid "PR Pruefer ID"
+msgstr "PR Tester ID"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:174
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:33
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:30
+msgid "NA Bemerkung"
+msgstr "NA Comment"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:175
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:50
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:29
+msgid "PR Bemerkung"
+msgstr "PR Comment"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:180
+msgid "Zeitdifferenz"
+msgstr "Time difference"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/ipsq_recherche_nacharbeit/js/db_ipsq_recherche_nacharbeit.js:181
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:36
+msgid "Dauer"
+msgstr "Duration"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/appserver/static/qlearning/ql_fehlerklassen.js:32
+msgid "example_text"
+msgstr "example_text"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/app.conf:11
+msgid "iQP 4.0"
+msgstr "iQP 4.0"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/props.conf:7
+msgid "Benutzerdefiniert"
+msgstr "User-Defined"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/props.conf:42
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/props.conf:58
+msgid "Structured"
+msgstr "Structured"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/props.conf:43
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/props.conf:59
+msgid ""
+"Comma-separated value format. Set header and other settings in \"Delimited "
+"Settings\""
+msgstr ""
+"Comma-separated value format. Set header and other settings in \"Delimited "
+"Settings\""
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/props.conf:84
+msgid "Custom"
+msgstr "Custom"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/savedsearches.conf:75
+msgid "Suche fuer werkfilter.js"
+msgstr "Search of werkfilter.js"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/searchbnf.conf:4
+msgid "Computes the sum of a set of numeric fields."
+msgstr "Computes the sum of a set of numeric fields."
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/searchbnf.conf:7
+msgid ""
+"\\\n"
+"This command computes the sum of a set of numeric fields. The TOTAL produced "
+"is sum(sum(fieldname, 1, n), 1, N) \\\n"
+"where n = number of fields in <field-list>, N = number of records processed."
+msgstr ""
+"\\\n"
+"This command computes the sum of a set of numeric fields. The TOTAL produced "
+"is sum(sum(fieldname, 1, n), 1, N) \\\n"
+"where n = number of fields in <field-list>, N = number of records processed."
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/searchbnf.conf:8
+msgid ""
+"This example computes the total number of words in the text field of the "
+"tweets lookup table."
+msgstr ""
+"This example computes the total number of words in the text field of the "
+"tweets lookup table."
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/searchbnf.conf:13
+msgid "reporting"
+msgstr "reporting"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/searchbnf.conf:21
+msgid "Manipulate data with Base64"
+msgstr "Manipulate data with Base64"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/searchbnf.conf:27
+msgid ""
+"Encode data to Base64 or to decode data from Base64. \\i\\\\\n"
+"\"field\"   - specify the field containing the data to encode or decode.\\i\\"
+"\\\n"
+"\"action\"  - encode or decode the data (default: encode). \\i\\\\\n"
+"\"mode\"    - replace the original field or create a new field named base64 "
+"(default: replace).\\i\\\\\n"
+"\"suppress_error\" - if True, do not raise exceptions when decoding "
+"(default: False).\\i\\\\\n"
+msgstr ""
+"Encode data to Base64 or to decode data from Base64. \\i\\\\\n"
+"\"field\"   - specify the field containing the data to encode or decode.\\i\\"
+"\\\n"
+"\"action\"  - encode or decode the data (default: encode). \\i\\\\\n"
+"\"mode\"    - replace the original field or create a new field named base64 "
+"(default: replace).\\i\\\\\n"
+"\"suppress_error\" - if True, do not raise exceptions when decoding "
+"(default: False).\\i\\\\\n"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/searchbnf.conf:28
+msgid "encode the content of the field url in base64 and replace it."
+msgstr "encode the content of the field url in base64 and replace it."
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/searchbnf.conf:31
+msgid ""
+"decode the content of the field ab and store the results in a new field."
+msgstr ""
+"decode the content of the field ab and store the results in a new field."
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/searchbnf.conf:36
+msgid "Calculate singel with multivalue field"
+msgstr "Calculate singel with multivalue field"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/searchbnf.conf:43
+msgid ""
+"Calculate singel with multivalue field. \\i\\\\\n"
+"\"singleValField\"   - Name of the field that will calculate into "
+"multiValField.\\i\\\\\n"
+"\"multiValField\"    - Name of the field that will calculate all pieces with "
+"singleValField. \\i\\\\\n"
+"\"fieldName\"        - Name of the output field.\\i\\\\\n"
+"\"operation\"        - Operation to calculate between singleValField and "
+"multiValField. (+, -, *, /, <, <=, ==, !=, >=, >)\\i\\\\\n"
+"\"orientation\"      - Orientation of the calculation.(single-multi, multi-"
+"single) (default:multi-single)\\i\\\\\n"
+msgstr ""
+"Calculate singel with multivalue field. \\i\\\\\n"
+"\"singleValField\"   - Name of the field that will calculate into "
+"multiValField.\\i\\\\\n"
+"\"multiValField\"    - Name of the field that will calculate all pieces with "
+"singleValField. \\i\\\\\n"
+"\"fieldName\"        - Name of the output field.\\i\\\\\n"
+"\"operation\"        - Operation to calculate between singleValField and "
+"multiValField. (+, -, *, /, <, <=, ==, !=, >=, >)\\i\\\\\n"
+"\"orientation\"      - Orientation of the calculation.(single-multi, multi-"
+"single) (default:multi-single)\\i\\\\\n"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/searchbnf.conf:44
+msgid "Add all fields of b to a."
+msgstr "Add all fields of b to a."
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/times.conf:2
+msgid "Letzte 4 Wochen"
+msgstr "Last 4 weeks"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/times.conf:3
+msgid "in den letzten 4 Wochen"
+msgstr "in last 4 weeks"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/nav/default.xml:0
+msgid "Auswertungen"
+msgstr "Auswertungen"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/nav/default.xml:0
+msgid "APDM"
+msgstr "APDM"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/nav/default.xml:0
+msgid "APDM Themenspeicher"
+msgstr "APDM Themenspeicher"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/nav/default.xml:0
+msgid "APDM Recherche - Thema"
+msgstr "APDM Research - Theme"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/nav/default.xml:0
+msgid "IPSQ Recherche - Nacharbeit"
+msgstr "IPSQ Research - Rework"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/nav/default.xml:0
+msgid "APDM Universelle Abfrage"
+msgstr "APDM Universal Query"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/nav/default.xml:0
+msgid "FT FWS"
+msgstr "FT FWS"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/nav/default.xml:0
+msgid "FT FWS: K0-Lagen"
+msgstr "FT FWS: K0-Level"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/nav/default.xml:0
+msgid "FT FWS: Auswertung Fahrwerksdaten"
+msgstr "FT FWS: Evaluation Chassis Data"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/nav/default.xml:0
+msgid "FT FWS: Auswertung Hinterachsanlagendaten"
+msgstr "FT FWS: Evaluation Rear Axle Data"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/nav/default.xml:0
+msgid "QLearning"
+msgstr "QLearning"
+
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/nav/default.xml:0
+msgid "Visualisierungen"
+msgstr "Visualisierungen"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_historie_4_wochen.xml:2
+msgid "APDM Historie - letzte 4 Wochen"
+msgstr "APDM History - last 4 Weeks"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_historie_4_wochen.xml:34
+msgid "<div id=\"tbl_hist_4w\"/>"
+msgstr "<div id=\"tbl_hist_4w\"/>"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_historie_7_tage.xml:34
+msgid "APDM Fehler - letzte 7 Tage"
+msgstr "APDM Error - last 7 Days"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_historie_7_tage.xml:2
+msgid "APDM Historie - letzte 7 Tage"
+msgstr "APDM History - last 7 Days"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_historie_7_tage.xml:36
+msgid "<div id=\"tbl_hist_7d\"/>"
+msgstr "<div id=\"tbl_hist_7d\"/>"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:6
+msgid "Test Zeit"
+msgstr "Test Time"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:7
+msgid "Test System"
+msgstr "Test System"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:9
+msgid "Version"
+msgstr "Version"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:10
+msgid "Komplett"
+msgstr "Complete"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:11
+msgid "Test Dauer"
+msgstr "Test Duration"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:12
+msgid "Details zu Pruefumfang"
+msgstr "Details from test scope"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:13
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:6
+msgid "SeqNr"
+msgstr "SeqNr"
+
+#. set
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:14
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:242
+msgid "Testschrittname"
+msgstr "Teststepname"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:15
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:21
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:19
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:28
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:9
+msgid "Beschreibung"
+msgstr "Description"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:18
+msgid "Parameter Api-Job"
+msgstr "Parameter API-Job"
+
+#. set
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:19
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:13
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:444
+msgid "Ergebnis"
+msgstr "Result"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:22
+msgid "Ergebnisname (Api-Result)"
+msgstr "Result Name (API-Result)"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:26
+msgid "Sistufenr"
+msgstr "Sistufenr"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:28
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:34
+msgid "Merkmal"
+msgstr "Feature"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:29
+msgid "NA Fehlerort"
+msgstr "RW Error Location"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:30
+msgid "NA Fehlerart"
+msgstr "RW Errortype"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:31
+msgid "NA Fehlerlage"
+msgstr "RW Error Position"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:32
+msgid "NA Taetigkeit"
+msgstr "RW Activity"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:35
+msgid "NA Schicht"
+msgstr "RW Shift"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:42
+msgid "PR/NA Fehlertyp"
+msgstr "PR/RW Errortype"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:48
+msgid "NA Station"
+msgstr "RW Station"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:87
+msgid "Fehler aus APDM insgesamt"
+msgstr "Error from APDM total"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:98
+msgid "Prüfumfänge mit Fehlern"
+msgstr "Test scope with error"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:126
+msgid "Durchgeführte Prüfungen"
+msgstr "Executed Tests"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:240
+msgid "$i18n_Details_zu_Pruefumfang$ $pruefumfangName_det$ ($testTime_det$)"
+msgstr "$i18n_Details_zu_Pruefumfang$ $pruefumfangName_det$ ($testTime_det$)"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:264
+msgid "Testschritt-Tabelle"
+msgstr "Teststep-Table"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:293
+msgid "Ereignisdaten komplett"
+msgstr "Result Data  complete"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:316
+msgid "Durchgeführte Nacharbeiten (IPSQ)"
+msgstr "Executed Rework (IPSQ)"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:55
+msgid "APDM Recherche - Fahrzeug"
+msgstr "APDM Research - Vehicle"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:59
+msgid "Zeitraum"
+msgstr "Period"
+
+#. label
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:168
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:4
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getvins.xml:26
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ionio.xml:47
+msgid "Prüfumfang"
+msgstr "Test Scope"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:188
+msgid "Prüfumfang komplett"
+msgstr "Test Scope complete"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:198
+msgid "Anzahl der Fehler größer als"
+msgstr "Count of error greater than"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:203
+msgid "Testdauer größer als"
+msgstr "Test Duration greater than"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:254
+msgid "Ergebnis des Tests"
+msgstr "Result of tests"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:261
+msgid "weitere Stichworte"
+msgstr "more keywords"
+
+#. input/choice
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:129
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:149
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:169
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:251
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:256
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__istufe.xml:27
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__istufe.xml:35
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__istufe.xml:47
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:117
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:133
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:149
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:165
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:178
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:201
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:220
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:290
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ionio.xml:48
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ionio.xml:66
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ionio.xml:170
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:206
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:230
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:245
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:260
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:278
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:293
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:308
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:79
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:92
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:107
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:127
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:92
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:104
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:172
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:177
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:192
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:207
+msgid "Alle"
+msgstr "All"
+
+#. input/choice
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:189
+msgid "ja"
+msgstr "yes"
+
+#. input/choice
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:190
+msgid "nein"
+msgstr "no"
+
+#. input/choice
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__fahrzeug.xml:258
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__istufe.xml:48
+msgid "NOK"
+msgstr "NOK"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__istufe.xml:5
+msgid "TestStepResult"
+msgstr "Test-Step-Result"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__istufe.xml:6
+msgid "Anzahl TestStepResults"
+msgstr "Count Test-Step-Result"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__istufe.xml:10
+msgid "APDM Recherche - I-Stufe"
+msgstr "APDM Research - I-Level"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__istufe.xml:13
+msgid "Zeitraum (<1 Woche)"
+msgstr "Timespan (<1 Week)"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/apdm_recherche__istufe.xml:46
+msgid "Test-Step-Result"
+msgstr "Test-Step-Result"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/appender.xml:7
+msgid "Testzeit"
+msgstr "Testtime"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/appender.xml:8
+msgid "modifiziert"
+msgstr "modified"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/appender.xml:12
+msgid "Manuell-Flag"
+msgstr "Manual-Flag"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/appender.xml:131
+msgid "Bestehende Pruefung"
+msgstr "Existing Tests"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/appender.xml:147
+msgid "Pruefergebnisse"
+msgstr "Test Result"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/appender.xml:14
+msgid "FT FWS: Appender"
+msgstr "FT FWS: Appender"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/appender.xml:148
+msgid ""
+"<button id=\"addBtn\" class=\"btn\">$i18n_Hinzufuegen$</button><button id="
+"\"editBtn\" class=\"btn\">$i18n_Bearbeiten$</button><button id=\"rmBtn\" "
+"class=\"btn\">$i18n_Entfernen$</button>"
+msgstr ""
+"<button id=\"addBtn\" class=\"btn\">$i18n_Hinzufuegen$</button><button id="
+"\"editBtn\" class=\"btn\">$i18n_Bearbeiten$</button><button id=\"rmBtn\" "
+"class=\"btn\">$i18n_Entfernen$</button>"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:3
+msgid "Fahrzeug Analyse"
+msgstr "Analysis Vehicle"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:4
+msgid "DTC Analyse"
+msgstr "Analysis DTC"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:5
+msgid "Fahrzeugauswahl"
+msgstr "Vehicle Choice"
+
+#. set
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:11
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:123
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:10
+msgid "Ländervariante"
+msgstr "Country Variant"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:13
+msgid "F2-Datum"
+msgstr "F2-Date"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:15
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:13
+msgid "Getriebe"
+msgstr "Gearbox"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:17
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:15
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:15
+msgid "Zeitkriterium"
+msgstr "Time Criterion"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:18
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:16
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:17
+msgid "DriveKonfig"
+msgstr "DriveConfig"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:19
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:17
+msgid "Hybrid"
+msgstr "Hybrid"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:20
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:18
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:27
+msgid "Code"
+msgstr "Code"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:22
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:23
+msgid "Motorfamilie"
+msgstr "Engine Family"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:24
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:25
+msgid "Derivat"
+msgstr "Derivate"
+
+#. set
+#. title
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:25
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:339
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:213
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:405
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:38
+msgid "DTC-Code"
+msgstr "DTC-Code"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:29
+msgid "Auswertung"
+msgstr "Evalutation"
+
+#. set
+#. input/choice
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:30
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:416
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:457
+msgid "Tabelle"
+msgstr "Table"
+
+#. set
+#. input/choice
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:31
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:417
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:458
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:66
+msgid "Tortendiagramm"
+msgstr "Pie-Chart"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:243
+msgid "$i18n_Fahrzeugauswahl$ ($table_vehicle_selection_count$)"
+msgstr "$i18n_Fahrzeugauswahl$ ($table_vehicle_selection_count$)"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:281
+msgid "Schnittmenge"
+msgstr "Intersection"
+
+#. title
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:297
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:171
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:135
+msgid "Sonderausstattung(en)"
+msgstr "Extra equipment(s)"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:318
+msgid "Motoren(en)"
+msgstr "Engine(s)"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:371
+msgid "DTC-Code  ($table_dtc_selection_count$)"
+msgstr "DTC-Code  ($table_dtc_selection_count$)"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:403
+msgid "$i18n_Auswertung$ ($form.filt_dtc$)"
+msgstr "$i18n_Auswertung$ ($form.filt_dtc$)"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:449
+msgid "I-Stufe Tortendiagramm"
+msgstr "I-Step Pie-Chart"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:493
+msgid "Baureihe Tortendiagramm"
+msgstr "Series Pie-Chart"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:502
+msgid "Weitere DTCs in den Fahrzeugen"
+msgstr "More DTCs in vehicles"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:36
+msgid "D2 - APDM DTC-Analyse (Ceasar in Splunk)"
+msgstr "D2 - APDM DTC-Analysis (Ceasar in Splunk)"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:103
+msgid "Zeitspanne"
+msgstr "Timespan"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:415
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:456
+msgid "Auswertung auswaehlen:"
+msgstr "Select evaluation:"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk.xml:228
+msgid ""
+"<ul class=\"nav nav-tabs\" id=\"tabs\"><li class=\"active\"><a href=\"#\" "
+"class=\"toggle-tab\" data-token=\"tab1_clicked\" data-elements="
+"\"Analyse_fahrzeug,compareRow,compareRow2\" data-toggle=\"tab\">"
+"$i18n_Fahrzeug_Analyse$</a></li><li><a href=\"#\" class=\"toggle-tab\" data-"
+"token=\"tab2_clicked\" data-elements=\"Analyse_dtc0,Analyse_dtc_fieldset,"
+"Analyse_dtc1,Analyse_dtc2,Analyse_dtc3\" data-toggle=\"tab\">"
+"$i18n_DTC_Analyse$</a></li></ul>"
+msgstr ""
+"<ul class=\"nav nav-tabs\" id=\"tabs\"><li class=\"active\"><a href=\"#\" "
+"class=\"toggle-tab\" data-token=\"tab1_clicked\" data-elements="
+"\"Analyse_fahrzeug,compareRow,compareRow2\" data-toggle=\"tab\">"
+"$i18n_Fahrzeug_Analyse$</a></li><li><a href=\"#\" class=\"toggle-tab\" data-"
+"token=\"tab2_clicked\" data-elements=\"Analyse_dtc0,Analyse_dtc_fieldset,"
+"Analyse_dtc1,Analyse_dtc2,Analyse_dtc3\" data-toggle=\"tab\">"
+"$i18n_DTC_Analyse$</a></li></ul>"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:5
+msgid "Anzahl DTC"
+msgstr "DTC Count"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:21
+msgid "DTC Zeit"
+msgstr "DTC Time"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:52
+msgid "Betroffene Prüfumfänge"
+msgstr "Affected Test Scope"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:78
+msgid "Jitter"
+msgstr "Jitter"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:89
+msgid "Fahrzeuge"
+msgstr "Vehicle"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:143
+msgid "Schnittmenge SA"
+msgstr "Intersection SA"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:23
+msgid "D2.2 - APDM DTC-Analyse (Ceasar in Splunk)/ DTC-Analyse"
+msgstr "D2.2 - APDM DTC-Analyse (Ceasar in Splunk)/ DTC-Analyse"
+
+#. input/choice
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_dtc.xml:46
+msgid "zeige Schwankung"
+msgstr "show jitter"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:5
+msgid "DTC Code zuruecksetzen"
+msgstr "Reset DTC Code"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:12
+msgid "Laendervariante"
+msgstr "Country Variant"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:16
+msgid "DriveTyp"
+msgstr "DriveTyp"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:19
+msgid "Fahrzeuginfo"
+msgstr "Vehicle Info"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:20
+msgid "Wert"
+msgstr "Value"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:22
+msgid "Motornummer"
+msgstr "Engine Number"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:30
+msgid "Uhrzeit"
+msgstr "Time"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:33
+msgid "PU komplett"
+msgstr "TS complete"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:34
+msgid "PU Fehler"
+msgstr "PU Error"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:35
+msgid "ZFS Fehler"
+msgstr "ZFS Error"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:39
+msgid "DTC-Text"
+msgstr "DTC-Text"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:40
+msgid "Event"
+msgstr "Event"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:41
+msgid "Zeitpunkt"
+msgstr "Point in Time"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:42
+msgid "Systemzeit"
+msgstr "Systemtime"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:43
+msgid "SG Adresse"
+msgstr "SG Address"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:48
+msgid "Testergebnis"
+msgstr "Test Result"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:51
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:11
+msgid "API-Job"
+msgstr "API-Job"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:52
+msgid "Job-Parameter"
+msgstr "Job-Parameter"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:54
+msgid "Ergebnis (Text)"
+msgstr "Result (Text)"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:55
+msgid "Ergebnis (Zahl)"
+msgstr "Result (Number)"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:56
+msgid "Fehlermeldung"
+msgstr "Error Message"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:118
+msgid "Motor"
+msgstr "Engine"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:151
+msgid "Ausgeführte Prüfumfänge"
+msgstr "Executed Test Scope"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:207
+msgid "Zentraler Fehlerspeicher Einträge"
+msgstr "Central Error Memory Entries"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:270
+msgid "Ausgeführte Prüfschritte"
+msgstr "Executed Test Steps"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:58
+msgid "D2.1-APDM DTC-Analyse (Ceasar in Splunk)/ Fahrzeuganalyse"
+msgstr "D2.1-APDM DTC-Analysis (Ceasar in Splunk)/ Fahrzeuganalysis"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:209
+msgid "Ausgewählte Prüfumfänge:"
+msgstr "Selected Test Scopes:"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:75
+msgid ""
+"<ul class=\"nav nav-tabs\" id=\"tabs\"><li class=\"active\"><a href=\"#\" "
+"class=\"toggle-tab\" data-token=\"tab1_clicked\" data-elements=\"vehData1,"
+"vehData2\" data-toggle=\"tab\">$i18n_Fahrzeugdaten$</a></li><li><a href=\"#"
+"\" class=\"toggle-tab\" data-token=\"tab2_clicked\" data-elements=\"dtcData1,"
+"dtcData2\" data-toggle=\"tab\">$i18n_Analyse$</a></li></ul>"
+msgstr ""
+"<ul class=\"nav nav-tabs\" id=\"tabs\"><li class=\"active\"><a href=\"#\" "
+"class=\"toggle-tab\" data-token=\"tab1_clicked\" data-elements=\"vehData1,"
+"vehData2\" data-toggle=\"tab\">$i18n_Fahrzeugdaten$</a></li><li><a href=\"#"
+"\" class=\"toggle-tab\" data-token=\"tab2_clicked\" data-elements=\"dtcData1,"
+"dtcData2\" data-toggle=\"tab\">$i18n_Analyse$</a></li></ul>"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/d2_apdm_dtc_analyse_ceasar_in_splunk_fahrzeug.xml:271
+msgid ""
+"<input type=\"text\" id=\"selectedPUS\" style=\"margin-bottom: 0;\" readonly="
+"\"true\"/><button type=\"button\" id=\"reset_DTC_button\" class=\"btn\">"
+"$i18n_DTC_reset$</button>"
+msgstr ""
+"<input type=\"text\" id=\"selectedPUS\" style=\"margin-bottom: 0;\" readonly="
+"\"true\"/><button type=\"button\" id=\"reset_DTC_button\" class=\"btn\">"
+"$i18n_DTC_reset$</button>"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/fehlerprotokoll_dev.xml:2
+msgid "Fehlerprotokoll Dev"
+msgstr "Fehlerprotokoll Dev"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/fehlerprotokoll_dev.xml:23
+msgid "<div id=\"fehlerview1\"/>"
+msgstr "<div id=\"fehlerview1\"/>"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:3
+msgid "Testschrittstart"
+msgstr "Teststep Start"
+
+#. set
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:8
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getvins.xml:32
+msgid "Prüfprozedur"
+msgstr "Test Procedure"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:12
+msgid "Parameter API-Job"
+msgstr "Parameter API-Job"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:19
+msgid "Ergebnisname (API-Result)"
+msgstr "Result Name (API-Result)"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:81
+msgid "Vorhandene Fehlerprotokolle"
+msgstr "Existing error logs"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:87
+msgid "Vorhandene Fehler"
+msgstr "Existing error"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:133
+msgid "Komplette Fehlermeldungen"
+msgstr "Complete error message"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:178
+msgid "Nacharbeiten aus IPSQ"
+msgstr "Rework from IPSQ"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:24
+msgid "Fehlerhafte Testschritte"
+msgstr "Fehlerhafte Testschritte"
+
+#. input/choice
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:40
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getvins.xml:51
+msgid "-"
+msgstr "-"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getteststep.xml:82
+msgid "<div id=\"fehlerprotokoll_view\"/>"
+msgstr "<div id=\"fehlerprotokoll_view\"/>"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getvins.xml:59
+msgid "VINs"
+msgstr "VINs"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getvins.xml:2
+msgid "GetVINs"
+msgstr "GetVINs"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getvins.xml:29
+msgid "Prüfling"
+msgstr "Prüfling"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getvins.xml:44
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/io_rate_pruefumfaenge_fdp.xml:12
+msgid "Werkfilter"
+msgstr "Werkfilter"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getvins.xml:50
+msgid "VINS"
+msgstr "VINS"
+
+#. input/choice
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getvins.xml:45
+msgid "München"
+msgstr "Munich"
+
+#. input/choice
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getvins.xml:46
+msgid "Regensburg"
+msgstr "Regensburg"
+
+#. input/choice
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/getvins.xml:47
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:69
+msgid "Alle Werke"
+msgstr "All Factories"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/io_rate_pruefumfaenge_fdp.xml:446
+msgid "Direktläuferquote"
+msgstr "Direktläuferquote"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/io_rate_pruefumfaenge_fdp.xml:448
+msgid ""
+"Prüfungen in der Montage und anschließenden Prüfstandslinie - Band 45: "
+"(A_CAS_INIT, A_DATA, A_DIAGNOSE), Band 53 (B_DATA, B_DIAGNOSE, EKS_INIT), "
+"Band 61 (F1_DIAGNOSE, VHT, ECOS, INFOTAINMENT), Prüfstandslinie (ROLLEPRFG, "
+"ABSPRFG, FINISH, MOTEST)"
+msgstr ""
+"Prüfungen in der Montage und anschließenden Prüfstandslinie - Band 45: "
+"(A_CAS_INIT, A_DATA, A_DIAGNOSE), Band 53 (B_DATA, B_DIAGNOSE, EKS_INIT), "
+"Band 61 (F1_DIAGNOSE, VHT, ECOS, INFOTAINMENT), Prüfstandslinie (ROLLEPRFG, "
+"ABSPRFG, FINISH, MOTEST)"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/io_rate_pruefumfaenge_fdp.xml:2
+msgid "I.O. Rate Prüfumfänge"
+msgstr "I.O. Rate Prüfumfänge"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ionio.xml:85
+msgid "IO/NIO"
+msgstr "IO/NIO"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ionio.xml:132
+msgid "Inline Nacharbeit"
+msgstr "Inline Nacharbeit"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ionio.xml:167
+msgid "Details zu $tok_pruefumfang_detail$"
+msgstr "Details zu $tok_pruefumfang_detail$"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ionio.xml:177
+msgid "Details/FGNR"
+msgstr "Details/FGNR"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ionio.xml:2
+msgid "Inline/Offline Nacharbeit"
+msgstr "Inline/Offline Nacharbeit"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ionio.xml:169
+msgid "Direktläufer"
+msgstr "Direktläufer"
+
+#. input/choice
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ionio.xml:67
+msgid "LK"
+msgstr "LK"
+
+#. input/choice
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ionio.xml:68
+msgid "LU"
+msgstr "LU"
+
+#. input/choice
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ionio.xml:171
+msgid "in Ordnung"
+msgstr "in Ordnung"
+
+#. input/choice
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ionio.xml:172
+msgid "inlineNA"
+msgstr "inlineNA"
+
+#. input/choice
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ionio.xml:173
+msgid "offlineNA"
+msgstr "offlineNA"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:3
+msgid "Referenzmessung"
+msgstr "Reference Measurement"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:4
+msgid "Linienmessung"
+msgstr "Line Measurement"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:5
+msgid "Ausreisser-Bereich"
+msgstr "Outlier-Range"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:6
+msgid "Ausreisser-Grenze"
+msgstr "Outlier-Limit"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:7
+msgid "Linie"
+msgstr "Line"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:8
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:19
+msgid "Anzahl Messung Linie"
+msgstr "Count Measurement Line"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:9
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:20
+msgid "Anzahl Fzge Rama"
+msgstr "Count Vehicle Rama"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:11
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:21
+msgid "Ausreisser Linie/Rama"
+msgstr "Outlier Line/Rama"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:12
+msgid "AW Linie (LG)"
+msgstr "EV Line (LG)"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:13
+msgid "AW Linie (DK)"
+msgstr "EV Line (DK)"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:14
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:25
+msgid "Rama (K0-Lage)"
+msgstr "Rama (K0-Level)"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:15
+msgid "Dif. Rama-Linie(akt Offset + xx)"
+msgstr "Dif. Rama-Line(curr Offset + xx)"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:16
+msgid "Hinterachsanlage"
+msgstr "Rear Axle Facility (RAF)"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:17
+msgid "Anzahl Messung Linie HAA"
+msgstr "Count Measurement Line RAF"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:18
+msgid "Anzahl Fzge Rama HAA"
+msgstr "Count Vehicle Rama RAF"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:22
+msgid "EW Linie (LG)"
+msgstr "SV Line (LG)"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:23
+msgid "Dif. Rama-Linie"
+msgstr "Dif. Rama-Line"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:24
+msgid "EW Linie (LG korr.)"
+msgstr "SV Line (LG corr.)"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:26
+msgid "IW kor.(Linie)(akt Offset + xx)"
+msgstr "IW cor.(Line)(curr Offset + xx)"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:27
+msgid "IW kor.(Rama)(akt Offset + xx)"
+msgstr "IW cor.(Rama)(curr Offset + xx)"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:324
+msgid "Ausgangswerte Vorderachse"
+msgstr "Ending Values Front Axle"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:364
+msgid "Ausgangswerte Hinterachse"
+msgstr "Ending Values Rear Axle"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:404
+msgid "Eingangswerte Hinterachse"
+msgstr "Starting Values Rear Axle"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:486
+msgid "CP-CPK"
+msgstr "CP-CPK"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:29
+msgid "FT FWS: Offsetmanager"
+msgstr "FT FWS: Offsetmanager"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:220
+msgid ""
+"$i18n_outlier_range$ (-$form.tok_outlier_range$ ≤ Δ ≤ $form.tok_outlier_range"
+"$)"
+msgstr ""
+"$i18n_outlier_range$ (-$form.tok_outlier_range$ ≤ Δ ≤ $form.tok_outlier_range"
+"$)"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:224
+msgid "$i18n_outlier_limit$ (≥ $form.tok_outlier_limit$%)"
+msgstr "$i18n_outlier_limit$ (≥ $form.tok_outlier_limit$%)"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:227
+msgid "<h2 id=\"h2_ref\">$i18n_Referenzmessung$</h2>"
+msgstr "<h2 id=\"h2_ref\">$i18n_Referenzmessung$</h2>"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/offsetmanager.xml:273
+msgid "<h2 id=\"h2_lin\">$i18n_Linienmessung$</h2>"
+msgstr "<h2 id=\"h2_lin\">$i18n_Linienmessung$</h2>"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql__darstellung_der_nacharbeitskategorien.xml:6
+msgid "Hierarchie der Nacharbeitskategorien"
+msgstr "Hierarchie der Nacharbeitskategorien"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql__darstellung_der_nacharbeitskategorien.xml:52
+msgid "Nachbearbeitungstexte des Baumknoten"
+msgstr "Nachbearbeitungstexte des Baumknoten"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql__darstellung_der_nacharbeitskategorien.xml:96
+msgid "Nacharbeitskategorien neu berechnen"
+msgstr "Nacharbeitskategorien neu berechnen"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql__darstellung_der_nacharbeitskategorien.xml:123
+msgid "Neuberechnete Hierarchie der Nacharbeitskategorien"
+msgstr "Neuberechnete Hierarchie der Nacharbeitskategorien"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql__darstellung_der_nacharbeitskategorien.xml:2
+msgid "QL - Darstellung der Nacharbeitskategorien"
+msgstr "QL - Darstellung der Nacharbeitskategorien"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql__darstellung_der_nacharbeitskategorien.xml:105
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitskategorien_neu.xml:26
+msgid "Anzahl Cluster k-means"
+msgstr "Anzahl Cluster k-means"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql__darstellung_der_nacharbeitskategorien.xml:110
+msgid "Anzahl wichtigster Wörter (Vokabular des Baums)"
+msgstr "Anzahl wichtigster Wörter (Vokabular des Baums)"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql__darstellung_der_nacharbeitskategorien.xml:23
+msgid ""
+"<div id=\"div_textarea_user_search\"/><!-- Modal START --><div class=\"modal "
+"fade\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby="
+"\"myModalLabel\"><div class=\"modal-dialog\" role=\"document\"><div class="
+"\"modal-content\"><div class=\"modal-header\"><button type=\"button\" class="
+"\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden="
+"\"true\">&amp;times;</span></button><h4 class=\"modal-title\" id="
+"\"myModalLabel\">Header</h4></div><div class=\"modal-body\"><div id=\"modal-"
+"body_content\">Body</div></div><div class=\"modal-footer\"><button id="
+"\"modal-cancel-btn\" type=\"button\" class=\"btn btn-default\" data-dismiss="
+"\"modal\">Cancel</button><button id=\"modal-save-btn\" type=\"button\" class="
+"\"btn btn-primary\">Save</button></div></div></div></div>"
+msgstr ""
+"<div id=\"div_textarea_user_search\"/><!-- Modal START --><div class=\"modal "
+"fade\" id=\"myModal\" tabindex=\"-1\" role=\"dialog\" aria-labelledby="
+"\"myModalLabel\"><div class=\"modal-dialog\" role=\"document\"><div class="
+"\"modal-content\"><div class=\"modal-header\"><button type=\"button\" class="
+"\"close\" data-dismiss=\"modal\" aria-label=\"Close\"><span aria-hidden="
+"\"true\">&amp;times;</span></button><h4 class=\"modal-title\" id="
+"\"myModalLabel\">Header</h4></div><div class=\"modal-body\"><div id=\"modal-"
+"body_content\">Body</div></div><div class=\"modal-footer\"><button id="
+"\"modal-cancel-btn\" type=\"button\" class=\"btn btn-default\" data-dismiss="
+"\"modal\">Cancel</button><button id=\"modal-save-btn\" type=\"button\" class="
+"\"btn btn-primary\">Save</button></div></div></div></div>"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql__darstellung_der_nacharbeitskategorien.xml:53
+msgid ""
+"<div class=\"form-submit\" id=\"ausblenden_button\"><button id="
+"\"i_ausblenden_btn\" class=\"btn btn\">Nachbearbeitungstexte ausblenden</"
+"button></div>"
+msgstr ""
+"<div class=\"form-submit\" id=\"ausblenden_button\"><button id="
+"\"i_ausblenden_btn\" class=\"btn btn\">Nachbearbeitungstexte ausblenden</"
+"button></div>"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql__darstellung_der_nacharbeitskategorien.xml:114
+msgid ""
+"<div class=\"form-submit\" id=\"submit_button\"><button id=\"i_submit_btn\" "
+"class=\"btn btn-primary submit\">Submit</button></div>"
+msgstr ""
+"<div class=\"form-submit\" id=\"submit_button\"><button id=\"i_submit_btn\" "
+"class=\"btn btn-primary submit\">Submit</button></div>"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql__darstellung_der_nacharbeitskategorien.xml:124
+msgid ""
+"<div class=\"form-submit\" id=\"save_button\"><button id=\"i_save_btn\" "
+"class=\"btn btn-primary submit\">Baum speichern als Lookup</button></div>"
+msgstr ""
+"<div class=\"form-submit\" id=\"save_button\"><button id=\"i_save_btn\" "
+"class=\"btn btn-primary submit\">Baum speichern als Lookup</button></div>"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql__nacharbeitskategorien.xml:29
+msgid "Liste der Nacharbeiten"
+msgstr "Liste der Nacharbeiten"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql__nacharbeitskategorien.xml:2
+msgid "QL - Nacharbeitskategorien"
+msgstr "QL - Nacharbeitskategorien"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql__nacharbeitskategorien.xml:5
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerbilder.xml:43
+msgid "Zeitauswahl"
+msgstr "Time Selection"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerbilder.xml:10
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:19
+msgid "Fehlerbild"
+msgstr "Error Pattern"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerbilder.xml:11
+msgid "Fehlerklassen"
+msgstr "Error Classes"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerbilder.xml:12
+msgid "Speichern"
+msgstr "Save"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerbilder.xml:13
+msgid "Fehlerbild_Beschreibung"
+msgstr "Error_Pattern_Description"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerbilder.xml:14
+msgid "Fehlerbeschreibung"
+msgstr "Error description"
+
+#. span
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerbilder.xml:131
+msgid "Bitte füllen Sie das Formular aus, um Fehlerbilder anzuzeigen."
+msgstr "Please fill out the form to view error pattern."
+
+#. button
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerbilder.xml:213
+msgid "Editoransicht"
+msgstr "Editor View"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerbilder.xml:129
+msgid "Bitte Formular ausfüllen"
+msgstr "Please fill in the form"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerbilder.xml:138
+msgid "Fehlerbilder"
+msgstr "Error Pattern"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerbilder.xml:167
+msgid "Matrixdarstellung der Fehlerbilder"
+msgstr "Matrix visualisation of error pattern"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerbilder.xml:177
+msgid "Graphendarstellung der Fehlerbilder"
+msgstr "Graph visualisation of error pattern"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerbilder.xml:188
+msgid "Gespeicherte Fehlerbilder"
+msgstr "Saved error pattern"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerbilder.xml:40
+msgid "QL - Fehlerbilder"
+msgstr "QL - Error Pattern"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerbilder.xml:102
+msgid "Fehlertext enthält"
+msgstr "Error text contains"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerbilder.xml:106
+msgid "maximale Anzahl von Fehlerbildern"
+msgstr "maximum count of error pattern"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerbilder.xml:110
+msgid "Visualisierung"
+msgstr "Visualisation"
+
+#. input/choice
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerbilder.xml:111
+msgid "Co-Occurrence-Graph"
+msgstr "Co-Occurrence-Graph"
+
+#. input/choice
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerbilder.xml:112
+msgid "Force-directed-Graph"
+msgstr "Force-directed-Graph"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerbilder.xml:130
+msgid ""
+"<span class=\"i18n\" i18ntag=\"\">Bitte f&#252;llen Sie das Formular aus, um "
+"Fehlerbilder anzuzeigen.</span>"
+msgstr ""
+"<span class=\"i18n\" i18ntag=\"\">Bitte f&#252;llen Sie das Formular aus, um "
+"Fehlerbilder anzuzeigen.</span>"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerbilder.xml:211
+msgid ""
+"<div style=\"display:inline\"><button id=\"btn_list_fehlerbilder\" class="
+"\"btn i18n\" style=\"padding-left:12px\" i18ntag=\"\">Editoransicht</"
+"button></div>"
+msgstr ""
+"<div style=\"display:inline\"><button id=\"btn_list_fehlerbilder\" class="
+"\"btn i18n\" style=\"padding-left:12px\" i18ntag=\"\">Editoransicht</"
+"button></div>"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:3
+msgid "bekannt"
+msgstr "known"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:4
+msgid "unbekannt"
+msgstr "unknown"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:5
+msgid "ID"
+msgstr "ID"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:7
+msgid "Trend"
+msgstr "Trend"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:8
+msgid "Beispieltext"
+msgstr "Example text"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:9
+msgid "Sensibilitaet"
+msgstr "Sensitivity"
+
+#. button
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:194
+msgid "Fehlerklasse hinzufügen"
+msgstr "Add error class"
+
+#. button
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:203
+msgid "Liste aller Fehlerklassen"
+msgstr "List all error classes"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:96
+msgid "Anzahlen bekannter und unbekannter Fehler"
+msgstr "Numbers of known and unknown errors"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:119
+msgid "Vorschlag für neue Fehlerklassen"
+msgstr "Proposal for new error classes"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:157
+msgid "Hinzufügen des neuen Fehlerklassen"
+msgstr "Add new error classes"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:11
+msgid "QL - Fehlerklassen"
+msgstr "QL - Error Classes"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:90
+msgid "Stichwort"
+msgstr "Keyword"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:122
+msgid "$i18n_sensitivity$ [0..1]"
+msgstr "$i18n_sensitivity$ [0..1]"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:159
+msgid "pruefumfangName"
+msgstr "pruefumfangName"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:162
+msgid "testStepName"
+msgstr "testStepName"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:165
+msgid "resultName"
+msgstr "resultName"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:168
+msgid "description"
+msgstr "description"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:171
+msgid "param1"
+msgstr "param1"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:174
+msgid "param2"
+msgstr "param2"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:177
+msgid "resultValueStr"
+msgstr "resultValueStr"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:180
+msgid "ErrorCodeDec"
+msgstr "ErrorCodeDec"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:183
+msgid "errorText"
+msgstr "errorText"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:186
+msgid "adviseText"
+msgstr "adviseText"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:189
+msgid "Beispieltexte"
+msgstr "Example text"
+
+#. description
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:12
+msgid ""
+"Die APDM TestStepResults in denen das Ergebnis NOK lautete sollen hier "
+"Fehlerklassen zugeordnet werden, um gleichartige Fehler zu gruppieren und "
+"Statistiken darüber bilden zu können."
+msgstr ""
+"Die APDM TestStepResults in denen das Ergebnis NOK lautete sollen hier "
+"Fehlerklassen zugeordnet werden, um gleichartige Fehler zu gruppieren und "
+"Statistiken darüber bilden zu können."
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:120
+msgid ""
+"<div class=\"input input-text\" id=\"input_sensitivity\" style=\"width: "
+"220px;\"><label>$i18n_sensitivity$ [0..1]</label><div id="
+"\"input_sensitivity_slider\"/><div id=\"input_sensitivity_text\" class="
+"\"splunk-textinput splunk-view\"><input id=\"input_sensitivity_text-input\" "
+"value=\"0.9\" type=\"text\"/></div></div><div class=\"form-submit\" id="
+"\"submit_button_cluster\"><button id=\"input_submit_btn_cluster\" class="
+"\"btn btn-primary submit\">Submit</button></div>"
+msgstr ""
+"<div class=\"input input-text\" id=\"input_sensitivity\" style=\"width: "
+"220px;\"><label>$i18n_sensitivity$ [0..1]</label><div id="
+"\"input_sensitivity_slider\"/><div id=\"input_sensitivity_text\" class="
+"\"splunk-textinput splunk-view\"><input id=\"input_sensitivity_text-input\" "
+"value=\"0.9\" type=\"text\"/></div></div><div class=\"form-submit\" id="
+"\"submit_button_cluster\"><button id=\"input_submit_btn_cluster\" class="
+"\"btn btn-primary submit\">Submit</button></div>"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:188
+msgid ""
+"<label>Beispieltexte</label><textarea rows=\"5\" id=\"input_example_text\" "
+"style=\"width: 90%;resize: both;\">$example_text$</textarea>"
+msgstr ""
+"<label>Beispieltexte</label><textarea rows=\"5\" id=\"input_example_text\" "
+"style=\"width: 90%;resize: both;\">$example_text$</textarea>"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:192
+msgid ""
+"<div style=\"display:inline\"><button id=\"btn_add_fehlerklasse\" class="
+"\"btn btn-primary i18n\" style=\"padding-left:12px\" i18ntag="
+"\"\">Fehlerklasse hinzuf&#252;gen</button></div>"
+msgstr ""
+"<div style=\"display:inline\"><button id=\"btn_add_fehlerklasse\" class="
+"\"btn btn-primary i18n\" style=\"padding-left:12px\" i18ntag="
+"\"\">Fehlerklasse hinzuf&#252;gen</button></div>"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_fehlerklassen.xml:201
+msgid ""
+"<div style=\"display:inline\"><button id=\"btn_list_fehlerklassen\" class="
+"\"btn i18n\" style=\"padding-left:12px\" i18ntag=\"\">Liste aller "
+"Fehlerklassen</button></div>"
+msgstr ""
+"<div style=\"display:inline\"><button id=\"btn_list_fehlerklassen\" class="
+"\"btn i18n\" style=\"padding-left:12px\" i18ntag=\"\">Liste aller "
+"Fehlerklassen</button></div>"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:4
+msgid "zuletzt ausgefuehrt"
+msgstr "last executed"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:11
+msgid "NOK Ergebnisse"
+msgstr "NOK Results"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:17
+msgid "Testschrittergebnis"
+msgstr "Test Step Result"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:18
+msgid "Fehlerklasse"
+msgstr "Error Class"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:20
+msgid "Beispiele"
+msgstr "Examples"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:23
+msgid "Station"
+msgstr "Station"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:25
+msgid "Fehlerart"
+msgstr "Errortype"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:26
+msgid "Fehlerlage"
+msgstr "Error Position"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:27
+msgid "Fehlerort"
+msgstr "Error Location"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:28
+msgid "Taetigkeit"
+msgstr "Activity"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:40
+msgid "Ausgewählte Fehlerklasse"
+msgstr "Selected error class"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:41
+msgid "Ausgewähltes Fehlerbild"
+msgstr "Selected error pattern"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:42
+msgid "mit folgenden Fehlerklassen"
+msgstr "with the following error classes"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:132
+msgid "Alle Prüfschrittergebnisse mit Fehlern"
+msgstr "All test step results with errors"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:178
+msgid "Prüfschrittergebnisse mit Fehlern aus dem gewählten Prüfumfang"
+msgstr "Test results with errors from the selected test scope"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:251
+msgid "Prüfschrittergebnisse des gewählten Prüfschrittes mit Fehlern"
+msgstr "Test step results of the selected test step with errors"
+
+#. a
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:431
+msgid "Alle Nacharbeiten"
+msgstr "All Reworks"
+
+#. a
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:434
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:501
+msgid "Nacharbeitskategorien"
+msgstr "Rework categories"
+
+#. a
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:437
+msgid "Statistiken"
+msgstr "Statistics"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:143
+msgid "Fehlerauswahl"
+msgstr "Error selection"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:145
+msgid "Prüfumfänge, die bei ihrer letzten Ausführung Fehler hatten"
+msgstr "Test scope which had errors on their last run"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:182
+msgid "Prüfschritte, die bei ihrer letzten Ausführung Fehler hatten"
+msgstr "Test steps which had errors on their last run"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:256
+msgid "$tsr_label$"
+msgstr "$tsr_label$"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:355
+msgid "Ausgewählter Fehler"
+msgstr "Selected error"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:377
+msgid "$i18n_selectedErrorClass$ ($fehlerklasse$)"
+msgstr "$i18n_selectedErrorClass$ ($fehlerklasse$)"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:400
+msgid "$i18n_selectedErrorPattern$ $fehlerbild$ $i18n_withFollowingErrorC$"
+msgstr "$i18n_selectedErrorPattern$ $fehlerbild$ $i18n_withFollowingErrorC$"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:427
+msgid "Zugehörige Nacharbeiten"
+msgstr "Corresponding reworks"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:447
+msgid "Alle Nacharbeiten (neueste zuerst)"
+msgstr "All reworks (newest first)"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:527
+msgid "Nacharbeiten der ausgewählten Kategorie"
+msgstr "Reworks of selected categories"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:549
+msgid "Wichtige Wörter"
+msgstr "Important words"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:565
+msgid "Häufigste Nacharbeitsstation"
+msgstr "Most frequent rework station"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:596
+msgid "Häufigste Fehlerart"
+msgstr "Most frequent error type"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:627
+msgid "Häufigste Fehlerlage"
+msgstr "Most frequent error level"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:658
+msgid "Häufigster Fehlerort"
+msgstr "Most frequent error location"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:689
+msgid "Häufigste NA Tätigkeit"
+msgstr "Most frequent rework activity"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:47
+msgid "QL - Nacharbeitsempfehlung"
+msgstr "QL - Rework Recommendation"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:98
+msgid "Prüfergebnisse im Zeitraum"
+msgstr "Test results in the period"
+
+#. option
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:572
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:603
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:634
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:665
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:696
+msgid "$i18n_count$"
+msgstr "$i18n_count$"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitsempfehlung.xml:428
+msgid ""
+"<ul class=\"nav nav-tabs\" id=\"tabs\"><li class=\"active\"><a href=\"#\" "
+"class=\"toggle-tab i18n\" data-token=\"tab1_clicked\" data-elements="
+"\"all_reworks\" data-toggle=\"tab\" i18ntag=\"\">Alle Nacharbeiten</a></"
+"li><li><a href=\"#\" class=\"toggle-tab i18n\" data-token=\"tab2_clicked\" "
+"data-elements=\"rework_categories,selected_rework_categories\" data-toggle="
+"\"tab\" i18ntag=\"\">Nacharbeitskategorien</a></li><li><a href=\"#\" class="
+"\"toggle-tab i18n\" data-token=\"tab3_clicked\" data-elements="
+"\"rework_statistics\" data-toggle=\"tab\" i18ntag=\"\">Statistiken</a></li></"
+"ul>"
+msgstr ""
+"<ul class=\"nav nav-tabs\" id=\"tabs\"><li class=\"active\"><a href=\"#\" "
+"class=\"toggle-tab i18n\" data-token=\"tab1_clicked\" data-elements="
+"\"all_reworks\" data-toggle=\"tab\" i18ntag=\"\">Alle Nacharbeiten</a></"
+"li><li><a href=\"#\" class=\"toggle-tab i18n\" data-token=\"tab2_clicked\" "
+"data-elements=\"rework_categories,selected_rework_categories\" data-toggle="
+"\"tab\" i18ntag=\"\">Nacharbeitskategorien</a></li><li><a href=\"#\" class="
+"\"toggle-tab i18n\" data-token=\"tab3_clicked\" data-elements="
+"\"rework_statistics\" data-toggle=\"tab\" i18ntag=\"\">Statistiken</a></li></"
+"ul>"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitskategorien_neu.xml:38
+msgid "Cluster der Nacharbeitstexte (mit 7 wichtigsten Wörtern pro Cluster)"
+msgstr "Cluster der Nacharbeitstexte (mit 7 wichtigsten Wörtern pro Cluster)"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitskategorien_neu.xml:66
+msgid "Informationen für Cluster $clusternum$"
+msgstr "Informationen für Cluster $clusternum$"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitskategorien_neu.xml:15
+msgid "QL Nacharbeitskategorien neu"
+msgstr "QL Nacharbeitskategorien neu"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitskategorien_neu.xml:31
+msgid "Anzahl wichtigster Wörter (Vokabular)"
+msgstr "Anzahl wichtigster Wörter (Vokabular)"
+
+#. description
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/ql_nacharbeitskategorien_neu.xml:16
+msgid "Clustering der Nacharbeitstexte"
+msgstr "Clustering der Nacharbeitstexte"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:3
+msgid "Spur"
+msgstr "Toe"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:4
+msgid "Sturz"
+msgstr "Chamber"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:5
+msgid "Hoehe"
+msgstr "Height"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:138
+msgid "Spur (Vorne/Links)"
+msgstr "Toe (Front/Left)"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:154
+msgid "Spur (Vorne/Rechts)"
+msgstr "Toe (Front/Right)"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:175
+msgid "Spur (Hinten/Links)"
+msgstr "Toe (Rear/Left)"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:191
+msgid "Spur (Hinten/Rechts)"
+msgstr "Toe (Rear/Rigth)"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:209
+msgid "Sturz (Vorne/Links)"
+msgstr "Chamber (Front/Left)"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:225
+msgid "Sturz (Vorne/Rechts)"
+msgstr "Chamber (Front/Right)"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:243
+msgid "Sturz (Hinten/Links)"
+msgstr "Chamber (Rear/Left)"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:259
+msgid "Sturz (Hinten/Rechts)"
+msgstr "Chamber (Rear/Right)"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:7
+msgid "FT FWS: Spur/Sturz-Kurven"
+msgstr "FT FWS: Toe/Chamber-Curves"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/spursturzkurven.xml:168
+msgid "<span class=\"pageBreak\"/>"
+msgstr "<span class=\"pageBreak\"/>"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/startseite.xml:8
+msgid "Verfügbare Dashboards"
+msgstr "Verfügbare Dashboards"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/startseite.xml:2
+msgid "Startseite"
+msgstr "Startseite"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/startseite.xml:9
+msgid ""
+"<div class=\"nav-bar-slide\"><ul class=\"nav nav-list affix-top\"><li class="
+"\"active\"><a href=\"#Alle_Werke\">Allgemein</a></li><li class=\"\"><a href="
+"\"#Alle_Werke-Details\">Alle Werke - Details</a></li><li class=\"\"><a href="
+"\"#Werksspezifisch\">Werksspezifisch</a></li></ul><ul class=\"nav nav-list "
+"affix-top\"><li class=\"active\"><a>Startseiten Werke</a></li><li class="
+"\"\"><a href=\"hauptseite_tr451\">Regensburg</a></li></ul><ul class=\"nav "
+"nav-list affix-top\"><li class=\"active\"><a>Startseiten Fachteams E/E - "
+"Pr&#252;f- und Prozessplanung</a></li><li class=\"\"><a href="
+"\"startseite_eeppl__ftantrieb\">Antrieb</a></li><li class=\"\"><a href="
+"\"startseite_eeppl__fteediagnose_1\">E/E-Diagnose 1</a></li><li class="
+"\"\"><a href=\"startseite_eeppl__fteediagnose_2\">E/E-Diagnose 2</a></li><li "
+"class=\"\"><a href=\"startseite_eeppl__fteemontagesysteme\">E/E-"
+"Montagesysteme</a></li><li class=\"\"><a href="
+"\"startseite_eeppl__ftfahrwerk_scheinwerfer_fas\">Fahrwerk, Scheinwerfer, "
+"FAS</a></li><li class=\"\"><a href=\"startseite_eeppl__ftfinishnacharbeit"
+"\">Finish / Nacharbeit</a></li><li class=\"\"><a href="
+"\"startseite_eeppl__ftfzgkonfiguration\">Fzg-Konfiguration</a></li><li class="
+"\"\"><a href=\"startseite_eeppl__ftinteraktionenergie\">Interaktion / "
+"Energie</a></li><li class=\"\"><a href="
+"\"startseite_eeppl__ftprozessintegration\">Prozessintegration</a></li></ul></"
+"div><div class=\"example-contents\"><section id=\"Alle_Werke\"><h2>Alle "
+"Werke</h2><div class=\"\"><a class=\"example\" href="
+"\"apdm_themenspeicher_html\"><img src=\"/static/app/iqp/apdm_themenspeicher."
+"png\"/><div class=\"content\"><h3>APDM Themenspeicher</h3><p>Analyse der "
+"h&#228;ufigsten APDM Fehler und Abspr&#252;nge in IPSQ und Fehlerprotokolle</"
+"p></div></a><a class=\"example\" href=\"ipsq_recherche_nacharbeit\"><img src="
+"\"/static/app/iqp/ausschleusser-offlinena.png\"/><div class=\"content"
+"\"><h3>IPSQ Recherche - Nacharbeit</h3><p>Analyse von fehlerhaften Pr&#252;"
+"fungen und Nacharbeiten aus dem IPS-Q</p></div></a><a class=\"example\" href="
+"\"universelle_apdm_abfrage\"><img src=\"/static/app/iqp/"
+"universelle_apdm_abfrage.png\"/><div class=\"content\"><h3>Universelle APDM "
+"Abfrage</h3><p>Vollst&#228;ndige Analyse von APDM-Ergebnisdaten</p></div></"
+"a><a class=\"example\" href=\"kolagen_uebersicht\"><img src=\"/static/app/"
+"iqp/KoLagen/preview/kolagen_uebersicht.png\"/><div class=\"content\"><h3>KO-"
+"Lagen &#220;bersicht</h3><p>Analyse von Prozessdaten der Fahrwerk-"
+"Einstellung</p></div></a></div></section><section id=\"Alle_Werke-Details"
+"\"><h2>Alle Werke - Details</h2><div class=\"\"><a class=\"example\" href="
+"\"apdm_recherche__istufe\"><img src=\"/static/app/iqp/apdm_istufe.png\"/"
+"><div class=\"content\"><h3>APDM Recherche - I-Stufe</h3><p>Detailrecherche "
+"nach I-Stufe &#252;ber APDM</p></div></a><a class=\"example\" href="
+"\"apdm_recherche__fahrzeug\"><img src=\"/static/app/iqp/apdm_fahrzeug.png\"/"
+"><div class=\"content\"><h3>APDM Recherche - Fahrzeug</h3><p>Detailrecherche "
+"nach VIN &#252;ber APDM und IPSQ</p></div></a><a class=\"example\" href="
+"\"getvins\"><img src=\"/static/app/iqp/apdm_recherche_thema_150px.png\"/"
+"><div class=\"content\"><h3>APDM Recherche - Thema</h3><p>Analyse eines "
+"Fehlers im APDM mit zugeh&#246;rigen Nacharbeiten</p></div></a><a class="
+"\"example\" href=\"apdm_historie_7_tage\"><img src=\"/static/app/iqp/"
+"apdm_7tage.png\"/><div class=\"content\"><h3>APDM Themenspeicher - letzte 7 "
+"Tage</h3><p>Analyse von APDM Daten und Abspr&#252;nge in IPSQ und "
+"Fehlerprotokolle</p></div></a><a class=\"example\" href="
+"\"apdm_historie_4_wochen\"><img src=\"/static/app/iqp/apdm_4wochen.png\"/"
+"><div class=\"content\"><h3>APDM Themenspeicher - letzte 4 Wochen</"
+"h3><p>Analyse von APDM Daten und Abspr&#252;nge in IPSQ und "
+"Fehlerprotokolle</p></div></a><a class=\"example\" href=\"ionio\"><img src="
+"\"/static/app/iqp/ionio.png\"/><div class=\"content\"><h3>Inline/Offline "
+"Nacharbeit</h3><p>Analyse von Direktl&#228;ufern zu nachgearbeiteten "
+"Fahrzeugen.</p></div></a></div></section><section id=\"Werksspezifisch"
+"\"><h2>Werksspezifisch</h2><div class=\"\"><a class=\"example\" href="
+"\"io_rate_pruefumfaenge_fdp\"><img src=\"/static/app/iqp/dlq.png\"/><div "
+"class=\"content\"><h3>I.O. Rate Pr&#252;fumf&#228;nge</h3><p>Anzeige der "
+"Direktl&#228;uferquote (DLQ) in der Montage und anschlie&#223;enden Pr&#252;"
+"fstandslinie.</p></div></a></div></section></div>"
+msgstr ""
+"<div class=\"nav-bar-slide\"><ul class=\"nav nav-list affix-top\"><li class="
+"\"active\"><a href=\"#Alle_Werke\">Allgemein</a></li><li class=\"\"><a href="
+"\"#Alle_Werke-Details\">Alle Werke - Details</a></li><li class=\"\"><a href="
+"\"#Werksspezifisch\">Werksspezifisch</a></li></ul><ul class=\"nav nav-list "
+"affix-top\"><li class=\"active\"><a>Startseiten Werke</a></li><li class="
+"\"\"><a href=\"hauptseite_tr451\">Regensburg</a></li></ul><ul class=\"nav "
+"nav-list affix-top\"><li class=\"active\"><a>Startseiten Fachteams E/E - "
+"Pr&#252;f- und Prozessplanung</a></li><li class=\"\"><a href="
+"\"startseite_eeppl__ftantrieb\">Antrieb</a></li><li class=\"\"><a href="
+"\"startseite_eeppl__fteediagnose_1\">E/E-Diagnose 1</a></li><li class="
+"\"\"><a href=\"startseite_eeppl__fteediagnose_2\">E/E-Diagnose 2</a></li><li "
+"class=\"\"><a href=\"startseite_eeppl__fteemontagesysteme\">E/E-"
+"Montagesysteme</a></li><li class=\"\"><a href="
+"\"startseite_eeppl__ftfahrwerk_scheinwerfer_fas\">Fahrwerk, Scheinwerfer, "
+"FAS</a></li><li class=\"\"><a href=\"startseite_eeppl__ftfinishnacharbeit"
+"\">Finish / Nacharbeit</a></li><li class=\"\"><a href="
+"\"startseite_eeppl__ftfzgkonfiguration\">Fzg-Konfiguration</a></li><li class="
+"\"\"><a href=\"startseite_eeppl__ftinteraktionenergie\">Interaktion / "
+"Energie</a></li><li class=\"\"><a href="
+"\"startseite_eeppl__ftprozessintegration\">Prozessintegration</a></li></ul></"
+"div><div class=\"example-contents\"><section id=\"Alle_Werke\"><h2>Alle "
+"Werke</h2><div class=\"\"><a class=\"example\" href="
+"\"apdm_themenspeicher_html\"><img src=\"/static/app/iqp/apdm_themenspeicher."
+"png\"/><div class=\"content\"><h3>APDM Themenspeicher</h3><p>Analyse der "
+"h&#228;ufigsten APDM Fehler und Abspr&#252;nge in IPSQ und Fehlerprotokolle</"
+"p></div></a><a class=\"example\" href=\"ipsq_recherche_nacharbeit\"><img src="
+"\"/static/app/iqp/ausschleusser-offlinena.png\"/><div class=\"content"
+"\"><h3>IPSQ Recherche - Nacharbeit</h3><p>Analyse von fehlerhaften Pr&#252;"
+"fungen und Nacharbeiten aus dem IPS-Q</p></div></a><a class=\"example\" href="
+"\"universelle_apdm_abfrage\"><img src=\"/static/app/iqp/"
+"universelle_apdm_abfrage.png\"/><div class=\"content\"><h3>Universelle APDM "
+"Abfrage</h3><p>Vollst&#228;ndige Analyse von APDM-Ergebnisdaten</p></div></"
+"a><a class=\"example\" href=\"kolagen_uebersicht\"><img src=\"/static/app/"
+"iqp/KoLagen/preview/kolagen_uebersicht.png\"/><div class=\"content\"><h3>KO-"
+"Lagen &#220;bersicht</h3><p>Analyse von Prozessdaten der Fahrwerk-"
+"Einstellung</p></div></a></div></section><section id=\"Alle_Werke-Details"
+"\"><h2>Alle Werke - Details</h2><div class=\"\"><a class=\"example\" href="
+"\"apdm_recherche__istufe\"><img src=\"/static/app/iqp/apdm_istufe.png\"/"
+"><div class=\"content\"><h3>APDM Recherche - I-Stufe</h3><p>Detailrecherche "
+"nach I-Stufe &#252;ber APDM</p></div></a><a class=\"example\" href="
+"\"apdm_recherche__fahrzeug\"><img src=\"/static/app/iqp/apdm_fahrzeug.png\"/"
+"><div class=\"content\"><h3>APDM Recherche - Fahrzeug</h3><p>Detailrecherche "
+"nach VIN &#252;ber APDM und IPSQ</p></div></a><a class=\"example\" href="
+"\"getvins\"><img src=\"/static/app/iqp/apdm_recherche_thema_150px.png\"/"
+"><div class=\"content\"><h3>APDM Recherche - Thema</h3><p>Analyse eines "
+"Fehlers im APDM mit zugeh&#246;rigen Nacharbeiten</p></div></a><a class="
+"\"example\" href=\"apdm_historie_7_tage\"><img src=\"/static/app/iqp/"
+"apdm_7tage.png\"/><div class=\"content\"><h3>APDM Themenspeicher - letzte 7 "
+"Tage</h3><p>Analyse von APDM Daten und Abspr&#252;nge in IPSQ und "
+"Fehlerprotokolle</p></div></a><a class=\"example\" href="
+"\"apdm_historie_4_wochen\"><img src=\"/static/app/iqp/apdm_4wochen.png\"/"
+"><div class=\"content\"><h3>APDM Themenspeicher - letzte 4 Wochen</"
+"h3><p>Analyse von APDM Daten und Abspr&#252;nge in IPSQ und "
+"Fehlerprotokolle</p></div></a><a class=\"example\" href=\"ionio\"><img src="
+"\"/static/app/iqp/ionio.png\"/><div class=\"content\"><h3>Inline/Offline "
+"Nacharbeit</h3><p>Analyse von Direktl&#228;ufern zu nachgearbeiteten "
+"Fahrzeugen.</p></div></a></div></section><section id=\"Werksspezifisch"
+"\"><h2>Werksspezifisch</h2><div class=\"\"><a class=\"example\" href="
+"\"io_rate_pruefumfaenge_fdp\"><img src=\"/static/app/iqp/dlq.png\"/><div "
+"class=\"content\"><h3>I.O. Rate Pr&#252;fumf&#228;nge</h3><p>Anzeige der "
+"Direktl&#228;uferquote (DLQ) in der Montage und anschlie&#223;enden Pr&#252;"
+"fstandslinie.</p></div></a></div></section></div>"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:10
+msgid "Gesamt-Pruefzeit"
+msgstr "Overall test time"
+
+#. set
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:11
+msgid "Ausfuehrungsdauer in Sekunden"
+msgstr "Execution time in seconds"
+
+#. title
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:141
+msgid "Zeitverlauf"
+msgstr "Timing"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:16
+msgid "FT FWS: TimeLogging"
+msgstr "FT FWS: TimeLogging"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:206
+msgid "SA/LA"
+msgstr "SA/LA"
+
+#. label
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:221
+msgid "ResultName"
+msgstr "ResultName"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:76
+msgid ""
+"<ul id=\"tabs\" class=\"nav nav-tabs\"><li class=\"active\"><a id=\"tab1\" "
+"href=\"#\" class=\"toggle-tab\" data-toggle=\"tab\" data-elements="
+"\"ResultName_Filter,ResultName_Dauer,ResultName_Histo\" data-token="
+"\"tok_ResultName_tab\">$i18n_rn_eval$</a></li><li><a id=\"tab2\" href=\"#\" "
+"class=\"toggle-tab\" data-toggle=\"tab\" data-elements=\"FGNR_Filter,"
+"FGNR_Gantt\" data-token=\"tok_FGNR_tab\">$i18n_FGNR_eval$</a></li></ul>"
+msgstr ""
+"<ul id=\"tabs\" class=\"nav nav-tabs\"><li class=\"active\"><a id=\"tab1\" "
+"href=\"#\" class=\"toggle-tab\" data-toggle=\"tab\" data-elements="
+"\"ResultName_Filter,ResultName_Dauer,ResultName_Histo\" data-token="
+"\"tok_ResultName_tab\">$i18n_rn_eval$</a></li><li><a id=\"tab2\" href=\"#\" "
+"class=\"toggle-tab\" data-toggle=\"tab\" data-elements=\"FGNR_Filter,"
+"FGNR_Gantt\" data-token=\"tok_FGNR_tab\">$i18n_FGNR_eval$</a></li></ul>"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:152
+msgid ""
+"<div id=\"demo-view\" class=\"splunk-view\" data-require=\"app/gantt/"
+"components/gantt/gantt\" data-options=\"{         &quot;managerid&quot;: "
+"&quot;gantt_root&quot;,         &quot;startField&quot;: &quot;"
+"startTime&quot;,         &quot;endField&quot;: &quot;endTime&quot;,         "
+"&quot;categoryLabel&quot;: &quot;&quot;,          &quot;categoryField&quot;: "
+"&quot;sequenceNrResult&quot;,         &quot;seriesField&quot;: &quot;"
+"shortVIN&quot;,                               &quot;timeAxisMode&quot;: "
+"&quot;DATA_RANGE&quot;,                               &quot;tokenName&quot;: "
+"&quot;gclick&quot;,                               &quot;tokenField&quot;: "
+"&quot;user&quot;}\">\n"
+"        </div>"
+msgstr ""
+"<div id=\"demo-view\" class=\"splunk-view\" data-require=\"app/gantt/"
+"components/gantt/gantt\" data-options=\"{         &quot;managerid&quot;: "
+"&quot;gantt_root&quot;,         &quot;startField&quot;: &quot;"
+"startTime&quot;,         &quot;endField&quot;: &quot;endTime&quot;,         "
+"&quot;categoryLabel&quot;: &quot;&quot;,          &quot;categoryField&quot;: "
+"&quot;sequenceNrResult&quot;,         &quot;seriesField&quot;: &quot;"
+"shortVIN&quot;,                               &quot;timeAxisMode&quot;: "
+"&quot;DATA_RANGE&quot;,                               &quot;tokenName&quot;: "
+"&quot;gclick&quot;,                               &quot;tokenField&quot;: "
+"&quot;user&quot;}\">\n"
+"        </div>"
+
+#. html
+#: /opt/iqp_dev/splunk/etc/apps/iqp/local/data/ui/views/timelogging.xml:300
+msgid ""
+"<button type=\"button\" id=\"reset_FGNR_button\" class=\"btn noPrint\">"
+"$i18n_FGNR_reset$</button>"
+msgstr ""
+"<button type=\"button\" id=\"reset_FGNR_button\" class=\"btn noPrint\">"
+"$i18n_FGNR_reset$</button>"
+
+#~ msgid "Papieformat"
+#~ msgstr "Paper size"
+
+#~ msgid "Layout"
+#~ msgstr "Layout"
+
+#~ msgid "Querformat"
+#~ msgstr "Landscape"
+
+#~ msgid "Hochformat"
+#~ msgstr "Portrait"
+
+#~ msgid "Hier können Sie ein Kommentar eingeben ..."
+#~ msgstr "Here you can enter a comment ..."
+
+#~ msgid "Drucken"
+#~ msgstr "Print"
+
+#~ msgid "Bitte Warten ..."
+#~ msgstr "Please wait ..."
+
+#~ msgid "Druckoptionen"
+#~ msgstr "Print options"
+
+#~ msgid "generiert von "
+#~ msgstr "generated from "
+
+#~ msgid " am "
+#~ msgstr " on "
+
+#~ msgid "Ausgewähltes Fehlerbild $fehlerbild$ mit folgenden Fehlerklassen"
+#~ msgstr "Ausgewähltes Fehlerbild $fehlerbild$ mit folgenden Fehlerklassen"
+
+#~ msgid "VIN"
+#~ msgstr "VIN"
+
+#~ msgid "Prüfdatum"
+#~ msgstr "Test Date"
+
+#~ msgid "NA_Bemerkung"
+#~ msgstr "RW Comment"
+
+#~ msgid "Fahrgestellnummer"
+#~ msgstr "Fahrgestellnummer"
+
+#, fuzzy
+#~| msgid "Baureihe"
+#~ msgid "Baureihe Code"
+#~ msgstr "Series"
+
+#, fuzzy
+#~| msgid "Typschluessel"
+#~ msgid "Typschluessel Nr"
+#~ msgstr "Type Key"
+
+#~ msgid "FGNR (shortVIN)"
+#~ msgstr "FGNR (shortVIN)"
+
+#~ msgid "System-Name"
+#~ msgstr "System-Name"
+
+#~ msgid "Betroffene Prüfumfänge_alt"
+#~ msgstr "Affected Test Scope"
+
+#~ msgid "Tortendiagramm_alt"
+#~ msgstr "Pie-Chart"
+
+#~ msgid "Jitter_alt"
+#~ msgstr "Jitter"
+
+#~ msgid "Fahrzeuge_alt"
+#~ msgstr "Vehicle"
+
+#~ msgid "Schnittmenge SA_alt"
+#~ msgstr "Intersection SA"
+
+#, fuzzy
+#~| msgid "Motorbaureihe"
+#~ msgid "Motorvariante"
+#~ msgstr "Engine Series"
+
+#~ msgid "Empfohlene Nacharbeiten"
+#~ msgstr "Empfohlene Nacharbeiten"
+
+#~ msgid "Typschlüssel"
+#~ msgstr "Type Key"
+
+#~ msgid "Prüfstand"
+#~ msgstr "Test Bench"
+
+#~ msgid "AnzahlFzg"
+#~ msgstr "CountVeh"
+
+#~ msgid "Auswertung auswählen:"
+#~ msgstr "Auswertung auswählen:"
+
+#, fuzzy
+#~| msgid "Tabelle"
+#~ msgid "$i18n_Tabelle$"
+#~ msgstr "Tabelle"
+
+#, fuzzy
+#~| msgid "Tortendiagramm"
+#~ msgid "$i18n_Tortendiagramm$"
+#~ msgstr "Tortendiagramm"
+
+#, fuzzy
+#~| msgid "Sonderausstattung(en)"
+#~ msgid "$i18n_Sonderausstattung$"
+#~ msgstr "Sonderausstattung(en)"
+
+#, fuzzy
+#~| msgid "Auswertung auswaehlen:"
+#~ msgid "$i18n_Auswertung_auswaehlen$:"
+#~ msgstr "Auswertung auswaehlen:"
+
+#~ msgid "Fahrgestellnummer/n"
+#~ msgstr "Fahrgestellnummer/n"
+
+#, fuzzy
+#~| msgid "Ergebnisname"
+#~ msgid "Eregbnisname"
+#~ msgstr "Result Name"
+
+#~ msgid "ResultName-Auswertung"
+#~ msgstr "ResultName-Evaluation"
+
+#~ msgid "FGNR-Auswertung"
+#~ msgstr "Short VIN-Evaluation"
+
+#~ msgid "Gantt Diagramm"
+#~ msgstr "Gantt Diagramm"
+
+#~ msgid "SpurVR"
+#~ msgstr "Toe"
+
+#~ msgid "SpurHL"
+#~ msgstr "Toe"
+
+#~ msgid "SpurHR"
+#~ msgstr "Toe"
+
+#~ msgid "SpHoeheVR"
+#~ msgstr "Height"
+
+#~ msgid "SpHoeheHL"
+#~ msgstr "Height"
+
+#~ msgid "SpHoeheHR"
+#~ msgstr "Height"
+
+#~ msgid "SturzVR"
+#~ msgstr "Chamber"
+
+#~ msgid "SturzHL"
+#~ msgstr "Chamber"
+
+#~ msgid "SturzHR"
+#~ msgstr "Chamber"
+
+#~ msgid "StHoeheVL"
+#~ msgstr "Height"
+
+#~ msgid "StHoeheVR"
+#~ msgstr "Height"
+
+#~ msgid "StHoeheHL"
+#~ msgstr "Height"
+
+#~ msgid "StHoeheHR"
+#~ msgstr "Height"
+
+#~ msgid ""
+#~ "  testStand_iL AS Linie \n"
+#~ "  cnt_AW_Linie AS \"Anzahl Messung Linie\" \n"
+#~ "  cnt_AW_Rama AS \"Anzahl Fzge Rama\" \n"
+#~ "  shortResultName AS Einstellung \n"
+#~ "  AW_Ausreisser AS \"Ausreisser Linie/Rama\" \n"
+#~ "  AW_Linie_LG AS \"AW Linie (LG)\" \n"
+#~ "  AW_Linie_DK AS \"AW Linie (DK)\" \n"
+#~ "  AW_Rama AS \"Rama (K0-Lage)\" \n"
+#~ "  AW_Offset AS \"Dif. Rama-Linie(akt Offset + xx)\""
+#~ msgstr ""
+#~ "  testStand_iL AS Line \n"
+#~ "  cnt_AW_Linie AS \"Count Measurement Line\" \n"
+#~ "  cnt_AW_Rama AS \"Count Vehicle Rama\" \n"
+#~ "  shortResultName AS Setting \n"
+#~ "  AW_Ausreisser AS \"Outlier Line/Rama\" \n"
+#~ "  AW_Linie_LG AS \"EV Line (LG)\" \n"
+#~ "  AW_Linie_DK AS \"EV Line (DK)\" \n"
+#~ "  AW_Rama AS \"Rama (K0-Level)\" \n"
+#~ "  AW_Offset AS \"Dif. Rama-Line(curr Offset + xx)\""
+
+#~ msgid ""
+#~ "  hinterTestStand AS \"Hinterachsanlage\" \n"
+#~ "  cnt_HAS_EW_Linie AS \"Anzahl Messung Linie HAA\" \n"
+#~ "  cnt_HAS_EW_Rama AS \"Anzahl Fzge Rama HAA\" \n"
+#~ "  testStand_iL AS Linie \n"
+#~ "  cnt_EW_Linie AS \"Anzahl Messung Linie\" \n"
+#~ "  cnt_EW_Rama AS \"Anzahl Fzge Rama\" \n"
+#~ "  shortResultName AS Einstellung \n"
+#~ "  EW_Ausreisser AS \"Ausreisser Linie/Rama\" \n"
+#~ "  EW_Linie_LG AS \"EW Linie (LG)\" \n"
+#~ "  AW_Offset AS \"Dif. Rama-Linie\" \n"
+#~ "  EW_Linie_LG_Kor AS \"EW Linie (LG korr.)\" \n"
+#~ "  EW_Rama AS \"Rama (K0-Lage)\""
+#~ msgstr ""
+#~ "  hinterTestStand AS \"Rear Axle Facility (RAF)\" \n"
+#~ "  cnt_HAS_EW_Linie AS \"Count Measurement Line RAF\" \n"
+#~ "  cnt_HAS_EW_Rama AS \"Count  Vehicle Rama RAF\" \n"
+#~ "  testStand_iL AS Line \n"
+#~ "  cnt_EW_Linie AS \"Count Measurement Line\" \n"
+#~ "  cnt_EW_Rama AS \"Count  Vehicle Rama\" \n"
+#~ "  shortResultName AS Setting \n"
+#~ "  EW_Ausreisser AS \"Outlier Line/Rama\" \n"
+#~ "  EW_Linie_LG AS \"SV Linie (LG)\" \n"
+#~ "  AW_Offset AS \"Dif. Rama-Linie\" \n"
+#~ "  EW_Linie_LG_Kor AS \"SV Line (LG korr.)\" \n"
+#~ "  EW_Rama AS \"Rama (K0-Level)\""
+
+#~ msgid ""
+#~ "  hinterTestStand AS \"Hinterachsanlage\" \n"
+#~ "  shortResultName AS Einstellung \n"
+#~ "  IW_kor_Linie AS \"IW kor.(Linie)(akt Offset + xx)\" \n"
+#~ "  IW_kor_Rama AS \"IW kor.(Rama)(akt Offset + xx)\""
+#~ msgstr ""
+#~ "  hinterTestStand AS \"Rear Axle Facility (RAF)\" \n"
+#~ "  shortResultName AS Setting \n"
+#~ "  IW_kor_Linie AS \"IW kor.(Line)(curr. Offset + xx)\" \n"
+#~ "  IW_kor_Rama AS \"IW kor.(Rama)(curr. Offset + xx)\""
+
+#~ msgid "  shortResultName AS Einstellung"
+#~ msgstr "  shortResultName AS Setting"

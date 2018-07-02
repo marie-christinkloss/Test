@@ -1,0 +1,524 @@
+<form script="fws_offsetmanager/js/offsetManager.js" stylesheet="RDS_TA_html2pdf:html2pdf.css">
+  <init>
+    <set token="i18n_Referenzmessung" i18ntag="">Referenzmessung</set>
+    <set token="i18n_Linienmessung" i18ntag="">Linienmessung</set>
+    <set token="i18n_outlier_range" i18ntag="">Ausreisser-Bereich</set>
+    <set token="i18n_outlier_limit" i18ntag="">Ausreisser-Grenze</set>
+    <set token="i18n_testStand_iL" i18ntag="">Linie</set>
+    <set token="i18n_cnt_AW_Linie" i18ntag="">Anzahl Messung Linie</set>
+    <set token="i18n_cnt_AW_Rama" i18ntag="">Anzahl Fzge Rama</set>
+    <set token="i18n_shortResultName" i18ntag="">Einstellung</set>
+    <set token="i18n_AW_Ausreisser" i18ntag="">Ausreisser Linie/Rama</set>
+    <set token="i18n_AW_Linie_LG" i18ntag="">AW Linie (LG)</set>
+    <set token="i18n_AW_Linie_DK" i18ntag="">AW Linie (DK)</set>
+    <set token="i18n_AW_Rama" i18ntag="">Rama (K0-Lage)</set>
+    <set token="i18n_AW_Offset" i18ntag="">Dif. Rama-Linie(akt Offset + xx)</set>
+    <set token="i18n_hinterTestStand" i18ntag="">Hinterachsanlage</set>
+    <set token="i18n_cnt_HAS_EW_Linie" i18ntag="">Anzahl Messung Linie HAA</set>
+    <set token="i18n_cnt_HAS_EW_Rama" i18ntag="">Anzahl Fzge Rama HAA</set>
+    <set token="i18n_cnt_EW_Linie" i18ntag="">Anzahl Messung Linie</set>
+    <set token="i18n_cnt_EW_Rama" i18ntag="">Anzahl Fzge Rama</set>
+    <set token="i18n_EW_Ausreisser" i18ntag="">Ausreisser Linie/Rama</set>
+    <set token="i18n_EW_Linie_LG" i18ntag="">EW Linie (LG)</set>
+    <set token="i18n_AW_Offset_2" i18ntag="">Dif. Rama-Linie</set>
+    <set token="i18n_EW_Linie_LG_Kor" i18ntag="">EW Linie (LG korr.)</set>
+    <set token="i18n_EW_Rama" i18ntag="">Rama (K0-Lage)</set>
+    <set token="i18n_IW_kor_Linie" i18ntag="">IW kor.(Linie)(akt Offset + xx)</set>
+    <set token="i18n_IW_kor_Rama" i18ntag="">IW kor.(Rama)(akt Offset + xx)</set>
+  </init>
+  <label>FT FWS: Offsetmanager</label>
+  <search id="filterBase">
+    <query>
+| tstats 
+    count
+  from datamodel=APDM_FWS.Achse
+  where (nodename = Achse) Achse.$tok_werk$  (
+  Achse.resultName="Gesamtspur vorne vor Einstellung" OR Achse.resultName="Gesamtspur hinten vor Einstellung" OR Achse.resultName="Fahrachswinkel vor Einstellung" OR Achse.resultName="Sturz vorne links vor Einstellung" OR Achse.resultName="Sturz vorne rechts vor Einstellung" OR Achse.resultName="Sturz hinten links vor Einstellung" OR Achse.resultName="Sturz hinten rechts vor Einstellung" OR Achse.resultName="Spur hinten links vor Einstellung" OR Achse.resultName="Spur hinten rechts vor Einstellung" OR 
+  Achse.resultName="Gesamtspur vorne" OR Achse.resultName="Gesamtspur hinten" OR Achse.resultName="Fahrachswinkel" OR Achse.resultName="Sturz vorne links" OR Achse.resultName="Sturz vorne rechts" OR Achse.resultName="Sturz hinten links" OR Achse.resultName="Sturz hinten rechts" OR Achse.resultName="Spur hinten links" OR Achse.resultName="Spur hinten rechts")
+  groupby source Achse.shortVIN Achse.testStand Achse.measureType Achse.pruefumfangName Achse.wheelAlignmentCode
+  summariesonly=true
+| fields - count
+| join type=outer source 
+[ 
+  | tstats 
+      count AS IS_REF
+    from datamodel=APDM_FWS.Achse 
+    where (nodename = Achse.ReferenceCar)
+    groupby source Achse.resultValueStr summariesonly=true
+  | rename Achse.resultValueStr AS resultValueStr
+]
+| eval IS_REF=if(isNotNull(IS_REF), 1, 0), resultValueStr=if(IS_REF=1, resultValueStr, "UNKNOWN")
+| fields - source
+| dedup Achse.wheelAlignmentCode Achse.testStand Achse.measureType Achse.pruefumfangName resultValueStr IS_REF
+    </query>
+    <earliest>$tok_datetime.earliest$</earliest>
+    <latest>$tok_datetime.latest$</latest>
+  </search>
+  <search id="offsetBase">
+    <query>
+| tstats 
+    count
+  from datamodel=APDM_FWS.Achse
+  where (nodename = Achse) $runSearch$ Achse.$tok_werk$ $tok_wheelAligmentCode$(
+  Achse.resultName="Gesamtspur vorne vor Einstellung" OR Achse.resultName="Gesamtspur hinten vor Einstellung" OR Achse.resultName="Fahrachswinkel vor Einstellung" OR Achse.resultName="Sturz vorne links vor Einstellung" OR Achse.resultName="Sturz vorne rechts vor Einstellung" OR Achse.resultName="Sturz hinten links vor Einstellung" OR Achse.resultName="Sturz hinten rechts vor Einstellung" OR Achse.resultName="Spur hinten links vor Einstellung" OR Achse.resultName="Spur hinten rechts vor Einstellung" OR 
+  Achse.resultName="Gesamtspur vorne" OR Achse.resultName="Gesamtspur hinten" OR Achse.resultName="Fahrachswinkel" OR Achse.resultName="Sturz vorne links" OR Achse.resultName="Sturz vorne rechts" OR Achse.resultName="Sturz hinten links" OR Achse.resultName="Sturz hinten rechts" OR Achse.resultName="Spur hinten links" OR Achse.resultName="Spur hinten rechts")
+  groupby _time source Achse.werk Achse.shortVIN Achse.testStand Achse.measureType Achse.pruefumfangName Achse.resultName Achse.resultValueDbl Achse.desiredValueDbl Achse.minValueDbl Achse.maxValueDbl 
+  span=1s summariesonly=true
+| rename
+  Achse.werk as werk
+  Achse.shortVIN as shortVIN
+  Achse.resultName as resultName
+  Achse.resultValueDbl as resultValueDbl
+  Achse.desiredValueDbl as desiredValueDbl
+  Achse.minValueDbl AS minValueDbl
+  Achse.maxValueDbl AS maxValueDbl
+`comment("Hinzufuegen der Hinterachsstaende")`
+| lookup lkup_fws_hinterachse_anlagen werk shortVIN OUTPUTNEW testStand AS hinterTestStand
+| eval hinterTestStand=if(isNull(hinterTestStand), "NONE", hinterTestStand)
+| eval 
+  differenceValueDbl=desiredValueDbl-resultValueDbl,
+  IS_VE=if(like(resultName,"%vor Einstellung"), 1, 0),
+  resultName=replace(resultName," vor Einstellung", "")
+| fields - count resultValueDbl desiredValueDbl
+`comment("Ermittlung von Referenzfahrzeugen")`
+| join type=outer source 
+[ 
+  | tstats 
+      count AS IS_REF
+    from datamodel=APDM_FWS.Achse 
+    where (nodename = Achse.ReferenceCar) Achse.$tok_werk$ $tok_testStand_rama$ $tok_pruefumfangName_rama$ 
+    groupby source Achse.resultValueStr summariesonly=true
+  | rename Achse.resultValueStr AS resultValueStr
+  | search $tok_inAus_rama$
+  | fields - resultValueStr
+] 
+| eval IS_REF=if(isNotNull(IS_REF), 1, 0)
+| search (IS_REF=0 AND $tok_testStand_linie$ AND $tok_pruefumfangName_linie$ AND $tok_measureType_linie$) 
+  OR (IS_REF=1)
+| rename
+  Achse.testStand as testStand
+  Achse.measureType as measureType
+  Achse.pruefumfangName as pruefumfangName
+`comment("Hinzufuegen von zusaetzlichen Achseinstellinformationen")`
+| lookup lkup_ko_lagen resultName OUTPUT $env_locale$ as shortResultName position as position
+`comment("Ermittlung der letzten Linien und der ersten Referenzmessung")`
+| eventstats 
+    earliest(eval(if(IS_REF==1, source, null()))) AS first_iR
+    latest(eval(if(IS_REF==0, source, null()))) AS last_iL
+    latest(eval(if(IS_REF==0, testStand, null()))) AS testStand_iL
+  by shortVIN
+| eventstats
+    avg(differenceValueDbl) as cp_cpk_Avg
+    stdev(differenceValueDbl) as cp_cpk_Stdev
+    min(minValueDbl) as cp_cpk_UG
+    min(maxValueDbl) as cp_cpk_OG
+  by resultName IS_REF IS_VE
+| where IS_REF=1 AND source=first_iR OR (IS_REF=0 AND source=last_iL)
+| fields - first_iR last_iL
+| eventstats
+    dc(source) AS iR_iL_exist
+  by shortVIN
+`comment("Ermittlung der Ausreisser")`
+| eventstats
+    list(eval(if(iR_iL_exist=2 AND IS_REF=1 AND IS_VE=1, differenceValueDbl,null()))) AS outlierR
+    list(eval(if(iR_iL_exist=2 AND IS_REF=0 AND IS_VE=0, differenceValueDbl,null()))) AS outlierAwL
+    list(eval(if(iR_iL_exist=2 AND IS_REF=0 AND IS_VE=1, differenceValueDbl,null()))) AS outlierEwL
+  by shortVIN resultName
+| eval 
+  outlierAwDiff=outlierAwL-outlierR,
+  outlierEwDiff=outlierEwL-outlierR
+| eventstats
+    avg(eval(if(iR_iL_exist=2 AND IS_REF=0 AND IS_VE=0,differenceValueDbl,null()))) AS AW_Linie_LG
+    count(eval(if(IS_REF=0 AND IS_VE=0,1,null()))) AS cnt_AW_Linie
+    count(eval(if(iR_iL_exist=2 AND IS_REF==1 AND IS_VE=1,1,null()))) AS cnt_AW_Rama
+    list(eval(if(iR_iL_exist=2 AND  IS_REF==1 AND IS_VE=1,outlierAwDiff,null()))) AS outlierAwValues
+  by resultName position testStand_iL
+| eventstats
+    avg(eval(if(iR_iL_exist=2 AND IS_REF==0 AND IS_VE=1,differenceValueDbl,null()))) AS EW_Linie_LG
+    count(eval(if(IS_REF==0 AND IS_VE=1,1,null()))) AS cnt_EW_Linie
+    count(eval(if(iR_iL_exist=2 AND IS_REF==1 AND IS_VE=1,1,null()))) AS cnt_EW_Rama
+    list(eval(if(iR_iL_exist=2 AND  IS_REF==1 AND IS_VE=1,outlierEwDiff,null()))) AS outlierEwValues
+  by hinterTestStand testStand_iL resultName position
+| where iR_iL_exist=2 `comment("Filtern von Referenzfahrzeugen (muessen eine Linien und Rama Messung haben)")` 
+| mvcalc singleValField=outlierAwDiff multiValField=outlierAwValues fieldName=outlierAwDiffValues operation=- 
+| mvcalc singleValField=outlierEwDiff multiValField=outlierEwValues fieldName=outlierEwDiffValues operation=- 
+| eval 
+  outlierUg=-$tok_outlier_range$,
+  outlierOg=$tok_outlier_range$,
+  outlierAwLimit=round(cnt_AW_Rama*$tok_outlier_limit$/100),
+  outlierEwLimit=round(cnt_EW_Rama*$tok_outlier_limit$/100)
+| mvcalc singleValField=outlierUg multiValField=outlierAwDiffValues fieldName=outlierAwCntUG operation=&lt;
+| mvcalc singleValField=outlierOg multiValField=outlierAwDiffValues fieldName=outlierAwCntOG operation=&gt;
+| mvcalc singleValField=outlierUg multiValField=outlierEwDiffValues fieldName=outlierEwCntUG operation=&lt;
+| mvcalc singleValField=outlierOg multiValField=outlierEwDiffValues fieldName=outlierEwCntOG operation=&gt;
+| eval 
+  IS_AW_OUT=if(outlierAwLimit&gt;=(cnt_AW_Rama-outlierAwCntUG-outlierAwCntOG), 1, 0), 
+  IS_EW_OUT=if(outlierEwLimit&gt;=(cnt_EW_Rama-outlierEwCntUG-outlierEwCntOG), 1, 0) 
+`comment("ENDE Ausreisser ermittlung aufraeumen der Daten")` 
+| fields IS_REF IS_VE IS_AW_OUT IS_EW_OUT iR_iL_exist shortVIN wheelAlignmentCode differenceValueDbl resultName shortResultName position testStand_iL AW_Linie_LG cnt_AW_Linie cnt_AW_Rama EW_Linie_LG cnt_EW_Linie cnt_EW_Rama hinterTestStand cp_cpk_* outlier*
+| eventstats
+  avg(eval(if(IS_REF=0 AND IS_VE=0 AND IS_AW_OUT=0 AND iR_iL_exist&gt;=2,differenceValueDbl,null()))) AS AW_Linie_DK
+  avg(eval(if(IS_REF=1 AND IS_VE=1 AND IS_AW_OUT=0,differenceValueDbl,null()))) AS AW_Rama
+  count(eval(if(IS_REF=1 AND IS_VE=1 AND IS_AW_OUT=1, 1, null()))) AS AW_Ausreisser
+  by resultName shortResultName position testStand_iL 
+| eval
+  EW_Rama=round(EW_Rama, 2),
+  AW_Linie_LG=round(AW_Linie_LG, 2),
+  AW_Linie_DK=round(AW_Linie_DK, 2),
+  AW_Rama=round(AW_Rama, 2),
+  AW_Offset=AW_Rama-AW_Linie_DK
+| eventstats
+  avg(eval(if(IS_REF=1 AND IS_VE=1 AND IS_EW_OUT=0,differenceValueDbl,null()))) AS EW_Rama
+  count(eval(if(IS_REF=1 AND IS_VE=1 AND IS_EW_OUT=1, 1, null()))) AS EW_Ausreisser
+  by hinterTestStand resultName shortResultName position testStand_iL 
+| eval 
+  EW_Rama=round(EW_Rama, 2),
+  EW_Linie_LG=round(EW_Linie_LG, 2),
+  EW_Linie_LG_Kor=round(AW_Offset-EW_Linie_LG, 2),
+  IW_kor_Linie=cnt_EW_Linie*EW_Linie_LG_Kor,
+  IW_kor_Rama=cnt_EW_Rama*EW_Rama
+    </query>
+    <earliest>$tok_datetime.earliest$</earliest>
+    <latest>$tok_datetime.latest$</latest>
+  </search>
+  <fieldset submitButton="true" autoRun="false">
+    <input id="input_dateTime" type="time" token="tok_datetime" searchWhenChanged="true">
+      <label>Zeit</label>
+      <default>
+        <earliest>-30d@d</earliest>
+        <latest>now</latest>
+      </default>
+    </input>
+    <input id="input_werk" type="dropdown" token="tok_werk" searchWhenChanged="true">
+      <label>Werk</label>
+      <prefix>werk="</prefix>
+      <suffix>"</suffix>
+    </input>
+    <input id="input_wheelAlignmentCode" type="multiselect" token="tok_wheelAligmentCode" searchWhenChanged="true">
+      <label>Spurcode</label>
+      <choice value="*">Alle</choice>
+      <search base="filterBase">
+        <query>fields Achse.wheelAlignmentCode | dedup Achse.wheelAlignmentCode | lookup lkup_spurcode Spurcode as Achse.wheelAlignmentCode OUTPUT Beschreibung AS spurcode | eval spurcode=Achse.wheelAlignmentCode+" ("+spurcode+")" | sort Achse.wheelAlignmentCode</query>
+      </search>
+      <default>*</default>
+      <prefix>(</prefix>
+      <suffix>)</suffix>
+      <valuePrefix>Achse.wheelAlignmentCode="</valuePrefix>
+      <valueSuffix>"</valueSuffix>
+      <delimiter> OR </delimiter>
+      <fieldForLabel>spurcode</fieldForLabel>
+      <fieldForValue>Achse.wheelAlignmentCode</fieldForValue>
+    </input>
+    <input id="input_outlier_range" type="text" token="tok_outlier_range" searchWhenChanged="true">
+      <label>$i18n_outlier_range$ (-$form.tok_outlier_range$ &#8804; &#916; &#8804; $form.tok_outlier_range$)</label>
+      <default>3</default>
+    </input>
+    <input id="input_outlier_limit" type="text" token="tok_outlier_limit">
+      <label>$i18n_outlier_limit$ (&#8805; $form.tok_outlier_limit$%)</label>
+      <default>80</default>
+    </input>
+    <html><h2 id="h2_ref">$i18n_Referenzmessung$</h2></html>
+    <input id="input_testStand_rama" type="multiselect" token="tok_testStand_rama" searchWhenChanged="true">
+      <label>Pruefstand</label>
+      <choice value="*">Alle</choice>
+      <search base="filterBase">
+        <query>search IS_REF=1 $tok_wheelAligmentCode$ $tok_pruefumfangName_rama$ $tok_inAus_rama$ | rename Achse.testStand as testStand | fields testStand | dedup testStand | sort testStand</query>
+      </search>
+      <default>*</default>
+      <prefix>(</prefix>
+      <suffix>)</suffix>
+      <valuePrefix>Achse.testStand="</valuePrefix>
+      <valueSuffix>"</valueSuffix>
+      <delimiter> OR </delimiter>
+      <fieldForLabel>testStand</fieldForLabel>
+      <fieldForValue>testStand</fieldForValue>
+    </input>
+    <input id="input_pruefumfangName_rama" type="multiselect" token="tok_pruefumfangName_rama" searchWhenChanged="true">
+      <label>Pruefumfang</label>
+      <choice value="*">Alle</choice>
+      <search base="filterBase">
+        <query>search IS_REF=1 $tok_wheelAligmentCode$ $tok_testStand_rama$ $tok_inAus_rama$ | rename Achse.pruefumfangName as pruefumfangName | fields pruefumfangName | dedup pruefumfangName | sort pruefumfangName</query>
+      </search>
+      <default>*</default>
+      <prefix>(</prefix>
+      <suffix>)</suffix>
+      <valuePrefix>Achse.pruefumfangName="</valuePrefix>
+      <valueSuffix>"</valueSuffix>
+      <delimiter> OR </delimiter>
+      <fieldForLabel>pruefumfangName</fieldForLabel>
+      <fieldForValue>pruefumfangName</fieldForValue>
+    </input>
+    <input id="input_inAuswertung_rama" type="multiselect" token="tok_inAus_rama" searchWhenChanged="true">
+      <label>Referenzmessung (IN_AUSWERTUNG)</label>
+      <choice value="*">Alle</choice>
+      <search base="filterBase">
+        <query>search IS_REF=1 $tok_wheelAligmentCode$ $tok_testStand_rama$ $tok_pruefumfangName_rama$ | fields resultValueStr | dedup resultValueStr | sort resultValueStr</query>
+      </search>
+      <default>*</default>
+      <prefix>(</prefix>
+      <suffix>)</suffix>
+      <valuePrefix>resultValueStr="</valuePrefix>
+      <valueSuffix>"</valueSuffix>
+      <delimiter> OR </delimiter>
+      <fieldForLabel>resultValueStr</fieldForLabel>
+      <fieldForValue>resultValueStr</fieldForValue>
+    </input>
+    <html>
+      <h2 id="h2_lin">$i18n_Linienmessung$</h2>
+    </html>
+    <input id="input_testStand_linie" type="multiselect" token="tok_testStand_linie" searchWhenChanged="true">
+      <label>Pruefstand</label>
+      <choice value="*">Alle</choice>
+      <search base="filterBase">
+        <query>search IS_REF=0  $tok_pruefumfangName_linie$ $tok_measureType_linie$ | rename Achse.testStand as testStand | fields testStand | dedup testStand | sort testStand</query>
+      </search>
+      <default>*</default>
+      <prefix>(</prefix>
+      <suffix>)</suffix>
+      <valuePrefix>Achse.testStand="</valuePrefix>
+      <valueSuffix>"</valueSuffix>
+      <delimiter> OR </delimiter>
+      <fieldForLabel>testStand</fieldForLabel>
+      <fieldForValue>testStand</fieldForValue>
+    </input>
+    <input id="input_pruefumfangName_linie" type="multiselect" token="tok_pruefumfangName_linie" searchWhenChanged="true">
+      <label>Pruefumfang</label>
+      <choice value="*">Alle</choice>
+      <search base="filterBase">
+        <query>search IS_REF=0 $tok_wheelAligmentCode$ $tok_testStand_linie$ $tok_measureType_linie$ | rename Achse.pruefumfangName as pruefumfangName | fields pruefumfangName | dedup pruefumfangName | sort pruefumfangName</query>
+      </search>
+      <default>*</default>
+      <prefix>(</prefix>
+      <suffix>)</suffix>
+      <valuePrefix>Achse.pruefumfangName="</valuePrefix>
+      <valueSuffix>"</valueSuffix>
+      <delimiter> OR </delimiter>
+      <fieldForLabel>pruefumfangName</fieldForLabel>
+      <fieldForValue>pruefumfangName</fieldForValue>
+    </input>
+    <input id="input_measureType_linie" type="multiselect" token="tok_measureType_linie" searchWhenChanged="true">
+      <label>Messungsart</label>
+      <choice value="*">Alle</choice>
+      <search base="filterBase">
+        <query>search IS_REF=0 $tok_wheelAligmentCode$ | rename Achse.measureType as measureType | fields measureType | dedup measureType | sort measureType</query>
+      </search>
+      <default>*</default>
+      <prefix>(</prefix>
+      <suffix>)</suffix>
+      <valuePrefix>Achse.measureType="</valuePrefix>
+      <valueSuffix>"</valueSuffix>
+      <delimiter> OR </delimiter>
+      <fieldForLabel>measureType</fieldForLabel>
+      <fieldForValue>measureType</fieldForValue>
+    </input>
+  </fieldset>
+  <row>
+    <panel>
+      <title>Ausgangswerte Vorderachse</title>
+      <table id="table_aw_va">
+        <search base="offsetBase">
+          <query>
+| search position="v" IS_REF=1 IS_VE=1
+| table testStand_iL cnt_AW_Linie cnt_AW_Rama shortResultName AW_Ausreisser AW_Linie_LG AW_Linie_DK AW_Rama AW_Offset
+| dedup testStand_iL shortResultName
+| sort testStand_iL
+| rename 
+  testStand_iL AS "$i18n_testStand_iL$"
+  cnt_AW_Linie AS "$i18n_cnt_AW_Linie$" 
+  cnt_AW_Rama AS "$i18n_cnt_AW_Rama$" 
+  shortResultName AS "$i18n_shortResultName$" 
+  AW_Ausreisser AS "$i18n_AW_Ausreisser$" 
+  AW_Linie_LG AS "$i18n_AW_Linie_LG$" 
+  AW_Linie_DK AS "$i18n_AW_Linie_DK$" 
+  AW_Rama AS "$i18n_AW_Rama$" 
+  AW_Offset AS "$i18n_AW_Offset$" 
+          </query>
+        </search>
+        <option name="count">100</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">false</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+        <option name="drilldown">row</option>
+        <format type="color" field="$i18n_testStand_iL$">
+          <colorPalette type="sharedList"></colorPalette>
+          <scale type="sharedCategory"></scale>
+        </format>
+        <format type="color" field="$i18n_AW_Offset$">
+          <colorPalette type="list">[#111111,#777777,#AAAAAA,#DDDDDD,#AAAAAA,#777777,#111111]</colorPalette>
+          <scale type="threshold">-6,-4,-2,2,4,6</scale>
+        </format>
+        <option name="drilldown">row</option>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Ausgangswerte Hinterachse</title>
+      <table id="table_aw_ha">
+        <search base="offsetBase">
+          <query>
+| search position="h" IS_REF=1 IS_VE=1
+| table testStand_iL cnt_AW_Linie cnt_AW_Rama shortResultName AW_Ausreisser AW_Linie_LG AW_Linie_DK AW_Rama AW_Offset
+| dedup testStand_iL shortResultName 
+| sort testStand_iL
+| rename 
+  testStand_iL AS "$i18n_testStand_iL$" 
+  cnt_AW_Linie AS "$i18n_cnt_AW_Linie$" 
+  cnt_AW_Rama AS "$i18n_cnt_AW_Rama$" 
+  shortResultName AS "$i18n_shortResultName$" 
+  AW_Ausreisser AS "$i18n_AW_Ausreisser$" 
+  AW_Linie_LG AS "$i18n_AW_Linie_LG$" 
+  AW_Linie_DK AS "$i18n_AW_Linie_DK$" 
+  AW_Rama AS "$i18n_AW_Rama$" 
+  AW_Offset AS "$i18n_AW_Offset$" 
+          </query>
+        </search>
+        <option name="count">100</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">false</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+        <format type="color" field="$i18n_testStand_iL$">
+          <colorPalette type="sharedList"></colorPalette>
+          <scale type="sharedCategory"></scale>
+        </format>
+        <format type="color" field="$i18n_AW_Offset$">
+          <colorPalette type="list">[#111111,#777777,#AAAAAA,#DDDDDD,#AAAAAA,#777777,#111111]</colorPalette>
+          <scale type="threshold">-6,-4,-2,2,4,6</scale>
+        </format>
+        <option name="drilldown">row</option>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>Eingangswerte Hinterachse</title>
+      <table id="table_ew_ha">
+        <search base="offsetBase">
+          <query>
+| search position="h" IS_REF=1 IS_VE=1
+| table hinterTestStand testStand_iL cnt_EW_Linie cnt_EW_Rama shortResultName EW_Ausreisser EW_Linie_LG AW_Offset EW_Linie_LG_Kor EW_Rama 
+| dedup hinterTestStand testStand_iL shortResultName
+| eventstats
+    sum(cnt_EW_Linie) AS cnt_HAS_EW_Linie
+    sum(cnt_EW_Rama) AS cnt_HAS_EW_Rama
+  by hinterTestStand shortResultName
+| table hinterTestStand cnt_HAS_EW_Linie cnt_HAS_EW_Rama testStand_iL cnt_EW_Linie cnt_EW_Rama shortResultName EW_Ausreisser EW_Linie_LG AW_Offset EW_Linie_LG_Kor EW_Rama 
+| sort hinterTestStand testStand_iL shortResultName
+| rename 
+  hinterTestStand AS "$i18n_hinterTestStand$"
+  cnt_HAS_EW_Linie AS "$i18n_cnt_HAS_EW_Linie$"
+  cnt_HAS_EW_Rama AS "$i18n_cnt_HAS_EW_Rama$"
+  testStand_iL AS "$i18n_testStand_iL$"
+  cnt_EW_Linie AS "$i18n_cnt_EW_Linie$"
+  cnt_EW_Rama AS "$i18n_cnt_EW_Rama$"
+  shortResultName AS "$i18n_shortResultName$"
+  EW_Ausreisser AS "$i18n_EW_Ausreisser$"
+  EW_Linie_LG AS "$i18n_EW_Linie_LG$"
+  AW_Offset AS "$i18n_AW_Offset_2$"
+  EW_Linie_LG_Kor AS "$i18n_EW_Linie_LG_Kor$"
+  EW_Rama AS "$i18n_EW_Rama$"
+          </query>
+        </search>
+        <option name="count">100</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">false</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+        <option name="drilldown">row</option>
+        <format type="color" field="$i18n_testStand_iL$">
+          <colorPalette type="sharedList"></colorPalette>
+          <scale type="sharedCategory"></scale>
+        </format>
+        <format type="color" field="$i18n_hinterTestStand$">
+          <colorPalette type="sharedList"></colorPalette>
+          <scale type="sharedCategory"></scale>
+        </format>
+      </table>
+      <table>
+        <title>Ergebnis</title>
+        <search base="offsetBase">
+          <query>
+| search position="H" IS_REF=1 IS_VE=1 
+| stats 
+    sum(IW_kor_Linie) AS IW_kor_Linie
+    sum(IW_kor_Rama) AS IW_kor_Rama
+    sum(cnt_EW_Linie) AS cnt_All_EW_Linie
+    sum(cnt_EW_Rama) AS cnt_All_EW_Rama
+  by hinterTestStand resultName shortResultName
+| eval 
+  IW_kor_Linie=round(IW_kor_Linie/cnt_All_EW_Linie, 2),
+  IW_kor_Rama=round(IW_kor_Rama/cnt_All_EW_Rama, 2)
+| table hinterTestStand shortResultName IW_kor_Linie IW_kor_Rama
+| dedup hinterTestStand shortResultName 
+| rename 
+  hinterTestStand AS "$i18n_hinterTestStand$"
+  shortResultName AS "$i18n_shortResultName$"
+  IW_kor_Linie AS "$i18n_IW_kor_Linie$"
+  IW_kor_Rama AS "$i18n_IW_kor_Rama$"
+          </query>
+        </search>
+        <option name="count">100</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">false</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+        <format type="color" field="$i18n_testStand_iL$">
+          <colorPalette type="sharedList"></colorPalette>
+          <scale type="sharedCategory"></scale>
+        </format>
+        <format type="color" field="$i18n_hinterTestStand$">
+          <colorPalette type="sharedList"></colorPalette>
+          <scale type="sharedCategory"></scale>
+        </format>
+        <format type="color" field="$i18n_IW_kor_Linie$">
+          <colorPalette type="list">[#111111,#777777,#AAAAAA,#DDDDDD,#AAAAAA,#777777,#111111]</colorPalette>
+          <scale type="threshold">-6,-4,-2,2,4,6</scale>
+        </format>
+        <format type="color" field="$i18n_IW_kor_Rama$">
+          <colorPalette type="list">[#111111,#777777,#AAAAAA,#DDDDDD,#AAAAAA,#777777,#111111]</colorPalette>
+          <scale type="threshold">-6,-4,-2,2,4,6</scale>
+        </format>
+      </table>
+    </panel>
+  </row>
+  <row>
+    <panel>
+      <title>CP-CPK</title>
+      <table>
+        <search base="offsetBase">
+          <query>
+| eval 
+    XQuer=cp_cpk_Avg,
+    Stabw=cp_cpk_Stdev,
+    cp=round((cp_cpk_OG - cp_cpk_UG) / (6 * Stabw), 2),
+    cpk=round(min((XQuer - cp_cpk_UG),(cp_cpk_OG - XQuer)) / (3 * Stabw), 2)
+| eval 
+  shortResultName=if(IS_REF=1 AND IS_VE=1, shortResultName + if("alias_en"="alias_en", " BA is_Rama", " VE ist_Rama"), shortResultName),
+  shortResultName=if(IS_REF=0 AND IS_VE=1, shortResultName + if("alias_en"="alias_en", " BA is_Line", " VE ist_Linie"), shortResultName)
+| search (IS_REF=1 AND IS_VE=1) OR (IS_REF=0 AND IS_VE=1)
+| table shortResultName cp cpk
+| dedup shortResultName cp cpk
+| rename shortResultName AS "$i18n_shortResultName$"
+          </query>
+        </search>
+        <option name="count">100</option>
+        <option name="dataOverlayMode">none</option>
+        <option name="drilldown">none</option>
+        <option name="percentagesRow">false</option>
+        <option name="rowNumbers">false</option>
+        <option name="totalsRow">false</option>
+        <option name="wrap">true</option>
+      </table>
+    </panel>
+  </row>
+</form>
